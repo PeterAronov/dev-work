@@ -26,7 +26,7 @@ const getUserById = async (id: number) => {
 };
 
 allUsers();
-getUserById(1);
-getUserById(8);
+getUserById(4);
+getUserById(5);
 
 console.log("Hello from TypeScript!!");
