@@ -15,6 +15,7 @@ const allUsers = async () => {
 };
 
 // now let's bring user with id 1 and save it to a file called user.1.json
+
 const getUserById = async (id: number) => {
   try {
     const user = await salesforceService.getUserById({ id });
