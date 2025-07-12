@@ -1,10 +1,10 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
-import { StructuredOutputParser } from "langchain/output_parsers";
 import { z } from "zod";
 import {
   ChatMessage,
   GenerateStructuredOutputReq,
+  GenerateStructuredOutputWithExamplesReq,
   ILLMClient,
   LLMModelConfig,
   OpenAIChatModels,
@@ -12,44 +12,91 @@ import {
 } from "../llm.interface";
 
 export class OpenAIClient implements ILLMClient {
-  constructor(private readonly config: LLMModelConfig) {}
+  constructor(private readonly defaultConfig?: LLMModelConfig) {}
 
-  private makeChatModel(config: LLMModelConfig): ChatOpenAI {
+  private makeChatModel(config?: LLMModelConfig): ChatOpenAI {
     return new ChatOpenAI({
-      modelName: config?.modelName ?? OpenAIChatModels.GPT_4O,
-      temperature: config?.temperature ?? 0,
-      openAIApiKey: process.env.OPENAI_API_KEY!,
+      modelName: config?.modelName ?? this.defaultConfig?.modelName ?? OpenAIChatModels.GPT_4O,
+      temperature: config?.temperature ?? this.defaultConfig?.temperature ?? 0,
+      openAIApiKey: process.env.OPEN_AI_API_KEY!,
     });
   }
 
-  private makeEmbeddingModel(): OpenAIEmbeddings {
+  private makeEmbeddingModel(config?: LLMModelConfig): OpenAIEmbeddings {
     return new OpenAIEmbeddings({
-      modelName: this.config.modelName ?? OpenAIEmbeddingModels.TEXT_EMBEDDING_ADA_002,
-      openAIApiKey: process.env.OPENAI_API_KEY!,
+      modelName: config?.modelName ?? this.defaultConfig?.modelName ?? OpenAIEmbeddingModels.SMALL,
+      openAIApiKey: process.env.OPEN_AI_API_KEY!,
     });
   }
 
-  async generateStructuredOutput<T>(req: GenerateStructuredOutputReq<T>): Promise<T> {
+  async generateStructuredOutput<T>(req: GenerateStructuredOutputReq): Promise<T> {
     const { prompt, schema, config } = req;
-    const parser = StructuredOutputParser.fromZodSchema(schema);
 
+    // Create the prompt template following the reference pattern
     const promptTemplate = ChatPromptTemplate.fromMessages([
-      ["system", "Extract structured data from the user input."],
-      ["user", "{input}"],
-      ["system", `Format the output to match this JSON schema:\n${parser.getFormatInstructions()}`],
+      [
+        "system",
+        `You are an expert extraction algorithm.
+Only extract relevant information from the text.
+If you do not know the value of an attribute asked to extract,
+return null for the attribute's value.`,
+      ],
+      ["human", "{text}"],
     ]);
 
-    const formattedMessages = await promptTemplate.formatMessages({ input: prompt });
+    const model = this.makeChatModel(config);
+    const structuredLLM = model.withStructuredOutput(schema as any);
+
+    const formattedPrompt = await promptTemplate.invoke({
+      text: prompt,
+    });
+
+    const result = await structuredLLM.invoke(formattedPrompt);
+
+    return result as T;
+  }
+
+  async generateStructuredOutputWithExamples<T>(req: GenerateStructuredOutputWithExamplesReq<T>): Promise<T> {
+    const { prompt, schema, config, examples = [] } = req;
+
+    const messages: Array<[string, string]> = [
+      [
+        "system",
+        `You are an expert extraction algorithm. I will provide you with reference examples to guide your extraction.
+Learn from these examples to understand the expected extraction patterns and quality.
+Only extract relevant information from the text.
+If you do not know the value of an attribute asked to extract, return null for the attribute's value.
+Follow the patterns demonstrated in the examples below.`,
+      ],
+    ];
+
+    if (examples && examples.length > 0) {
+      examples.forEach((example) => {
+        messages.push(["human", example.input]);
+        messages.push(["assistant", JSON.stringify(example.output)]);
+      });
+    }
+
+    messages.push(["human", "{text}"]);
+
+    const promptTemplate = ChatPromptTemplate.fromMessages(messages);
 
     const model = this.makeChatModel(config);
-    const response = await model.invoke(formattedMessages);
+    const structuredLLM = model.withStructuredOutput(schema as any);
 
-    return await parser.parse(response.content);
+    const formattedPrompt = await promptTemplate.invoke({
+      text: prompt,
+    });
+
+    const result = await structuredLLM.invoke(formattedPrompt);
+
+    return result as T;
   }
 
   async embed(input: string | object | (string | object)[]): Promise<number[][]> {
     const texts = Array.isArray(input) ? input : [input];
     const stringified = texts.map((t) => (typeof t === "string" ? t : JSON.stringify(t)));
+
     const model = this.makeEmbeddingModel();
     return model.embedDocuments(stringified);
   }

@@ -1,0 +1,23 @@
+{
+  "id": 2,
+  "name": "Sarah Smith",
+  "email": "sarah@frontend.dev",
+  "role": "Frontend Developer",
+  "location": "San Francisco",
+  "skills": [
+    "React",
+    "TypeScript",
+    "UI/UX design"
+  ],
+  "previousCompanies": [
+    "Meta",
+    "Airbnb"
+  ],
+  "interests": [
+    "accessibility",
+    "performance optimization"
+  ],
+  "experience": ".",
+  "createdAt": "2025-07-12T23:23:13.441Z",
+  "updatedAt": "2025-07-12T23:23:13.442Z"
+}

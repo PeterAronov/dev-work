@@ -46,10 +46,18 @@ export enum OpenAIChatModels {
 }
 
 export enum OpenAIEmbeddingModels {
-  SMALL = "text-embedding-3-small",
-  LARGE = "text-embedding-3-large",
-  ADA = "text-embedding-ada-002",
+  SMALL = "text-embedding-3-small", // dim = 1536
+  LARGE = "text-embedding-3-large", // dim = 3072
+  ADA = "text-embedding-ada-002", //legacy
 }
+
+/** 
+| Model                    | MIRACL Avg | MTEB Avg |
+| ------------------------ | ---------- | -------- |
+| `ada-002`                | 31.4       | 61.0     |
+| `text-embedding-3-small` | 44.0       | 62.3     |
+| `text-embedding-3-large` | 54.9       | 64.6     |
+**/
 
 // === Static Model Info (for registry or system-wide metadata) ===
 export interface LLMModel {
@@ -109,7 +117,7 @@ export interface ILLMClient {
   /**
    * Extracts structured data from a prompt using schema validation.
    */
-  generateStructuredOutput?<T>(req: GenerateStructuredOutputReq<T>): Promise<T>;
+  generateStructuredOutput?<T>(req: GenerateStructuredOutputReq): Promise<T>;
 
   /**
    * Converts input(s) into embedding vectors.
@@ -117,8 +125,12 @@ export interface ILLMClient {
   embed(input: string | object | (string | object)[]): Promise<number[][]>; // batched
 }
 
-export interface GenerateStructuredOutputReq<T> {
+export interface GenerateStructuredOutputReq {
   prompt: string;
-  schema: z.ZodType<T>;
+  schema: z.ZodTypeAny;
   config?: LLMModelConfig;
+}
+
+export interface GenerateStructuredOutputWithExamplesReq<T> extends GenerateStructuredOutputReq {
+  examples?: Array<{ input: string; output: T }>;
 }
