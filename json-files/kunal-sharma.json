@@ -1,7 +1,7 @@
 {
   "name": "Dr. Kunal Sharma",
   "email": "k.sharma@ai.research.org",
-  "role": "data scientist",
+  "role": "Data Scientist",
   "location": "Berlin",
   "skills": [
     "Python",
@@ -18,8 +18,8 @@
     "jazz piano",
     "open science advocacy"
   ],
-  "experience": "focusing on machine learning for healthcare",
-  "id": "60e29418-8025-4470-b917-4e3c6e5b3a61",
-  "createdAt": "2025-07-13T21:57:42.812Z",
-  "updatedAt": "2025-07-13T21:57:42.812Z"
+  "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich",
+  "id": "1e134798-af79-4d7e-bc28-c5fba5ddbded",
+  "createdAt": "2025-07-13T22:19:31.931Z",
+  "updatedAt": "2025-07-13T22:19:31.931Z"
 }

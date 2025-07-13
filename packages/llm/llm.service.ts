@@ -3,14 +3,10 @@ import { OpenAIClient } from "./clients/open-ai";
 import {
   ILLMClient,
   LLMEmbeddingRequest,
-  LLMGenerateStructuredOutputReq,
+  LLMEmbeddingResponse,
+  LLMGenerateStructuredOutputRequest,
   LLMModel,
-  LLMModelCapability,
-  LLMModelConfig,
   LLMProvider,
-  LLMRequest,
-  LLMResponse,
-  LLMTask,
 } from "./llm.interface";
 import { ModelRegistry, ModelSelector } from "./model.registry";
 
@@ -45,38 +41,35 @@ class LLMService {
     return client;
   }
 
-  async generateStructuredOutput<T>(req: LLMGenerateStructuredOutputReq): Promise<T> {
+  async generateStructuredOutput<T>(req: LLMGenerateStructuredOutputRequest): Promise<T> {
     console.log("LLMService | Generating structured output...");
 
-    if (!req.prompt) {
+    const { prompt, priority, config } = req;
+
+    if (!prompt) {
       throw new Error("Prompt is required for structured output generation");
     }
 
     // Use provided model or default to Gpt4O (best for function calling)
-    const model: LLMModel = req.priority?.[0] || ModelRegistry.Gpt4O;
+    const model: LLMModel = priority?.[0] || ModelRegistry.Gpt4O;
     const client: ILLMClient = this.getClient(model);
 
     console.log(`LLMService | Using model: ${model.name} and provider: ${model.provider}`);
 
     return await client.generateStructuredOutput<T>({
       ...req,
-      config: { ...req.config, modelName: model.id }, //need to cast modelName to model.id(in model registry we have id as the model name)
+      config: { ...config, modelName: model.id }, //need to cast modelName to model.id(in model registry we have id as the model name)
     });
   }
+  async executeEmbedding(req: LLMEmbeddingRequest): Promise<LLMEmbeddingResponse> {
+    const { input, priority, config } = req;
 
-  async executeEmbedding(
-    input: string | object | (string | object)[],
-    options?: {
-      priority?: LLMModel[];
-      config?: LLMModelConfig;
-    }
-  ): Promise<number[][]> {
-    const model = options?.priority?.[0] || ModelRegistry.OpenAIEmbeddingSmall;
-    const client = this.getClient(model);
+    const model: LLMModel = priority?.[0] || ModelRegistry.OpenAIEmbeddingSmall;
+    const client: ILLMClient = this.getClient(model);
 
     return await client.embed({
       input,
-      config: { ...options?.config, modelName: model.id },
+      config: { ...config, modelName: model.id },
     });
   }
 }

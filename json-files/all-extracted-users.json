@@ -20,9 +20,9 @@
       "marathon running"
     ],
     "experience": "She has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
-    "id": "76d8cc40-4810-4ce5-a69d-32390d00df77",
-    "createdAt": "2025-07-13T21:57:34.784Z",
-    "updatedAt": "2025-07-13T21:57:34.786Z"
+    "id": "452fb606-3205-4e53-b615-1e5fb6d0c215",
+    "createdAt": "2025-07-13T22:19:24.167Z",
+    "updatedAt": "2025-07-13T22:19:24.168Z"
   },
   {
     "name": "Carlos Mendes",
@@ -43,10 +43,10 @@
       "micro frontends",
       "performance optimization"
     ],
-    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe",
-    "id": "6e476cac-c9cc-4bcf-a37a-acf5860ec05c",
-    "createdAt": "2025-07-13T21:57:36.064Z",
-    "updatedAt": "2025-07-13T21:57:36.065Z"
+    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
+    "id": "f5f92701-afe5-438f-bd9b-ae5044ca4a63",
+    "createdAt": "2025-07-13T22:19:25.733Z",
+    "updatedAt": "2025-07-13T22:19:25.733Z"
   },
   {
     "name": "Dr. Elena Petrova",
@@ -70,10 +70,10 @@
       "open science",
       "ethical AI"
     ],
-    "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs. She has collaborated with Hugging Face and DeepMind on multilingual benchmark development.",
-    "id": "264afd27-f209-4b13-b8d8-bfedcf426e14",
-    "createdAt": "2025-07-13T21:57:39.135Z",
-    "updatedAt": "2025-07-13T21:57:39.135Z"
+    "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs. She focuses on foundation models, federated learning, and low-resource language models.",
+    "id": "17bfad4e-fdf7-43dc-af5e-c4736d186c42",
+    "createdAt": "2025-07-13T22:19:27.940Z",
+    "updatedAt": "2025-07-13T22:19:27.940Z"
   },
   {
     "name": "John Doe",
@@ -92,9 +92,9 @@
       "open-source"
     ],
     "experience": "",
-    "id": "7241c800-2d48-4b10-97bc-ee81f00b4dc3",
-    "createdAt": "2025-07-13T21:57:40.238Z",
-    "updatedAt": "2025-07-13T21:57:40.239Z"
+    "id": "ead17df4-06cb-4c8a-9f36-9f0518ade23f",
+    "createdAt": "2025-07-13T22:19:28.825Z",
+    "updatedAt": "2025-07-13T22:19:28.826Z"
   },
   {
     "name": "Josh Lee",
@@ -111,14 +111,14 @@
       "writing documentation"
     ],
     "experience": "He helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
-    "id": "ca37dc73-445c-4061-8868-8a805f243d97",
-    "createdAt": "2025-07-13T21:57:41.592Z",
-    "updatedAt": "2025-07-13T21:57:41.592Z"
+    "id": "4ffe5a9f-84d9-4e8e-91f2-2af3b87cffd4",
+    "createdAt": "2025-07-13T22:19:30.703Z",
+    "updatedAt": "2025-07-13T22:19:30.704Z"
   },
   {
     "name": "Dr. Kunal Sharma",
     "email": "k.sharma@ai.research.org",
-    "role": "data scientist",
+    "role": "Data Scientist",
     "location": "Berlin",
     "skills": [
       "Python",
@@ -135,10 +135,10 @@
       "jazz piano",
       "open science advocacy"
     ],
-    "experience": "focusing on machine learning for healthcare",
-    "id": "60e29418-8025-4470-b917-4e3c6e5b3a61",
-    "createdAt": "2025-07-13T21:57:42.812Z",
-    "updatedAt": "2025-07-13T21:57:42.812Z"
+    "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich",
+    "id": "1e134798-af79-4d7e-bc28-c5fba5ddbded",
+    "createdAt": "2025-07-13T22:19:31.931Z",
+    "updatedAt": "2025-07-13T22:19:31.931Z"
   },
   {
     "name": "Michael Anderson",
@@ -164,26 +164,26 @@
       "Netflix"
     ],
     "interests": [
-      "open-source monitoring tools",
+      "contributing to open-source monitoring tools",
       "mentoring junior engineers"
     ],
-    "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps.",
-    "id": "7cf65aee-005f-46f5-928f-7cee42de9081",
-    "createdAt": "2025-07-13T21:57:44.327Z",
-    "updatedAt": "2025-07-13T21:57:44.328Z"
+    "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
+    "id": "fe3cbd2a-14fa-4850-bcf2-676e2b0a0f78",
+    "createdAt": "2025-07-13T22:19:33.984Z",
+    "updatedAt": "2025-07-13T22:19:33.985Z"
   },
   {
-    "name": ":null",
-    "email": ":null",
-    "role": ":null",
-    "location": ":null",
+    "name": "null",
+    "email": "null",
+    "role": "null",
+    "location": "null",
     "skills": null,
     "previousCompanies": null,
     "interests": null,
-    "experience": ":null",
-    "id": "ef86302c-7812-44ea-be4a-45f98c2deac0",
-    "createdAt": "2025-07-13T21:57:45.208Z",
-    "updatedAt": "2025-07-13T21:57:45.208Z"
+    "experience": "null",
+    "id": "67ca7781-cc00-4dbd-806a-ba8d0fae07b1",
+    "createdAt": "2025-07-13T22:19:35.213Z",
+    "updatedAt": "2025-07-13T22:19:35.213Z"
   },
   {
     "name": "Sarah Smith",
@@ -204,9 +204,9 @@
       "performance optimization"
     ],
     "experience": "",
-    "id": "54e952dc-e43c-4f5f-b924-9eff70ef11a7",
-    "createdAt": "2025-07-13T21:57:46.182Z",
-    "updatedAt": "2025-07-13T21:57:46.183Z"
+    "id": "283c7c57-44e0-421f-b844-4f645c4b225e",
+    "createdAt": "2025-07-13T22:19:36.203Z",
+    "updatedAt": "2025-07-13T22:19:36.204Z"
   },
   {
     "name": "Yossi Cohen",
@@ -226,8 +226,8 @@
       "exploring new markets in global food culture"
     ],
     "experience": "With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies.",
-    "id": "df307333-1ff8-48ab-ba89-9ed920769645",
-    "createdAt": "2025-07-13T21:57:47.726Z",
-    "updatedAt": "2025-07-13T21:57:47.727Z"
+    "id": "0cc0b347-a2ef-4ba2-96b1-5f5959933ba2",
+    "createdAt": "2025-07-13T22:19:37.975Z",
+    "updatedAt": "2025-07-13T22:19:37.976Z"
   }
 ]

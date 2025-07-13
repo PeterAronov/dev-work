@@ -83,11 +83,11 @@ export interface LLMRequest<TArgs = any> {
   criteria?: ModelSelectionCriteria;
 }
 
-export interface LLMGenerateStructuredOutputReq extends LLMRequest {
+export interface LLMGenerateStructuredOutputRequest extends LLMRequest {
   schema: z.ZodTypeAny;
 }
 
-export interface GenerateStructuredOutputWithExamplesReq<T> extends LLMGenerateStructuredOutputReq {
+export interface LLMGenerateStructuredOutputWithExamplesRequest<T> extends LLMGenerateStructuredOutputRequest {
   examples?: Array<{ input: string; output: T }>;
 }
 
@@ -95,15 +95,8 @@ export interface LLMEmbeddingRequest extends LLMRequest {
   input: string | object | (string | object)[];
 }
 
-export interface LLMResponse<T = any> {
-  output: string;
-  raw?: any;
-  parsed?: T;
-  usage?: {
-    promptTokens: number;
-    completionTokens: number;
-    totalTokens: number;
-  };
+export interface LLMEmbeddingResponse {
+  embeddings: number[][];
 }
 
 // === Final Interface ===
@@ -111,17 +104,17 @@ export interface ILLMClient {
   /**
    * Generates a free-form or chat-based response.
    */
-  generateText?<T = any>(req: LLMRequest<T>): Promise<LLMResponse<T>>;
+  generateText?<T = any>(req: LLMRequest<T>): Promise<T>;
 
   /**
    * Extracts structured data from a prompt using schema validation.
    */
-  generateStructuredOutput<T>(req: LLMGenerateStructuredOutputReq): Promise<T>;
+  generateStructuredOutput<T>(req: LLMGenerateStructuredOutputRequest): Promise<T>;
 
   /**
    * Converts input(s) into embedding vectors.
    */
-  embed(req: LLMEmbeddingRequest): Promise<number[][]>; // batched
+  embed(req: LLMEmbeddingRequest): Promise<LLMEmbeddingResponse>;
 }
 
 export interface ModelSelectionCriteria {
