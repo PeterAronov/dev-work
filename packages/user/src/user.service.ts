@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import { OpenAIClient } from "../../llm/clients/openai.client";
 import { ILLMClient, OpenAIChatModels } from "../../llm/llm.interface";
 import { IUser, IUserService } from "./user.interface";
@@ -73,7 +74,7 @@ export class UserService implements IUserService {
   async saveUser(user: IUser): Promise<IUser> {
     const newUser: IUser = {
       ...user,
-      id: this.users.length + 1,
+      id: uuidv4(),
       updatedAt: new Date(),
     };
 
@@ -82,7 +83,7 @@ export class UserService implements IUserService {
     return newUser;
   }
 
-  async getUserById(id: number): Promise<IUser | null> {
+  async getUserById(id: string): Promise<IUser | null> {
     return this.users.find((user) => user.id === id) || null;
   }
 

@@ -3,7 +3,7 @@ import path from "path";
 import { PlainTextFile } from "./plain-text-parser.interface";
 
 export class PlainTextParserService {
-  async readTextFiles(folderPath: string): Promise<PlainTextFile[]> {
+  static async readTextFiles(folderPath: string): Promise<PlainTextFile[]> {
     try {
       const resolvedPath = path.resolve(process.cwd(), folderPath);
       const files = await fs.readdir(resolvedPath);

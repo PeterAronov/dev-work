@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+import { PlainTextParserService } from "./packages/paresrs";
 import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
@@ -100,25 +101,6 @@ const extractUserWithExamples = async (text: string, filename?: string) => {
   }
 };
 
-const usersAsPlainText: Array<{ text: string; filename?: string }> = [
-  {
-    text: `John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience
-    with Kubernetes, Python, and cloud infrastructure. Formerly worked
-    at Google and loves open-source.`,
-    filename: "extracted-user-john-doe",
-  },
-  {
-    text: `Sarah Smith (sarah@frontend.dev) is a frontend developer from San Francisco. 
-    She specializes in React, TypeScript, and UI/UX design. 
-    Previously worked at Meta and Airbnb. She's passionate about accessibility and performance optimization.`,
-    filename: "extracted-user-sarah-smith",
-  },
-  {
-    text: `The sun is shining and it's a beautiful day for a walk in the park.`,
-    filename: "extracted-no-user-info",
-  },
-];
-
 const runAll = async () => {
   /*
   console.log("=== Starting Salesforce Operations ===");
@@ -130,9 +112,13 @@ const runAll = async () => {
   console.log("\n=== Starting LLM User Extraction ===");
 
   // Basic extraction
-  for (const { text, filename } of usersAsPlainText) {
-    console.log(`\n--- Processing: ${filename} ---`);
-    await extractAndSaveUser(text, filename);
+
+  const textFiles = await PlainTextParserService.readTextFiles("static-data/plain-text");
+
+  for (const file of textFiles) {
+    console.log(`\n--- Processing: ${file.filename} ---`);
+    console.log("File content:", file.content);
+    await extractAndSaveUser(file.content, file.filename);
   }
 
   // Demonstrate extraction with examples
@@ -155,7 +141,7 @@ runAll()
     console.log("\n🎉 All operations completed successfully!");
   })
   .catch((error) => {
-    console.error("❌ Error in runAll:", error);
+    console.error("Error in runAll:", error);
   });
 
 console.log("Hello from TypeScript!!");

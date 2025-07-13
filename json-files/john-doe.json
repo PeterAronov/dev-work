@@ -1,8 +1,7 @@
 {
-  "id": 1,
   "name": "John Doe",
   "email": "john.doe@tech.com",
-  "role": "Backend Engineer",
+  "role": "backend engineer",
   "location": "Berlin",
   "skills": [
     "Kubernetes",
@@ -15,7 +14,8 @@
   "interests": [
     "open-source"
   ],
-  "experience": "Experience with Kubernetes, Python, and cloud infrastructure.",
-  "createdAt": "2025-07-13T11:53:57.885Z",
-  "updatedAt": "2025-07-13T11:53:57.886Z"
+  "experience": "",
+  "createdAt": "2025-07-13T12:53:59.793Z",
+  "updatedAt": "2025-07-13T12:53:59.793Z",
+  "id": "ccde4250-1806-4b65-bde0-f678b11bb10a"
 }

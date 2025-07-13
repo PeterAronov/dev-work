@@ -1,0 +1,19 @@
+{
+  "name": "Josh Lee",
+  "email": "josh@devrel.io",
+  "role": "Developer Advocate",
+  "location": "UK",
+  "skills": null,
+  "previousCompanies": [
+    "HashiCorp"
+  ],
+  "interests": [
+    "speaking at meetups",
+    "producing YouTube content",
+    "writing documentation"
+  ],
+  "experience": "He helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
+  "createdAt": "2025-07-13T12:54:07.993Z",
+  "updatedAt": "2025-07-13T12:54:07.994Z",
+  "id": "890bbade-ef85-462a-9cd5-6e95500acae3"
+}

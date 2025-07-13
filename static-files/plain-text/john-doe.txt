@@ -1,3 +1,0 @@
-`John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience
-    with Kubernetes, Python, and cloud infrastructure. Formerly worked
-    at Google and loves open-source.`

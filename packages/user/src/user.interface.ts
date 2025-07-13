@@ -1,5 +1,5 @@
 export interface IUser {
-  id: number | null;
+  id?: string;
   name: string | null;
   email: string | null;
   role: string | null;
@@ -15,6 +15,6 @@ export interface IUser {
 export interface IUserService {
   extractUserFromText(text: string): Promise<IUser>;
   saveUser(user: IUser): Promise<IUser>;
-  getUserById(id: number): Promise<IUser | null>;
+  getUserById(id: string): Promise<IUser | null>;
   getAllUsers(): Promise<IUser[]>;
 }

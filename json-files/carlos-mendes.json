@@ -1,0 +1,24 @@
+{
+  "name": "Carlos Mendes",
+  "email": "carlos.m@webflowcraft.com",
+  "role": "Full-stack JavaScript Engineer",
+  "location": "Porto, Portugal",
+  "skills": [
+    "React",
+    "Node.js",
+    "Next.js",
+    "PostgreSQL"
+  ],
+  "previousCompanies": [
+    "OutSystems"
+  ],
+  "interests": [
+    "developer experience (DX)",
+    "micro frontends",
+    "performance optimization"
+  ],
+  "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
+  "createdAt": "2025-07-13T12:53:56.922Z",
+  "updatedAt": "2025-07-13T12:53:56.923Z",
+  "id": "bfcc2699-51c6-49ce-acfd-36be588bd374"
+}
