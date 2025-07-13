@@ -3,3 +3,8 @@ node_modules/
 
 # Ignore coverage reports
 coverage/
+
+.env
+
+# Covers .env.local, .env.development, etc.
+.env.* 
