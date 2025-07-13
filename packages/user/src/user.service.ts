@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
-import { OpenAIClient } from "../../llm/clients/openai.client";
-import { ILLMClient, OpenAIChatModels } from "../../llm/llm.interface";
+import { OpenAIClient } from "../../llm";
+import { OpenAIChatModels } from "../../llm/clients/open-ai/openai.interface";
+import { ILLMClient } from "../../llm/llm.interface";
 import { IUser, IUserService } from "./user.interface";
 import { User, UserSchema } from "./user.schema";
 
