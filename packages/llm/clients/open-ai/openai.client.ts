@@ -1,18 +1,17 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { z } from "zod";
-import { convertToPlainText } from "../../utils/convert.user.to.plain.text";
+import { convertToPlainText } from "../../../utils/convert.user.to.plain.text";
 import {
   ChatMessage,
   GenerateStructuredOutputReq,
   GenerateStructuredOutputWithExamplesReq,
   ILLMClient,
   LLMModelConfig,
-  OpenAIChatModels,
-  OpenAIEmbeddingModels,
-} from "../llm.interface";
+} from "../../llm.interface";
+import { OpenAIChatModels, OpenAIEmbeddingModels } from "./openai.interface";
 
-export class OpenAIClient implements ILLMClient {
+export default class OpenAIClient implements ILLMClient {
   constructor(private readonly defaultConfig?: LLMModelConfig) {}
 
   private makeChatModel(config?: LLMModelConfig): ChatOpenAI {
