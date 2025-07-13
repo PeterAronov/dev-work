@@ -113,7 +113,7 @@ const runAll = async () => {
 
   // Basic extraction
 
-  const textFiles = await PlainTextParserService.readTextFiles("static-data/plain-text");
+  const textFiles = await PlainTextParserService.readTextFiles("static-data/users/plain-text");
 
   for (const file of textFiles) {
     console.log(`\n--- Processing: ${file.filename} ---`);
