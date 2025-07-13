@@ -18,6 +18,13 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "axios": "^1.9.0"
+    "@types/uuid": "^10.0.0",
+    "axios": "^1.9.0",
+    "dotenv": "^17.2.0",
+    "langchain": "^0.3.29",
+    "openai": "^5.9.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.5",
+    "zod-to-json-schema": "^3.24.6"
   }
 }

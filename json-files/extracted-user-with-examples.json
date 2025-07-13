@@ -1,0 +1,19 @@
+{
+  "id": 4,
+  "name": "Mike Wilson",
+  "email": "m.wilson@devops.io",
+  "role": "DevOps engineer",
+  "location": "Austin",
+  "skills": [
+    "Docker",
+    "AWS",
+    "Jenkins"
+  ],
+  "previousCompanies": [
+    "Microsoft"
+  ],
+  "interests": null,
+  "experience": "",
+  "createdAt": "2025-07-12T23:55:36.112Z",
+  "updatedAt": "2025-07-12T23:55:36.112Z"
+}

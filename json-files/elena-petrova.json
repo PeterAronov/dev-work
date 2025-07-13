@@ -1,0 +1,25 @@
+{
+  "name": "Dr. Elena Petrova",
+  "email": "elena.petrova@neuralx.ai",
+  "role": "AI research scientist",
+  "location": "Zurich, Switzerland",
+  "skills": [
+    "PyTorch",
+    "Hugging Face Transformers",
+    "TensorFlow",
+    "fastai"
+  ],
+  "previousCompanies": [
+    "Hugging Face",
+    "DeepMind"
+  ],
+  "interests": [
+    "mentoring early-career female researchers",
+    "open science",
+    "ethical AI"
+  ],
+  "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, focusing on foundation models, federated learning, and low-resource language models.",
+  "createdAt": "2025-07-13T12:53:58.722Z",
+  "updatedAt": "2025-07-13T12:53:58.724Z",
+  "id": "3fbf4254-0603-4033-871a-e26d56ab2ef5"
+}

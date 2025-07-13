@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Alice Morgan",
+    "email": "alice.morgan@productlabs.io",
+    "role": "Product Manager",
+    "location": "Amsterdam",
+    "skills": [
+      "Agile methodology",
+      "stakeholder communication",
+      "roadmapping"
+    ],
+    "previousCompanies": [
+      "Booking.com",
+      "Stripe",
+      "two local Dutch startups"
+    ],
+    "interests": [
+      "ethical design",
+      "behavioral economics",
+      "marathon running"
+    ],
+    "experience": "Led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
+    "createdAt": "2025-07-13T12:53:55.001Z",
+    "updatedAt": "2025-07-13T12:53:55.002Z",
+    "id": "5f494c3b-5de1-4076-b63a-1e4a477b4d7e"
+  },
+  {
+    "name": "Carlos Mendes",
+    "email": "carlos.m@webflowcraft.com",
+    "role": "Full-stack JavaScript Engineer",
+    "location": "Porto, Portugal",
+    "skills": [
+      "React",
+      "Node.js",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "previousCompanies": [
+      "OutSystems"
+    ],
+    "interests": [
+      "developer experience (DX)",
+      "micro frontends",
+      "performance optimization"
+    ],
+    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
+    "createdAt": "2025-07-13T12:53:56.922Z",
+    "updatedAt": "2025-07-13T12:53:56.923Z",
+    "id": "bfcc2699-51c6-49ce-acfd-36be588bd374"
+  },
+  {
+    "name": "Dr. Elena Petrova",
+    "email": "elena.petrova@neuralx.ai",
+    "role": "AI research scientist",
+    "location": "Zurich, Switzerland",
+    "skills": [
+      "PyTorch",
+      "Hugging Face Transformers",
+      "TensorFlow",
+      "fastai"
+    ],
+    "previousCompanies": [
+      "Hugging Face",
+      "DeepMind"
+    ],
+    "interests": [
+      "mentoring early-career female researchers",
+      "open science",
+      "ethical AI"
+    ],
+    "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, focusing on foundation models, federated learning, and low-resource language models.",
+    "createdAt": "2025-07-13T12:53:58.722Z",
+    "updatedAt": "2025-07-13T12:53:58.724Z",
+    "id": "3fbf4254-0603-4033-871a-e26d56ab2ef5"
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@tech.com",
+    "role": "backend engineer",
+    "location": "Berlin",
+    "skills": [
+      "Kubernetes",
+      "Python",
+      "cloud infrastructure"
+    ],
+    "previousCompanies": [
+      "Google"
+    ],
+    "interests": [
+      "open-source"
+    ],
+    "experience": "",
+    "createdAt": "2025-07-13T12:53:59.793Z",
+    "updatedAt": "2025-07-13T12:53:59.793Z",
+    "id": "ccde4250-1806-4b65-bde0-f678b11bb10a"
+  },
+  {
+    "name": "Josh Lee",
+    "email": "josh@devrel.io",
+    "role": "Developer Advocate",
+    "location": "UK",
+    "skills": null,
+    "previousCompanies": [
+      "HashiCorp"
+    ],
+    "interests": [
+      "speaking at meetups",
+      "producing YouTube content",
+      "writing documentation"
+    ],
+    "experience": "He helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
+    "createdAt": "2025-07-13T12:54:07.993Z",
+    "updatedAt": "2025-07-13T12:54:07.994Z",
+    "id": "890bbade-ef85-462a-9cd5-6e95500acae3"
+  },
+  {
+    "name": "Dr. Kunal Sharma",
+    "email": "k.sharma@ai.research.org",
+    "role": "Data Scientist",
+    "location": "Berlin",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "NLP",
+      "biomedical data modeling"
+    ],
+    "previousCompanies": [
+      "DeepMind",
+      "Novartis"
+    ],
+    "interests": [
+      "long hikes",
+      "jazz piano",
+      "open science advocacy"
+    ],
+    "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich.",
+    "createdAt": "2025-07-13T12:54:09.707Z",
+    "updatedAt": "2025-07-13T12:54:09.708Z",
+    "id": "d6e38322-e39c-4b65-8052-10fc6e79e748"
+  },
+  {
+    "name": "Michael Anderson",
+    "email": "michael.anderson@cloudops.io",
+    "role": "Senior DevOps Engineer",
+    "location": "Austin, Texas",
+    "skills": [
+      "CI/CD",
+      "cloud infrastructure",
+      "automation",
+      "AWS",
+      "GCP",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Jenkins",
+      "Helm",
+      "Prometheus",
+      "Bash scripting"
+    ],
+    "previousCompanies": [
+      "IBM",
+      "Netflix"
+    ],
+    "interests": [
+      "open-source monitoring tools",
+      "mentoring junior engineers"
+    ],
+    "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
+    "createdAt": "2025-07-13T12:54:12.398Z",
+    "updatedAt": "2025-07-13T12:54:12.400Z",
+    "id": "daffb21c-beb1-4381-b46d-133dbe1ae806"
+  },
+  {
+    "name": "",
+    "email": "",
+    "role": "",
+    "location": "",
+    "skills": null,
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "",
+    "createdAt": "2025-07-13T12:54:13.499Z",
+    "updatedAt": "2025-07-13T12:54:13.499Z",
+    "id": "33479a36-7a8b-4b17-8950-5bd1af975b84"
+  },
+  {
+    "name": "Sarah Smith",
+    "email": "sarah@frontend.dev",
+    "role": "frontend developer",
+    "location": "San Francisco",
+    "skills": [
+      "React",
+      "TypeScript",
+      "UI/UX design"
+    ],
+    "previousCompanies": [
+      "Meta",
+      "Airbnb"
+    ],
+    "interests": [
+      "accessibility",
+      "performance optimization"
+    ],
+    "experience": "",
+    "createdAt": "2025-07-13T12:54:14.741Z",
+    "updatedAt": "2025-07-13T12:54:14.742Z",
+    "id": "937dae8d-3694-4400-b927-996e4bf0f2b8"
+  }
+]

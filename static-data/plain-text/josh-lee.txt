@@ -1,0 +1,4 @@
+Josh Lee is a Developer Advocate working remotely from the UK. He helps build communities and educates engineers about cloud-native tooling.
+Josh loves speaking at meetups, producing YouTube content, and writing documentation. 
+Formerly at HashiCorp, now working with multiple open-source foundations.
+His email is josh@devrel.io.

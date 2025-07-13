@@ -1,0 +1,5 @@
+Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.
+Kunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. 
+His key skills include Python, PyTorch, NLP, and biomedical data modeling. 
+In his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy.
+  

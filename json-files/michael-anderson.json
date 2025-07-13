@@ -1,0 +1,32 @@
+{
+  "name": "Michael Anderson",
+  "email": "michael.anderson@cloudops.io",
+  "role": "Senior DevOps Engineer",
+  "location": "Austin, Texas",
+  "skills": [
+    "CI/CD",
+    "cloud infrastructure",
+    "automation",
+    "AWS",
+    "GCP",
+    "Terraform",
+    "Kubernetes",
+    "Docker",
+    "Jenkins",
+    "Helm",
+    "Prometheus",
+    "Bash scripting"
+  ],
+  "previousCompanies": [
+    "IBM",
+    "Netflix"
+  ],
+  "interests": [
+    "open-source monitoring tools",
+    "mentoring junior engineers"
+  ],
+  "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
+  "createdAt": "2025-07-13T12:54:12.398Z",
+  "updatedAt": "2025-07-13T12:54:12.400Z",
+  "id": "daffb21c-beb1-4381-b46d-133dbe1ae806"
+}

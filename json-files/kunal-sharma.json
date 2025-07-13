@@ -1,0 +1,25 @@
+{
+  "name": "Dr. Kunal Sharma",
+  "email": "k.sharma@ai.research.org",
+  "role": "Data Scientist",
+  "location": "Berlin",
+  "skills": [
+    "Python",
+    "PyTorch",
+    "NLP",
+    "biomedical data modeling"
+  ],
+  "previousCompanies": [
+    "DeepMind",
+    "Novartis"
+  ],
+  "interests": [
+    "long hikes",
+    "jazz piano",
+    "open science advocacy"
+  ],
+  "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich.",
+  "createdAt": "2025-07-13T12:54:09.707Z",
+  "updatedAt": "2025-07-13T12:54:09.708Z",
+  "id": "d6e38322-e39c-4b65-8052-10fc6e79e748"
+}

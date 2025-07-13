@@ -1,0 +1,25 @@
+{
+  "name": "Alice Morgan",
+  "email": "alice.morgan@productlabs.io",
+  "role": "Product Manager",
+  "location": "Amsterdam",
+  "skills": [
+    "Agile methodology",
+    "stakeholder communication",
+    "roadmapping"
+  ],
+  "previousCompanies": [
+    "Booking.com",
+    "Stripe",
+    "two local Dutch startups"
+  ],
+  "interests": [
+    "ethical design",
+    "behavioral economics",
+    "marathon running"
+  ],
+  "experience": "Led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
+  "createdAt": "2025-07-13T12:53:55.001Z",
+  "updatedAt": "2025-07-13T12:53:55.002Z",
+  "id": "5f494c3b-5de1-4076-b63a-1e4a477b4d7e"
+}
