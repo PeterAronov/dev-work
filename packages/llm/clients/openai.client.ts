@@ -1,6 +1,7 @@
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { z } from "zod";
+import { convertToPlainText } from "../../utils/convert.user.to.plain.text";
 import {
   ChatMessage,
   GenerateStructuredOutputReq,
@@ -73,7 +74,7 @@ Follow the patterns demonstrated in the examples below.`,
     if (examples && examples.length > 0) {
       examples.forEach((example) => {
         messages.push(["human", example.input]);
-        messages.push(["assistant", JSON.stringify(example.output)]);
+        messages.push(["assistant", convertToPlainText(example.output)]);
       });
     }
 

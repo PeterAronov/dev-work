@@ -71,8 +71,6 @@ const extractUserWithExamples = async (text: string, filename?: string) => {
           previousCompanies: ["Netflix"],
           interests: null,
           experience: null,
-          createdAt: null,
-          updatedAt: null,
         },
       },
       {
@@ -87,8 +85,6 @@ const extractUserWithExamples = async (text: string, filename?: string) => {
           previousCompanies: null,
           interests: null,
           experience: null,
-          createdAt: null,
-          updatedAt: null,
         },
       },
     ];

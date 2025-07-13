@@ -10,9 +10,7 @@ export const UserSchema = z.object({
   skills: z.array(z.string()).nullable().describe("Technical skills, programming languages, tools they know"),
   previousCompanies: z.array(z.string()).nullable().describe("Companies they previously worked at"),
   interests: z.array(z.string()).nullable().describe("Personal interests, hobbies, or professional preferences"),
-  experience: z.string().nullable().describe("Summary of their professional experience"),
-  createdAt: z.date().nullable(),
-  updatedAt: z.date().nullable(),
+  experience: z.string().nullable().describe("Summary of their professional experience")
 });
 
 export type User = z.infer<typeof UserSchema>;

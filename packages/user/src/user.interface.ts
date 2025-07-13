@@ -8,8 +8,8 @@ export interface IUser {
   previousCompanies: string[] | null;
   interests: string[] | null;
   experience: string | null;
-  createdAt: Date | null;
-  updatedAt: Date | null;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface IUserService {
