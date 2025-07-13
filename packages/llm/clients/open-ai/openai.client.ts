@@ -3,10 +3,9 @@ import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { z } from "zod";
 import { convertToPlainText } from "../../../utils/convert.user.to.plain.text";
 import {
-  ChatMessage,
-  GenerateStructuredOutputReq,
   GenerateStructuredOutputWithExamplesReq,
   ILLMClient,
+  LLMGenerateStructuredOutputReq,
   LLMModelConfig,
 } from "../../llm.interface";
 import { OpenAIChatModels, OpenAIEmbeddingModels } from "./openai.interface";
@@ -29,7 +28,7 @@ export default class OpenAIClient implements ILLMClient {
     });
   }
 
-  async generateStructuredOutput<T>(req: GenerateStructuredOutputReq): Promise<T> {
+  async generateStructuredOutput<T>(req: LLMGenerateStructuredOutputReq): Promise<T> {
     const { prompt, schema, config } = req;
 
     // Create the prompt template following the reference pattern

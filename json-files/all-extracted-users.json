@@ -20,14 +20,14 @@
       "marathon running"
     ],
     "experience": "She has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
-    "createdAt": "2025-07-13T16:22:21.830Z",
-    "updatedAt": "2025-07-13T16:22:21.832Z",
-    "id": "1d208ccf-54a5-4ae4-bade-6e365b2421a6"
+    "id": "76d8cc40-4810-4ce5-a69d-32390d00df77",
+    "createdAt": "2025-07-13T21:57:34.784Z",
+    "updatedAt": "2025-07-13T21:57:34.786Z"
   },
   {
     "name": "Carlos Mendes",
     "email": "carlos.m@webflowcraft.com",
-    "role": "Full-stack JavaScript Engineer",
+    "role": "full-stack JavaScript engineer",
     "location": "Porto, Portugal",
     "skills": [
       "React",
@@ -43,10 +43,10 @@
       "micro frontends",
       "performance optimization"
     ],
-    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
-    "createdAt": "2025-07-13T16:22:24.579Z",
-    "updatedAt": "2025-07-13T16:22:24.580Z",
-    "id": "8eb8efb4-0a96-4c9b-89d9-b093e427867d"
+    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe",
+    "id": "6e476cac-c9cc-4bcf-a37a-acf5860ec05c",
+    "createdAt": "2025-07-13T21:57:36.064Z",
+    "updatedAt": "2025-07-13T21:57:36.065Z"
   },
   {
     "name": "Dr. Elena Petrova",
@@ -64,14 +64,16 @@
       "DeepMind"
     ],
     "interests": [
-      "mentoring early-career female researchers",
+      "foundation models",
+      "federated learning",
+      "low-resource language models",
       "open science",
       "ethical AI"
     ],
-    "experience": "Elena is leading a research group at NeuralX AI Labs focusing on foundation models, federated learning, and low-resource language models. She has published papers at NeurIPS and ICML and collaborated on multilingual benchmark development.",
-    "createdAt": "2025-07-13T16:22:26.734Z",
-    "updatedAt": "2025-07-13T16:22:26.735Z",
-    "id": "85381244-7611-415f-a61f-b182a6ec92b5"
+    "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs. She has collaborated with Hugging Face and DeepMind on multilingual benchmark development.",
+    "id": "264afd27-f209-4b13-b8d8-bfedcf426e14",
+    "createdAt": "2025-07-13T21:57:39.135Z",
+    "updatedAt": "2025-07-13T21:57:39.135Z"
   },
   {
     "name": "John Doe",
@@ -90,9 +92,9 @@
       "open-source"
     ],
     "experience": "",
-    "createdAt": "2025-07-13T16:22:28.273Z",
-    "updatedAt": "2025-07-13T16:22:28.273Z",
-    "id": "5f97d9a5-0fe6-48bb-95c4-335e3ec15e7e"
+    "id": "7241c800-2d48-4b10-97bc-ee81f00b4dc3",
+    "createdAt": "2025-07-13T21:57:40.238Z",
+    "updatedAt": "2025-07-13T21:57:40.239Z"
   },
   {
     "name": "Josh Lee",
@@ -109,14 +111,14 @@
       "writing documentation"
     ],
     "experience": "He helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
-    "createdAt": "2025-07-13T16:22:29.907Z",
-    "updatedAt": "2025-07-13T16:22:29.908Z",
-    "id": "af3267ba-9145-4252-ac81-4fa8ea8cb61b"
+    "id": "ca37dc73-445c-4061-8868-8a805f243d97",
+    "createdAt": "2025-07-13T21:57:41.592Z",
+    "updatedAt": "2025-07-13T21:57:41.592Z"
   },
   {
     "name": "Dr. Kunal Sharma",
     "email": "k.sharma@ai.research.org",
-    "role": "Data Scientist",
+    "role": "data scientist",
     "location": "Berlin",
     "skills": [
       "Python",
@@ -133,10 +135,10 @@
       "jazz piano",
       "open science advocacy"
     ],
-    "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich.",
-    "createdAt": "2025-07-13T16:22:32.668Z",
-    "updatedAt": "2025-07-13T16:22:32.669Z",
-    "id": "757ea358-fd46-48c9-8b89-eb0328287e57"
+    "experience": "focusing on machine learning for healthcare",
+    "id": "60e29418-8025-4470-b917-4e3c6e5b3a61",
+    "createdAt": "2025-07-13T21:57:42.812Z",
+    "updatedAt": "2025-07-13T21:57:42.812Z"
   },
   {
     "name": "Michael Anderson",
@@ -162,26 +164,26 @@
       "Netflix"
     ],
     "interests": [
-      "contributing to open-source monitoring tools",
+      "open-source monitoring tools",
       "mentoring junior engineers"
     ],
-    "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
-    "createdAt": "2025-07-13T16:22:35.753Z",
-    "updatedAt": "2025-07-13T16:22:35.755Z",
-    "id": "1be1e85e-9f0a-4c68-b18f-ff92a15ae02a"
+    "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps.",
+    "id": "7cf65aee-005f-46f5-928f-7cee42de9081",
+    "createdAt": "2025-07-13T21:57:44.327Z",
+    "updatedAt": "2025-07-13T21:57:44.328Z"
   },
   {
-    "name": "",
-    "email": "",
-    "role": "",
-    "location": "",
+    "name": ":null",
+    "email": ":null",
+    "role": ":null",
+    "location": ":null",
     "skills": null,
     "previousCompanies": null,
     "interests": null,
-    "experience": "",
-    "createdAt": "2025-07-13T16:22:36.764Z",
-    "updatedAt": "2025-07-13T16:22:36.764Z",
-    "id": "760220ed-54f4-4258-9a46-435b6b5d67e8"
+    "experience": ":null",
+    "id": "ef86302c-7812-44ea-be4a-45f98c2deac0",
+    "createdAt": "2025-07-13T21:57:45.208Z",
+    "updatedAt": "2025-07-13T21:57:45.208Z"
   },
   {
     "name": "Sarah Smith",
@@ -202,9 +204,9 @@
       "performance optimization"
     ],
     "experience": "",
-    "createdAt": "2025-07-13T16:22:37.527Z",
-    "updatedAt": "2025-07-13T16:22:37.528Z",
-    "id": "bb1f4539-13e2-46ec-80a7-0ee9d80059e1"
+    "id": "54e952dc-e43c-4f5f-b924-9eff70ef11a7",
+    "createdAt": "2025-07-13T21:57:46.182Z",
+    "updatedAt": "2025-07-13T21:57:46.183Z"
   },
   {
     "name": "Yossi Cohen",
@@ -223,9 +225,9 @@
       "mentoring young founders",
       "exploring new markets in global food culture"
     ],
-    "experience": "Over a decade of experience leading innovation and growth initiatives across food tech startups and large-scale production companies.",
-    "createdAt": "2025-07-13T16:22:38.764Z",
-    "updatedAt": "2025-07-13T16:22:38.765Z",
-    "id": "1f14b929-35ac-4bc9-9d7d-f63bd0306e60"
+    "experience": "With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies.",
+    "id": "df307333-1ff8-48ab-ba89-9ed920769645",
+    "createdAt": "2025-07-13T21:57:47.726Z",
+    "updatedAt": "2025-07-13T21:57:47.727Z"
   }
 ]

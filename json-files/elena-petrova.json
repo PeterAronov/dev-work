@@ -14,12 +14,14 @@
     "DeepMind"
   ],
   "interests": [
-    "mentoring early-career female researchers",
+    "foundation models",
+    "federated learning",
+    "low-resource language models",
     "open science",
     "ethical AI"
   ],
-  "experience": "Elena is leading a research group at NeuralX AI Labs focusing on foundation models, federated learning, and low-resource language models. She has published papers at NeurIPS and ICML and collaborated on multilingual benchmark development.",
-  "createdAt": "2025-07-13T16:22:26.734Z",
-  "updatedAt": "2025-07-13T16:22:26.735Z",
-  "id": "85381244-7611-415f-a61f-b182a6ec92b5"
+  "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs. She has collaborated with Hugging Face and DeepMind on multilingual benchmark development.",
+  "id": "264afd27-f209-4b13-b8d8-bfedcf426e14",
+  "createdAt": "2025-07-13T21:57:39.135Z",
+  "updatedAt": "2025-07-13T21:57:39.135Z"
 }

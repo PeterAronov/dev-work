@@ -52,54 +52,54 @@ const extractAndSaveUser = async (text: string, filename?: string) => {
   }
 };
 
-const extractUserWithExamples = async (text: string, filename?: string) => {
-  try {
-    const examples = [
-      {
-        input:
-          "Alice Johnson (alice.j@tech.com) is a data scientist from New York. She works with Python, machine learning, and has worked at Netflix.",
-        output: {
-          id: null,
-          name: "Alice Johnson",
-          email: "alice.j@tech.com",
-          role: "data scientist",
-          location: "New York",
-          skills: ["Python", "machine learning"],
-          previousCompanies: ["Netflix"],
-          interests: null,
-          experience: null,
-        },
-      },
-      {
-        input: "The weather is nice today with sunny skies.",
-        output: {
-          id: null,
-          name: null,
-          email: null,
-          role: null,
-          location: null,
-          skills: null,
-          previousCompanies: null,
-          interests: null,
-          experience: null,
-        },
-      },
-    ];
+// const extractUserWithExamples = async (text: string, filename?: string) => {
+//   try {
+//     const examples = [
+//       {
+//         input:
+//           "Alice Johnson (alice.j@tech.com) is a data scientist from New York. She works with Python, machine learning, and has worked at Netflix.",
+//         output: {
+//           id: null,
+//           name: "Alice Johnson",
+//           email: "alice.j@tech.com",
+//           role: "data scientist",
+//           location: "New York",
+//           skills: ["Python", "machine learning"],
+//           previousCompanies: ["Netflix"],
+//           interests: null,
+//           experience: null,
+//         },
+//       },
+//       {
+//         input: "The weather is nice today with sunny skies.",
+//         output: {
+//           id: null,
+//           name: null,
+//           email: null,
+//           role: null,
+//           location: null,
+//           skills: null,
+//           previousCompanies: null,
+//           interests: null,
+//           experience: null,
+//         },
+//       },
+//     ];
 
-    const extractedUser = await userService.extractUserFromTextWithExamples(text, examples);
-    const savedUser = await userService.saveUser(extractedUser);
+//     const extractedUser = await userService.extractUserFromTextWithExamples(text, examples);
+//     const savedUser = await userService.saveUser(extractedUser);
 
-    if (filename) {
-      saveToJsonFile(filename, savedUser);
-      console.log(`Saved user with examples to ${filename}`);
-    }
+//     if (filename) {
+//       saveToJsonFile(filename, savedUser);
+//       console.log(`Saved user with examples to ${filename}`);
+//     }
 
-    return savedUser;
-  } catch (error: any) {
-    console.error("Error in extractUserWithExamples:", error?.message || error);
-    throw error;
-  }
-};
+//     return savedUser;
+//   } catch (error: any) {
+//     console.error("Error in extractUserWithExamples:", error?.message || error);
+//     throw error;
+//   }
+// };
 
 const runAll = async () => {
   /*

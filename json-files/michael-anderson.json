@@ -22,11 +22,11 @@
     "Netflix"
   ],
   "interests": [
-    "contributing to open-source monitoring tools",
+    "open-source monitoring tools",
     "mentoring junior engineers"
   ],
-  "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
-  "createdAt": "2025-07-13T16:22:35.753Z",
-  "updatedAt": "2025-07-13T16:22:35.755Z",
-  "id": "1be1e85e-9f0a-4c68-b18f-ff92a15ae02a"
+  "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps.",
+  "id": "7cf65aee-005f-46f5-928f-7cee42de9081",
+  "createdAt": "2025-07-13T21:57:44.327Z",
+  "updatedAt": "2025-07-13T21:57:44.328Z"
 }

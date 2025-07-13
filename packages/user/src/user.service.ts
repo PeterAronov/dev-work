@@ -1,81 +1,82 @@
 import { v4 as uuidv4 } from "uuid";
-import { OpenAIClient } from "../../llm";
-import { OpenAIChatModels } from "../../llm/clients/open-ai/openai.interface";
-import { ILLMClient } from "../../llm/llm.interface";
+import { LLMService } from "../../llm";
+import { ModelRegistry } from "../../llm/model.registry";
 import { IUser, IUserService } from "./user.interface";
 import { User, UserSchema } from "./user.schema";
 
 export class UserService implements IUserService {
   private users: IUser[] = []; // In-memory storage for demo
 
-  async extractUserFromText(text: string): Promise<IUser> {
+  /**
+   * Extract user data from plain text - simplified interface
+   */
+  private async extractUserFromPlainTextLLM(plainText: string): Promise<IUser> {
+    const instructions = `
+You are an expert data extraction agent specialized in extracting user information from various text formats.
+
+Your task is to:
+1. Carefully analyze the provided text
+2. Extract relevant user information according to the provided schema
+3. Return structured data that matches the schema exactly
+4. If a field cannot be determined from the text, set it to null
+5. Be precise and conservative - only extract information that is clearly stated
+
+The text may contain:
+- Personal information (name, email, location)
+- Professional details (job title, company, experience)
+- Skills and technologies
+- Additional notes or context
+
+Extract all relevant information and structure it according to the provided schema.
+
+Text to analyze:
+${plainText}
+    `;
+
     try {
-      console.log("Extracting user data from text...");
-
-      const llmClient: ILLMClient = new OpenAIClient();
-
-      const extractedUser = await llmClient.generateStructuredOutput<User>({
-        prompt: text,
+      const extractedUser = await LLMService.generateStructuredOutput<User>({
+        prompt: instructions,
         schema: UserSchema,
+        priority: [ModelRegistry.Gpt4O, ModelRegistry.Gpt4],
         config: {
           temperature: 0,
-          modelName: OpenAIChatModels.GPT_4O,
+          maxTokens: 2000,
         },
       });
 
-      // Add timestamps
-      const userWithTimestamps: IUser = {
+      // Convert extracted user to IUser with metadata
+      const user: IUser = {
         ...extractedUser,
+        id: uuidv4(),
         createdAt: new Date(),
         updatedAt: new Date(),
       };
 
-      console.log("Successfully extracted user data:", userWithTimestamps);
-      return userWithTimestamps;
+      return user;
+    } catch (error) {
+      console.error("Error in extractUserFromPlainTextLLM:", error);
+      throw new Error(`Failed to extract user data: ${error instanceof Error ? error.message : "Unknown error"}`);
+    }
+  }
+
+  async extractUserFromText(text: string): Promise<IUser> {
+    try {
+      console.log("Extracting user data from text...");
+
+      const user = await this.extractUserFromPlainTextLLM(text);
+
+      console.log("Successfully extracted user data:", user);
+      return user;
     } catch (error: any) {
       console.error("Error extracting user data:", error?.message || error);
       throw new Error(`Failed to extract user data: ${error?.message}`);
     }
   }
 
-  async extractUserFromTextWithExamples(
-    text: string,
-    examples?: Array<{ input: string; output: User }>
-  ): Promise<IUser> {
-    try {
-      console.log("Extracting user data with examples...");
-
-      // Initialize client for this operation
-      const llmClient = new OpenAIClient();
-
-      const extractedUser = await llmClient.generateStructuredOutputWithExamples<User>({
-        prompt: text,
-        schema: UserSchema,
-        examples,
-        config: {
-          temperature: 0,
-          modelName: OpenAIChatModels.GPT_4O,
-        },
-      });
-
-      const userWithTimestamps: IUser = {
-        ...extractedUser,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-
-      console.log("Successfully extracted user data with examples:", userWithTimestamps);
-      return userWithTimestamps;
-    } catch (error: any) {
-      console.error("Error extracting user data with examples:", error?.message || error);
-      throw new Error(`Failed to extract user data with examples: ${error?.message}`);
-    }
-  }
-
   async saveUser(user: IUser): Promise<IUser> {
     const newUser: IUser = {
       ...user,
-      id: uuidv4(),
+      id: user.id || uuidv4(),
       updatedAt: new Date(),
     };
 

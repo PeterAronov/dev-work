@@ -1,13 +1,13 @@
 {
-  "name": "",
-  "email": "",
-  "role": "",
-  "location": "",
+  "name": ":null",
+  "email": ":null",
+  "role": ":null",
+  "location": ":null",
   "skills": null,
   "previousCompanies": null,
   "interests": null,
-  "experience": "",
-  "createdAt": "2025-07-13T16:22:36.764Z",
-  "updatedAt": "2025-07-13T16:22:36.764Z",
-  "id": "760220ed-54f4-4258-9a46-435b6b5d67e8"
+  "experience": ":null",
+  "id": "ef86302c-7812-44ea-be4a-45f98c2deac0",
+  "createdAt": "2025-07-13T21:57:45.208Z",
+  "updatedAt": "2025-07-13T21:57:45.208Z"
 }

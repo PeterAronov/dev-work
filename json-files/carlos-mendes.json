@@ -1,7 +1,7 @@
 {
   "name": "Carlos Mendes",
   "email": "carlos.m@webflowcraft.com",
-  "role": "Full-stack JavaScript Engineer",
+  "role": "full-stack JavaScript engineer",
   "location": "Porto, Portugal",
   "skills": [
     "React",
@@ -17,8 +17,8 @@
     "micro frontends",
     "performance optimization"
   ],
-  "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
-  "createdAt": "2025-07-13T16:22:24.579Z",
-  "updatedAt": "2025-07-13T16:22:24.580Z",
-  "id": "8eb8efb4-0a96-4c9b-89d9-b093e427867d"
+  "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe",
+  "id": "6e476cac-c9cc-4bcf-a37a-acf5860ec05c",
+  "createdAt": "2025-07-13T21:57:36.064Z",
+  "updatedAt": "2025-07-13T21:57:36.065Z"
 }
