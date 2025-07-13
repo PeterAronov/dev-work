@@ -117,7 +117,7 @@ export interface ILLMClient {
   /**
    * Extracts structured data from a prompt using schema validation.
    */
-  generateStructuredOutput?<T>(req: GenerateStructuredOutputReq): Promise<T>;
+  generateStructuredOutput<T>(req: GenerateStructuredOutputReq): Promise<T>;
 
   /**
    * Converts input(s) into embedding vectors.

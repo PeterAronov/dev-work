@@ -1,5 +1,5 @@
 import { OpenAIClient } from "../../llm/clients/openai.client";
-import { OpenAIChatModels } from "../../llm/llm.interface";
+import { ILLMClient, OpenAIChatModels } from "../../llm/llm.interface";
 import { IUser, IUserService } from "./user.interface";
 import { User, UserSchema } from "./user.schema";
 
@@ -10,8 +10,7 @@ export class UserService implements IUserService {
     try {
       console.log("Extracting user data from text...");
 
-      // Initialize client for this operation
-      const llmClient = new OpenAIClient();
+      const llmClient: ILLMClient = new OpenAIClient();
 
       const extractedUser = await llmClient.generateStructuredOutput<User>({
         prompt: text,

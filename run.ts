@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
 import { SalesforceService } from "./salesforce/src/salesforce.service";
@@ -14,13 +15,12 @@ const userService = new UserService();
 const allUsers = async () => {
   try {
     const { users } = await salesforceService.getAllUsers();
-    saveToJsonFile("allUsers.json", users);
+    saveToJsonFile("allUsers", users);
     console.log("All Users:", users);
   } catch (error: any) {
     console.error("Error fetching accounts:", error?.message || error);
   }
 };
-
 const getUserById = async (id: number) => {
   try {
     const user = await salesforceService.getUserById({ id });
@@ -31,16 +31,14 @@ const getUserById = async (id: number) => {
   }
 };
 
-// Enhanced function using UserService
+/************ LLM User Extraction *************/
+
 const extractAndSaveUser = async (text: string, filename?: string) => {
   try {
-    // Extract user from text using LLM
-    const extractedUser = await userService.extractUserFromText(text);
+    const extractedUser: IUser = await userService.extractUserFromText(text);
 
-    // Save to user service (in-memory for demo)
-    const savedUser = await userService.saveUser(extractedUser);
+    const savedUser: IUser = await userService.saveUser(extractedUser);
 
-    // Save to file
     if (filename) {
       saveToJsonFile(filename, savedUser);
       console.log(`Saved user to ${filename}`);
@@ -53,10 +51,8 @@ const extractAndSaveUser = async (text: string, filename?: string) => {
   }
 };
 
-// Demonstrate few-shot learning
 const extractUserWithExamples = async (text: string, filename?: string) => {
   try {
-    // Define examples for better extraction
     const examples = [
       {
         input:
@@ -104,53 +100,54 @@ const extractUserWithExamples = async (text: string, filename?: string) => {
   }
 };
 
-// Example texts
-const exampleTexts = [
+const usersAsPlainText: Array<{ text: string; filename?: string }> = [
   {
     text: `John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience
     with Kubernetes, Python, and cloud infrastructure. Formerly worked
     at Google and loves open-source.`,
-    filename: "extracted-user-john-doe.json",
+    filename: "extracted-user-john-doe",
   },
   {
     text: `Sarah Smith (sarah@frontend.dev) is a frontend developer from San Francisco. 
     She specializes in React, TypeScript, and UI/UX design. 
     Previously worked at Meta and Airbnb. She's passionate about accessibility and performance optimization.`,
-    filename: "extracted-user-sarah-smith.json",
+    filename: "extracted-user-sarah-smith",
   },
   {
     text: `The sun is shining and it's a beautiful day for a walk in the park.`,
-    filename: "extracted-no-user-info.json",
+    filename: "extracted-no-user-info",
   },
 ];
 
-// Main execution function
 const runAll = async () => {
+  /*
   console.log("=== Starting Salesforce Operations ===");
+
   await allUsers();
   await getUserById(2);
   await getUserById(3);
-
+*/
   console.log("\n=== Starting LLM User Extraction ===");
 
   // Basic extraction
-  for (const { text, filename } of exampleTexts) {
+  for (const { text, filename } of usersAsPlainText) {
     console.log(`\n--- Processing: ${filename} ---`);
     await extractAndSaveUser(text, filename);
   }
 
-  // Demonstrate few-shot learning
+  // Demonstrate extraction with examples
+  /*
   console.log("\n=== Demonstrating Few-Shot Learning ===");
   await extractUserWithExamples(
     "Mike Wilson (m.wilson@devops.io) is a DevOps engineer in Austin. He knows Docker, AWS, and Jenkins. Used to work at Microsoft.",
-    "extracted-user-with-examples.json"
+    "extracted-user-with-examples"
   );
-
+*/
   // Show all users in memory
   console.log("\n=== All Users in UserService ===");
-  const allUsersInService = await userService.getAllUsers();
-  console.log("Users in service:", JSON.stringify(allUsersInService, null, 2));
-  saveToJsonFile("all-extracted-users.json", allUsersInService);
+  const allUsers: IUser[] = await userService.getAllUsers();
+  console.log("Users in service:", JSON.stringify(allUsers, null, 2));
+  saveToJsonFile("all-extracted-users", allUsers);
 };
 
 runAll()
