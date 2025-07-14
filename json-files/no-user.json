@@ -1,13 +1,14 @@
 {
-  "name": "null",
-  "email": "null",
-  "role": "null",
-  "location": "null",
+  "name": ":null",
+  "email": ":null",
+  "role": ":null",
+  "location": ":null",
   "skills": null,
   "previousCompanies": null,
   "interests": null,
-  "experience": "null",
-  "id": "67ca7781-cc00-4dbd-806a-ba8d0fae07b1",
-  "createdAt": "2025-07-13T22:19:35.213Z",
-  "updatedAt": "2025-07-13T22:19:35.213Z"
+  "experience": ":null",
+  "id": "122b315b-684b-4b2d-8c2f-67aae17db92c",
+  "createdAt": "2025-07-14T16:04:35.643Z",
+  "updatedAt": "2025-07-14T16:04:35.644Z",
+  "description": "`The sun is shining and it's a beautiful day for a walk in the park.`"
 }

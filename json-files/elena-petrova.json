@@ -14,14 +14,13 @@
     "DeepMind"
   ],
   "interests": [
-    "foundation models",
-    "federated learning",
-    "low-resource language models",
     "open science",
-    "ethical AI"
+    "ethical AI",
+    "mentoring early-career female researchers"
   ],
-  "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs. She focuses on foundation models, federated learning, and low-resource language models.",
-  "id": "17bfad4e-fdf7-43dc-af5e-c4736d186c42",
-  "createdAt": "2025-07-13T22:19:27.940Z",
-  "updatedAt": "2025-07-13T22:19:27.940Z"
+  "experience": "Elena is currently leading a research group at NeuralX AI Labs, focusing on foundation models, federated learning, and low-resource language models. She has published papers at NeurIPS and ICML and collaborated on multilingual benchmark development.",
+  "id": "e32c7a9b-98a3-4c0a-ad4b-6a5ed252743b",
+  "createdAt": "2025-07-14T16:04:22.431Z",
+  "updatedAt": "2025-07-14T16:04:22.432Z",
+  "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI."
 }

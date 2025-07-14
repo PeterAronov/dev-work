@@ -1,0 +1,18 @@
+{
+  "id": "u204",
+  "name": "Dana Shimon",
+  "email": null,
+  "role": "Construction Engineer",
+  "location": "Haifa",
+  "skills": [
+    "AutoCAD",
+    "Project Management",
+    "Structural Analysis"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Supervised construction of high-rise apartments across northern Israel.",
+  "createdAt": "2025-07-14T16:04:41.130Z",
+  "updatedAt": "2025-07-14T16:04:41.130Z"
+}

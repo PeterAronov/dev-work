@@ -1,0 +1,18 @@
+{
+  "id": "u108",
+  "name": "Maya Rosen",
+  "email": null,
+  "role": "Biostatistician",
+  "location": "Netanya",
+  "skills": [
+    "SAS",
+    "R",
+    "Clinical Data Analysis"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Published research on heart disease in elderly populations.",
+  "createdAt": "2025-07-14T16:04:41.131Z",
+  "updatedAt": "2025-07-14T16:04:41.131Z"
+}

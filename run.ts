@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { PlainTextParserService } from "./packages/paresrs";
+import { JSONUserParserService, PlainTextParserService } from "./packages/paresrs";
 import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
@@ -34,9 +34,10 @@ const getUserById = async (id: number) => {
 
 /************ LLM User Extraction *************/
 
-const extractAndSaveUser = async (text: string, filename?: string) => {
+const extractFromPlainTextAndSaveUser = async (text: string, filename?: string) => {
   try {
     const extractedUser: IUser = await userService.extractUserFromText(text);
+    extractedUser.description = text;
 
     const savedUser: IUser = await userService.saveUser(extractedUser);
 
@@ -47,7 +48,7 @@ const extractAndSaveUser = async (text: string, filename?: string) => {
 
     return savedUser;
   } catch (error: any) {
-    console.error("Error in extractAndSaveUser:", error?.message || error);
+    console.error("Error in extractFromPlainTextAndSaveUser:", error?.message || error);
     throw error;
   }
 };
@@ -118,8 +119,17 @@ const runAll = async () => {
   for (const file of textFiles) {
     console.log(`\n--- Processing: ${file.filename} ---`);
     console.log("File content:", file.content);
-    await extractAndSaveUser(file.content, file.filename);
+    await extractFromPlainTextAndSaveUser(file.content, file.filename);
   }
+
+  const jsonUsers: IUser[] = await JSONUserParserService.parseJSONFiles("static-data/users/json");
+  console.log(`Parsed ${jsonUsers.length} JSON users from static-data/users/json`);
+  for (const user of jsonUsers) {
+    saveToJsonFile(`json-user-${user.id}`, user);
+    console.log(`\n--- Processing JSON User: ${user.name} ---`);
+    console.log("User data:", JSON.stringify(user, null, 2));
+  }
+  await userService.saveUsers(jsonUsers);
 
   // Demonstrate extraction with examples
   /*

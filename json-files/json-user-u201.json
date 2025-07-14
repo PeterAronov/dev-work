@@ -1,0 +1,18 @@
+{
+  "id": "u201",
+  "name": "Erez Nahum",
+  "email": null,
+  "role": "Executive Chef",
+  "location": "Tel Aviv",
+  "skills": [
+    "Mediterranean Cuisine",
+    "Menu Design",
+    "Team Leadership"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Head chef at a boutique hotel. Specializes in fusion and seasonal menus.",
+  "createdAt": "2025-07-14T16:04:41.131Z",
+  "updatedAt": "2025-07-14T16:04:41.131Z"
+}

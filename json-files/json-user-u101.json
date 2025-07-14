@@ -1,0 +1,19 @@
+{
+  "id": "u101",
+  "name": "Yael Cohen",
+  "email": null,
+  "role": "Financial Analyst",
+  "location": "Tel Aviv",
+  "skills": [
+    "Excel",
+    "Financial Modeling",
+    "Power BI",
+    "SQL"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Specializes in equity research for tech sector.",
+  "createdAt": "2025-07-14T16:04:41.132Z",
+  "updatedAt": "2025-07-14T16:04:41.132Z"
+}

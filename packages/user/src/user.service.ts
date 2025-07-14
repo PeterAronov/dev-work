@@ -73,6 +73,29 @@ ${plainText}
     }
   }
 
+  private async createUserEmbeddingLLM(user: IUser): Promise<number[]> {
+    try {
+      // Create a comprehensive text representation of the user
+      const userText: string = this.userToSearchableText(user);
+
+      console.log(`Creating embedding for user: ${user.name}`);
+
+      const embeddingResponse = await LLMService.executeEmbedding({
+        input: userText,
+        priority: [ModelRegistry.OpenAIEmbeddingLarge], // Using the Large model as requested
+        config: {
+          // No additional config needed for embeddings
+        },
+      });
+
+      // Return the first (and only) embedding vector
+      return embeddingResponse.embeddings[0];
+    } catch (error) {
+      console.error("Error creating user embedding:", error);
+      throw new Error(`Failed to create embedding: ${error instanceof Error ? error.message : "Unknown error"}`);
+    }
+  }
+
   async saveUser(user: IUser): Promise<IUser> {
     const newUser: IUser = {
       ...user,
@@ -82,7 +105,37 @@ ${plainText}
 
     this.users.push(newUser);
     console.log(`User saved with ID: ${newUser.id}`);
+
+    // Create embedding for the user after saving using OpenAIEmbeddingLarge
+    try {
+      const embedding = await this.createUserEmbeddingLLM(newUser);
+      console.log(`Created embedding for user ${newUser.id} using OpenAI Large model`);
+      console.log(`Vector dimension: ${embedding.length}`);
+      console.log(
+        `Embedding preview: [${embedding
+          .slice(0, 5)
+          .map((n) => n.toFixed(4))
+          .join(", ")}...]`
+      );
+
+      // Here you could store the embedding in a vector database
+      // For now, we're just logging it
+      // Example: await this.vectorDB.store(newUser.id, embedding);
+    } catch (error) {
+      console.warn(`Failed to create embedding for user ${newUser.id}:`, error);
+      // Don't fail the save operation if embedding fails
+    }
+
     return newUser;
+  }
+
+  async saveUsers(users: IUser[]): Promise<IUser[]> {
+    const savedUsers: IUser[] = [];
+    for (const user of users) {
+      const savedUser = await this.saveUser(user);
+      savedUsers.push(savedUser);
+    }
+    return savedUsers;
   }
 
   async getUserById(id: string): Promise<IUser | null> {
@@ -91,5 +144,22 @@ ${plainText}
 
   async getAllUsers(): Promise<IUser[]> {
     return [...this.users];
+  }
+
+  private userToSearchableText(user: IUser): string {
+    const parts: string[] = [];
+
+    if (user.description) parts.push(`Description: ${user.description}`);
+    if (user.id) parts.push(`ID: ${user.id}`);
+    if (user.name) parts.push(`Name: ${user.name}`);
+    if (user.email) parts.push(`Email: ${user.email}`);
+    if (user.role) parts.push(`Role: ${user.role}`);
+    if (user.location) parts.push(`Location: ${user.location}`);
+    if (user.skills?.length) parts.push(`Skills: ${user.skills.join(", ")}`);
+    if (user.previousCompanies?.length) parts.push(`Previous Companies: ${user.previousCompanies.join(", ")}`);
+    if (user.interests?.length) parts.push(`Interests: ${user.interests.join(", ")}`);
+    if (user.experience) parts.push(`Experience: ${user.experience}`);
+
+    return parts.join("\n");
   }
 }

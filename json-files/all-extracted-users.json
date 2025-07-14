@@ -20,9 +20,10 @@
       "marathon running"
     ],
     "experience": "She has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
-    "id": "452fb606-3205-4e53-b615-1e5fb6d0c215",
-    "createdAt": "2025-07-13T22:19:24.167Z",
-    "updatedAt": "2025-07-13T22:19:24.168Z"
+    "id": "f61284bc-2be1-42e8-97f4-e5cb6595f502",
+    "createdAt": "2025-07-14T16:04:12.765Z",
+    "updatedAt": "2025-07-14T16:04:12.766Z",
+    "description": "Alice Morgan (alice.morgan@productlabs.io) is a seasoned product manager based in Amsterdam. \nShe has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech. \nAlice has strong skills in Agile methodology, stakeholder communication, and roadmapping. \nShe previously worked at Booking.com, Stripe, and two local Dutch startups. \nOutside of work, she’s passionate about ethical design, behavioral economics, and marathon running."
   },
   {
     "name": "Carlos Mendes",
@@ -44,9 +45,10 @@
       "performance optimization"
     ],
     "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
-    "id": "f5f92701-afe5-438f-bd9b-ae5044ca4a63",
-    "createdAt": "2025-07-13T22:19:25.733Z",
-    "updatedAt": "2025-07-13T22:19:25.733Z"
+    "id": "77737fe0-5c6d-4579-8342-60e5d98fc329",
+    "createdAt": "2025-07-14T16:04:16.866Z",
+    "updatedAt": "2025-07-14T16:04:16.867Z",
+    "description": "Carlos Mendes (carlos.m@webflowcraft.com) is a full-stack JavaScript engineer working remotely from Porto, Portugal. \nWith 7+ years of experience, Carlos builds SaaS platforms and high-performance web apps for startups across the US and Europe. \nHe specializes in React, Node.js, Next.js, and PostgreSQL, and is a contributor to the React Hook Form library. \nCarlos has delivered end-to-end apps for clients in healthtech, edtech, and travel — including a real-time collaboration platform for a YC-backed company. \nBefore freelancing full-time, he worked at OutSystems as a frontend lead. \nCarlos is deeply interested in developer experience (DX), micro frontends, and performance optimization. \nHe also teaches advanced TypeScript workshops and runs a YouTube channel focused on debugging and testing patterns."
   },
   {
     "name": "Dr. Elena Petrova",
@@ -64,16 +66,15 @@
       "DeepMind"
     ],
     "interests": [
-      "foundation models",
-      "federated learning",
-      "low-resource language models",
       "open science",
-      "ethical AI"
+      "ethical AI",
+      "mentoring early-career female researchers"
     ],
-    "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs. She focuses on foundation models, federated learning, and low-resource language models.",
-    "id": "17bfad4e-fdf7-43dc-af5e-c4736d186c42",
-    "createdAt": "2025-07-13T22:19:27.940Z",
-    "updatedAt": "2025-07-13T22:19:27.940Z"
+    "experience": "Elena is currently leading a research group at NeuralX AI Labs, focusing on foundation models, federated learning, and low-resource language models. She has published papers at NeurIPS and ICML and collaborated on multilingual benchmark development.",
+    "id": "e32c7a9b-98a3-4c0a-ad4b-6a5ed252743b",
+    "createdAt": "2025-07-14T16:04:22.431Z",
+    "updatedAt": "2025-07-14T16:04:22.432Z",
+    "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI."
   },
   {
     "name": "John Doe",
@@ -92,9 +93,10 @@
       "open-source"
     ],
     "experience": "",
-    "id": "ead17df4-06cb-4c8a-9f36-9f0518ade23f",
-    "createdAt": "2025-07-13T22:19:28.825Z",
-    "updatedAt": "2025-07-13T22:19:28.826Z"
+    "id": "8f5f615e-f58f-4dd9-af23-fd6635361e96",
+    "createdAt": "2025-07-14T16:04:24.587Z",
+    "updatedAt": "2025-07-14T16:04:24.588Z",
+    "description": "John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source."
   },
   {
     "name": "Josh Lee",
@@ -110,10 +112,11 @@
       "producing YouTube content",
       "writing documentation"
     ],
-    "experience": "He helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
-    "id": "4ffe5a9f-84d9-4e8e-91f2-2af3b87cffd4",
-    "createdAt": "2025-07-13T22:19:30.703Z",
-    "updatedAt": "2025-07-13T22:19:30.704Z"
+    "experience": "Helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
+    "id": "48116ed0-d670-4826-94bd-6ec4d856e867",
+    "createdAt": "2025-07-14T16:04:27.611Z",
+    "updatedAt": "2025-07-14T16:04:27.611Z",
+    "description": "Josh Lee is a Developer Advocate working remotely from the UK. He helps build communities and educates engineers about cloud-native tooling.\nJosh loves speaking at meetups, producing YouTube content, and writing documentation. \nFormerly at HashiCorp, now working with multiple open-source foundations.\nHis email is josh@devrel.io."
   },
   {
     "name": "Dr. Kunal Sharma",
@@ -136,9 +139,10 @@
       "open science advocacy"
     ],
     "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich",
-    "id": "1e134798-af79-4d7e-bc28-c5fba5ddbded",
-    "createdAt": "2025-07-13T22:19:31.931Z",
-    "updatedAt": "2025-07-13T22:19:31.931Z"
+    "id": "55ee93a7-ec09-4cc3-9190-103b654fc210",
+    "createdAt": "2025-07-14T16:04:30.111Z",
+    "updatedAt": "2025-07-14T16:04:30.111Z",
+    "description": "Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy."
   },
   {
     "name": "Michael Anderson",
@@ -164,26 +168,28 @@
       "Netflix"
     ],
     "interests": [
-      "contributing to open-source monitoring tools",
+      "open-source monitoring tools",
       "mentoring junior engineers"
     ],
     "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
-    "id": "fe3cbd2a-14fa-4850-bcf2-676e2b0a0f78",
-    "createdAt": "2025-07-13T22:19:33.984Z",
-    "updatedAt": "2025-07-13T22:19:33.985Z"
+    "id": "85d9ee4a-1f65-499c-a280-c074c50f58dc",
+    "createdAt": "2025-07-14T16:04:33.478Z",
+    "updatedAt": "2025-07-14T16:04:33.480Z",
+    "description": "Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge."
   },
   {
-    "name": "null",
-    "email": "null",
-    "role": "null",
-    "location": "null",
+    "name": ":null",
+    "email": ":null",
+    "role": ":null",
+    "location": ":null",
     "skills": null,
     "previousCompanies": null,
     "interests": null,
-    "experience": "null",
-    "id": "67ca7781-cc00-4dbd-806a-ba8d0fae07b1",
-    "createdAt": "2025-07-13T22:19:35.213Z",
-    "updatedAt": "2025-07-13T22:19:35.213Z"
+    "experience": ":null",
+    "id": "122b315b-684b-4b2d-8c2f-67aae17db92c",
+    "createdAt": "2025-07-14T16:04:35.643Z",
+    "updatedAt": "2025-07-14T16:04:35.644Z",
+    "description": "`The sun is shining and it's a beautiful day for a walk in the park.`"
   },
   {
     "name": "Sarah Smith",
@@ -204,9 +210,10 @@
       "performance optimization"
     ],
     "experience": "",
-    "id": "283c7c57-44e0-421f-b844-4f645c4b225e",
-    "createdAt": "2025-07-13T22:19:36.203Z",
-    "updatedAt": "2025-07-13T22:19:36.204Z"
+    "id": "f05430e2-e12e-4997-b529-59cadc2ab7cd",
+    "createdAt": "2025-07-14T16:04:37.896Z",
+    "updatedAt": "2025-07-14T16:04:37.898Z",
+    "description": "`Sarah Smith (sarah@frontend.dev) is a frontend developer from San Francisco. \n    She specializes in React, TypeScript, and UI/UX design. \n    Previously worked at Meta and Airbnb. She's passionate about accessibility and performance optimization.`"
   },
   {
     "name": "Yossi Cohen",
@@ -226,8 +233,156 @@
       "exploring new markets in global food culture"
     ],
     "experience": "With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies.",
-    "id": "0cc0b347-a2ef-4ba2-96b1-5f5959933ba2",
-    "createdAt": "2025-07-13T22:19:37.975Z",
-    "updatedAt": "2025-07-13T22:19:37.976Z"
+    "id": "ea77dbbb-f9b7-4488-a45f-67d235d818de",
+    "createdAt": "2025-07-14T16:04:40.861Z",
+    "updatedAt": "2025-07-14T16:04:40.861Z",
+    "description": "Meet Yossi Cohen, an Israel-based entrepreneur and product strategist in the food industry.\nWith over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies. \nHis expertise spans supply chain optimization, food safety compliance, sustainable packaging, and consumer trend analysis.\nYossi is passionate about bridging culinary tradition with modern technology, and in his free time, he enjoys Mediterranean cooking, mentoring young founders, and exploring new markets in global food culture."
+  },
+  {
+    "id": "u104",
+    "name": "Avi Mizrahi",
+    "email": null,
+    "role": "Clinical Research Coordinator",
+    "location": "Jerusalem",
+    "skills": [
+      "Clinical Trials",
+      "Regulatory Compliance",
+      "Data Collection"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Managed oncology trials in multiple hospitals.",
+    "createdAt": "2025-07-14T16:04:41.130Z",
+    "updatedAt": "2025-07-14T16:04:41.134Z"
+  },
+  {
+    "id": "u204",
+    "name": "Dana Shimon",
+    "email": null,
+    "role": "Construction Engineer",
+    "location": "Haifa",
+    "skills": [
+      "AutoCAD",
+      "Project Management",
+      "Structural Analysis"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Supervised construction of high-rise apartments across northern Israel.",
+    "createdAt": "2025-07-14T16:04:41.130Z",
+    "updatedAt": "2025-07-14T16:04:41.787Z"
+  },
+  {
+    "id": "u205",
+    "name": "Elior Bar",
+    "email": null,
+    "role": "Architectural Engineer",
+    "location": "Ramat Gan",
+    "skills": [
+      "Revit",
+      "Urban Planning",
+      "Building Codes"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Specializes in sustainable and green building design.",
+    "createdAt": "2025-07-14T16:04:41.130Z",
+    "updatedAt": "2025-07-14T16:04:42.226Z"
+  },
+  {
+    "id": "u201",
+    "name": "Erez Nahum",
+    "email": null,
+    "role": "Executive Chef",
+    "location": "Tel Aviv",
+    "skills": [
+      "Mediterranean Cuisine",
+      "Menu Design",
+      "Team Leadership"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Head chef at a boutique hotel. Specializes in fusion and seasonal menus.",
+    "createdAt": "2025-07-14T16:04:41.131Z",
+    "updatedAt": "2025-07-14T16:04:43.018Z"
+  },
+  {
+    "id": "u105",
+    "name": "Lior Ben-David",
+    "email": null,
+    "role": "Quantitative Analyst",
+    "location": "Tel Aviv",
+    "skills": [
+      "R",
+      "Machine Learning",
+      "Monte Carlo",
+      "Python"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Built trading strategies for derivatives market.",
+    "createdAt": "2025-07-14T16:04:41.131Z",
+    "updatedAt": "2025-07-14T16:04:43.425Z"
+  },
+  {
+    "id": "u108",
+    "name": "Maya Rosen",
+    "email": null,
+    "role": "Biostatistician",
+    "location": "Netanya",
+    "skills": [
+      "SAS",
+      "R",
+      "Clinical Data Analysis"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Published research on heart disease in elderly populations.",
+    "createdAt": "2025-07-14T16:04:41.131Z",
+    "updatedAt": "2025-07-14T16:04:43.751Z"
+  },
+  {
+    "id": "u103",
+    "name": "Tamar Shalev",
+    "email": null,
+    "role": "Investment Banker",
+    "location": "Herzliya",
+    "skills": [
+      "Valuation",
+      "M&A",
+      "Pitchbooks",
+      "DCF Analysis"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Focused on cross-border fintech acquisitions.",
+    "createdAt": "2025-07-14T16:04:41.132Z",
+    "updatedAt": "2025-07-14T16:04:44.199Z"
+  },
+  {
+    "id": "u101",
+    "name": "Yael Cohen",
+    "email": null,
+    "role": "Financial Analyst",
+    "location": "Tel Aviv",
+    "skills": [
+      "Excel",
+      "Financial Modeling",
+      "Power BI",
+      "SQL"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Specializes in equity research for tech sector.",
+    "createdAt": "2025-07-14T16:04:41.132Z",
+    "updatedAt": "2025-07-14T16:04:44.619Z"
   }
 ]

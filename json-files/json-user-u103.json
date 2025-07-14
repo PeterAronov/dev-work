@@ -1,0 +1,19 @@
+{
+  "id": "u103",
+  "name": "Tamar Shalev",
+  "email": null,
+  "role": "Investment Banker",
+  "location": "Herzliya",
+  "skills": [
+    "Valuation",
+    "M&A",
+    "Pitchbooks",
+    "DCF Analysis"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Focused on cross-border fintech acquisitions.",
+  "createdAt": "2025-07-14T16:04:41.132Z",
+  "updatedAt": "2025-07-14T16:04:41.132Z"
+}
