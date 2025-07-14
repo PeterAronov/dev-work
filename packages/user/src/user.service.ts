@@ -1,87 +1,141 @@
 import { v4 as uuidv4 } from "uuid";
-import { OpenAIClient } from "../../llm";
-import { OpenAIChatModels } from "../../llm/clients/open-ai/openai.interface";
-import { ILLMClient } from "../../llm/llm.interface";
+import { LLMService } from "../../llm";
+import { ModelRegistry } from "../../llm/model.registry";
 import { IUser, IUserService } from "./user.interface";
 import { User, UserSchema } from "./user.schema";
 
 export class UserService implements IUserService {
   private users: IUser[] = []; // In-memory storage for demo
 
-  async extractUserFromText(text: string): Promise<IUser> {
+  /**
+   * Extract user data from plain text - simplified interface
+   */
+  private async extractUserFromPlainTextLLM(plainText: string): Promise<IUser> {
+    const instructions = `
+You are an expert data extraction agent specialized in extracting user information from various text formats.
+
+Your task is to:
+1. Carefully analyze the provided text
+2. Extract relevant user information according to the provided schema
+3. Return structured data that matches the schema exactly
+4. If a field cannot be determined from the text, set it to null
+5. Be precise and conservative - only extract information that is clearly stated
+
+The text may contain:
+- Personal information (name, email, location)
+- Professional details (job title, company, experience)
+- Skills and technologies
+- Additional notes or context
+
+Extract all relevant information and structure it according to the provided schema.
+
+Text to analyze:
+${plainText}
+    `;
+
     try {
-      console.log("Extracting user data from text...");
-
-      const llmClient: ILLMClient = new OpenAIClient();
-
-      const extractedUser = await llmClient.generateStructuredOutput<User>({
-        prompt: text,
+      const extractedUser = await LLMService.generateStructuredOutput<User>({
+        prompt: instructions,
         schema: UserSchema,
+        priority: [ModelRegistry.Gpt4O, ModelRegistry.Gpt4],
         config: {
           temperature: 0,
-          modelName: OpenAIChatModels.GPT_4O,
+          maxTokens: 2000,
         },
       });
 
-      // Add timestamps
-      const userWithTimestamps: IUser = {
+      // Convert extracted user to IUser with metadata
+      const user: IUser = {
         ...extractedUser,
+        id: uuidv4(),
         createdAt: new Date(),
         updatedAt: new Date(),
       };
 
-      console.log("Successfully extracted user data:", userWithTimestamps);
-      return userWithTimestamps;
+      return user;
+    } catch (error) {
+      console.error("Error in extractUserFromPlainTextLLM:", error);
+      throw new Error(`Failed to extract user data: ${error instanceof Error ? error.message : "Unknown error"}`);
+    }
+  }
+
+  async extractUserFromText(text: string): Promise<IUser> {
+    try {
+      console.log("Extracting user data from text...");
+
+      const user = await this.extractUserFromPlainTextLLM(text);
+
+      console.log("Successfully extracted user data:", user);
+      return user;
     } catch (error: any) {
       console.error("Error extracting user data:", error?.message || error);
       throw new Error(`Failed to extract user data: ${error?.message}`);
     }
   }
 
-  async extractUserFromTextWithExamples(
-    text: string,
-    examples?: Array<{ input: string; output: User }>
-  ): Promise<IUser> {
+  private async createUserEmbeddingLLM(user: IUser): Promise<number[]> {
     try {
-      console.log("Extracting user data with examples...");
+      // Create a comprehensive text representation of the user
+      const userText: string = this.userToSearchableText(user);
 
-      // Initialize client for this operation
-      const llmClient = new OpenAIClient();
+      console.log(`Creating embedding for user: ${user.name}`);
 
-      const extractedUser = await llmClient.generateStructuredOutputWithExamples<User>({
-        prompt: text,
-        schema: UserSchema,
-        examples,
+      const embeddingResponse = await LLMService.executeEmbedding({
+        input: userText,
+        priority: [ModelRegistry.OpenAIEmbeddingLarge], // Using the Large model as requested
         config: {
-          temperature: 0,
-          modelName: OpenAIChatModels.GPT_4O,
+          // No additional config needed for embeddings
         },
       });
 
-      const userWithTimestamps: IUser = {
-        ...extractedUser,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-
-      console.log("Successfully extracted user data with examples:", userWithTimestamps);
-      return userWithTimestamps;
-    } catch (error: any) {
-      console.error("Error extracting user data with examples:", error?.message || error);
-      throw new Error(`Failed to extract user data with examples: ${error?.message}`);
+      // Return the first (and only) embedding vector
+      return embeddingResponse.embeddings[0];
+    } catch (error) {
+      console.error("Error creating user embedding:", error);
+      throw new Error(`Failed to create embedding: ${error instanceof Error ? error.message : "Unknown error"}`);
     }
   }
 
   async saveUser(user: IUser): Promise<IUser> {
     const newUser: IUser = {
       ...user,
-      id: uuidv4(),
+      id: user.id || uuidv4(),
       updatedAt: new Date(),
     };
 
     this.users.push(newUser);
     console.log(`User saved with ID: ${newUser.id}`);
+
+    // Create embedding for the user after saving using OpenAIEmbeddingLarge
+    try {
+      const embedding = await this.createUserEmbeddingLLM(newUser);
+      console.log(`Created embedding for user ${newUser.id} using OpenAI Large model`);
+      console.log(`Vector dimension: ${embedding.length}`);
+      console.log(
+        `Embedding preview: [${embedding
+          .slice(0, 5)
+          .map((n) => n.toFixed(4))
+          .join(", ")}...]`
+      );
+
+      // Here you could store the embedding in a vector database
+      // For now, we're just logging it
+      // Example: await this.vectorDB.store(newUser.id, embedding);
+    } catch (error) {
+      console.warn(`Failed to create embedding for user ${newUser.id}:`, error);
+      // Don't fail the save operation if embedding fails
+    }
+
     return newUser;
+  }
+
+  async saveUsers(users: IUser[]): Promise<IUser[]> {
+    const savedUsers: IUser[] = [];
+    for (const user of users) {
+      const savedUser = await this.saveUser(user);
+      savedUsers.push(savedUser);
+    }
+    return savedUsers;
   }
 
   async getUserById(id: string): Promise<IUser | null> {
@@ -90,5 +144,22 @@ export class UserService implements IUserService {
 
   async getAllUsers(): Promise<IUser[]> {
     return [...this.users];
+  }
+
+  private userToSearchableText(user: IUser): string {
+    const parts: string[] = [];
+
+    if (user.description) parts.push(`Description: ${user.description}`);
+    if (user.id) parts.push(`ID: ${user.id}`);
+    if (user.name) parts.push(`Name: ${user.name}`);
+    if (user.email) parts.push(`Email: ${user.email}`);
+    if (user.role) parts.push(`Role: ${user.role}`);
+    if (user.location) parts.push(`Location: ${user.location}`);
+    if (user.skills?.length) parts.push(`Skills: ${user.skills.join(", ")}`);
+    if (user.previousCompanies?.length) parts.push(`Previous Companies: ${user.previousCompanies.join(", ")}`);
+    if (user.interests?.length) parts.push(`Interests: ${user.interests.join(", ")}`);
+    if (user.experience) parts.push(`Experience: ${user.experience}`);
+
+    return parts.join("\n");
   }
 }

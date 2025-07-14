@@ -1,0 +1,18 @@
+{
+  "id": "u104",
+  "name": "Avi Mizrahi",
+  "email": null,
+  "role": "Clinical Research Coordinator",
+  "location": "Jerusalem",
+  "skills": [
+    "Clinical Trials",
+    "Regulatory Compliance",
+    "Data Collection"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Managed oncology trials in multiple hospitals.",
+  "createdAt": "2025-07-14T16:04:41.130Z",
+  "updatedAt": "2025-07-14T16:04:41.130Z"
+}

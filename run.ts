@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { PlainTextParserService } from "./packages/paresrs";
+import { JSONUserParserService, PlainTextParserService } from "./packages/paresrs";
 import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
@@ -34,9 +34,10 @@ const getUserById = async (id: number) => {
 
 /************ LLM User Extraction *************/
 
-const extractAndSaveUser = async (text: string, filename?: string) => {
+const extractFromPlainTextAndSaveUser = async (text: string, filename?: string) => {
   try {
     const extractedUser: IUser = await userService.extractUserFromText(text);
+    extractedUser.description = text;
 
     const savedUser: IUser = await userService.saveUser(extractedUser);
 
@@ -47,59 +48,59 @@ const extractAndSaveUser = async (text: string, filename?: string) => {
 
     return savedUser;
   } catch (error: any) {
-    console.error("Error in extractAndSaveUser:", error?.message || error);
+    console.error("Error in extractFromPlainTextAndSaveUser:", error?.message || error);
     throw error;
   }
 };
 
-const extractUserWithExamples = async (text: string, filename?: string) => {
-  try {
-    const examples = [
-      {
-        input:
-          "Alice Johnson (alice.j@tech.com) is a data scientist from New York. She works with Python, machine learning, and has worked at Netflix.",
-        output: {
-          id: null,
-          name: "Alice Johnson",
-          email: "alice.j@tech.com",
-          role: "data scientist",
-          location: "New York",
-          skills: ["Python", "machine learning"],
-          previousCompanies: ["Netflix"],
-          interests: null,
-          experience: null,
-        },
-      },
-      {
-        input: "The weather is nice today with sunny skies.",
-        output: {
-          id: null,
-          name: null,
-          email: null,
-          role: null,
-          location: null,
-          skills: null,
-          previousCompanies: null,
-          interests: null,
-          experience: null,
-        },
-      },
-    ];
+// const extractUserWithExamples = async (text: string, filename?: string) => {
+//   try {
+//     const examples = [
+//       {
+//         input:
+//           "Alice Johnson (alice.j@tech.com) is a data scientist from New York. She works with Python, machine learning, and has worked at Netflix.",
+//         output: {
+//           id: null,
+//           name: "Alice Johnson",
+//           email: "alice.j@tech.com",
+//           role: "data scientist",
+//           location: "New York",
+//           skills: ["Python", "machine learning"],
+//           previousCompanies: ["Netflix"],
+//           interests: null,
+//           experience: null,
+//         },
+//       },
+//       {
+//         input: "The weather is nice today with sunny skies.",
+//         output: {
+//           id: null,
+//           name: null,
+//           email: null,
+//           role: null,
+//           location: null,
+//           skills: null,
+//           previousCompanies: null,
+//           interests: null,
+//           experience: null,
+//         },
+//       },
+//     ];
 
-    const extractedUser = await userService.extractUserFromTextWithExamples(text, examples);
-    const savedUser = await userService.saveUser(extractedUser);
+//     const extractedUser = await userService.extractUserFromTextWithExamples(text, examples);
+//     const savedUser = await userService.saveUser(extractedUser);
 
-    if (filename) {
-      saveToJsonFile(filename, savedUser);
-      console.log(`Saved user with examples to ${filename}`);
-    }
+//     if (filename) {
+//       saveToJsonFile(filename, savedUser);
+//       console.log(`Saved user with examples to ${filename}`);
+//     }
 
-    return savedUser;
-  } catch (error: any) {
-    console.error("Error in extractUserWithExamples:", error?.message || error);
-    throw error;
-  }
-};
+//     return savedUser;
+//   } catch (error: any) {
+//     console.error("Error in extractUserWithExamples:", error?.message || error);
+//     throw error;
+//   }
+// };
 
 const runAll = async () => {
   /*
@@ -113,13 +114,22 @@ const runAll = async () => {
 
   // Basic extraction
 
-  const textFiles = await PlainTextParserService.readTextFiles("static-data/plain-text");
+  const textFiles = await PlainTextParserService.readTextFiles("static-data/users/plain-text");
 
   for (const file of textFiles) {
     console.log(`\n--- Processing: ${file.filename} ---`);
     console.log("File content:", file.content);
-    await extractAndSaveUser(file.content, file.filename);
+    await extractFromPlainTextAndSaveUser(file.content, file.filename);
   }
+
+  const jsonUsers: IUser[] = await JSONUserParserService.parseJSONFiles("static-data/users/json");
+  console.log(`Parsed ${jsonUsers.length} JSON users from static-data/users/json`);
+  for (const user of jsonUsers) {
+    saveToJsonFile(`json-user-${user.id}`, user);
+    console.log(`\n--- Processing JSON User: ${user.name} ---`);
+    console.log("User data:", JSON.stringify(user, null, 2));
+  }
+  await userService.saveUsers(jsonUsers);
 
   // Demonstrate extraction with examples
   /*

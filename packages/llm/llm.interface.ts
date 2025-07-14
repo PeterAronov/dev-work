@@ -12,10 +12,12 @@ export enum LLMProvider {
 }
 
 export enum LLMModelCapability {
-  Chat = "chat", // Conversational, multi-turn
-  Completion = "completion", // Single-turn prompt → text
-  Embedding = "embedding", // Converts text/data into vectors
-  Vision = "vision", // Text + image multimodal inputs
+  Chat = "chat", // Multi-turn conversational (messages array)
+  Completion = "completion", // Single-turn prompt → text (single prompt string)
+  Embedding = "embedding", // Text/data → vectors
+  Vision = "vision", // Text + image inputs
+  Audio = "audio", // Speech-to-text, text-to-speech
+  ImageGeneration = "image_generation", // Text → image
 }
 
 export enum LLMTask {
@@ -25,8 +27,11 @@ export enum LLMTask {
   SQLGen = "sql_generation", // SQL, SOQL, etc.
   RAG = "retrieval_augmented_gen", // RAG-style response
   MetadataSearch = "metadata_search", // Structured filtering
+  Translation = "translation", // Language translation
+  Summarization = "summarization", // Text summarization
+  Classification = "classification", // Text classification
+  SentimentAnalysis = "sentiment", // Sentiment analysis
 }
-
 export enum ChatMessageRole {
   System = "system",
   User = "user",
@@ -35,16 +40,21 @@ export enum ChatMessageRole {
   Function = "function",
 }
 
-// === Static Model Info (for registry or system-wide metadata) ===
 export interface LLMModel {
-  id: string; // UUID, slug, or config key
+  id: string;
+  name: string;
   provider: LLMProvider;
-  capability: LLMModelCapability;
+  capabilities: LLMModelCapability[];
   tasks?: LLMTask[];
   cost?: {
-    inputToken: number;
-    outputToken: number;
+    inputToken: number; // per 1K tokens
+    outputToken: number; // per 1K tokens
   };
+  contextWindow?: number;
+  maxOutputTokens?: number;
+  supportsStreaming?: boolean;
+  supportsVision?: boolean;
+  supportsFunctionCalling?: boolean;
 }
 
 export interface LLMModelConfig {
@@ -61,26 +71,32 @@ export interface LLMModelConfig {
   providerExtras?: Record<string, any>;
 }
 
+// LLM Request and Response Interfaces ///
+
 export interface LLMRequest<TArgs = any> {
   prompt?: string;
-  messages?: ChatMessage[]; // for chat-based models
   args?: TArgs;
   config?: LLMModelConfig;
-  tools?: string[];
   model?: LLMModel; // optional, fallback to config.modelName
+  // Service-level model selection
+  priority?: LLMModel[];
+  criteria?: ModelSelectionCriteria;
 }
 
-export interface ChatMessage {
-  role: ChatMessageRole;
-  content: string;
-  name?: string; // e.g., function/tool name
-  tool_call_id?: string;
+export interface LLMGenerateStructuredOutputRequest extends LLMRequest {
+  schema: z.ZodTypeAny;
 }
 
-export interface LLMResponse<T = any> {
-  output: string;
-  raw?: any; // full API payload
-  parsed?: T;
+export interface LLMGenerateStructuredOutputWithExamplesRequest<T> extends LLMGenerateStructuredOutputRequest {
+  examples?: Array<{ input: string; output: T }>;
+}
+
+export interface LLMEmbeddingRequest extends LLMRequest {
+  input: string | object | (string | object)[];
+}
+
+export interface LLMEmbeddingResponse {
+  embeddings: number[][];
 }
 
 // === Final Interface ===
@@ -88,25 +104,25 @@ export interface ILLMClient {
   /**
    * Generates a free-form or chat-based response.
    */
-  generateText?<T = any>(req: LLMRequest<T>): Promise<LLMResponse<T>>;
+  generateText?<T = any>(req: LLMRequest<T>): Promise<T>;
 
   /**
    * Extracts structured data from a prompt using schema validation.
    */
-  generateStructuredOutput<T>(req: GenerateStructuredOutputReq): Promise<T>;
+  generateStructuredOutput<T>(req: LLMGenerateStructuredOutputRequest): Promise<T>;
 
   /**
    * Converts input(s) into embedding vectors.
    */
-  embed(input: string | object | (string | object)[]): Promise<number[][]>; // batched
+  embed(req: LLMEmbeddingRequest): Promise<LLMEmbeddingResponse>;
 }
 
-export interface GenerateStructuredOutputReq {
-  prompt: string;
-  schema: z.ZodTypeAny;
-  config?: LLMModelConfig;
-}
-
-export interface GenerateStructuredOutputWithExamplesReq<T> extends GenerateStructuredOutputReq {
-  examples?: Array<{ input: string; output: T }>;
+export interface ModelSelectionCriteria {
+  capability: LLMModelCapability;
+  task?: LLMTask;
+  requiresVision?: boolean;
+  requiresFunctionCalling?: boolean;
+  maxBudget?: number;
+  preferredProvider?: LLMProvider;
+  minContextWindow?: number;
 }

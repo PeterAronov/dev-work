@@ -1,0 +1,18 @@
+{
+  "id": "u205",
+  "name": "Elior Bar",
+  "email": null,
+  "role": "Architectural Engineer",
+  "location": "Ramat Gan",
+  "skills": [
+    "Revit",
+    "Urban Planning",
+    "Building Codes"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Specializes in sustainable and green building design.",
+  "createdAt": "2025-07-14T16:04:41.130Z",
+  "updatedAt": "2025-07-14T16:04:41.130Z"
+}

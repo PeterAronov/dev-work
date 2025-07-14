@@ -3,10 +3,11 @@ import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { z } from "zod";
 import { convertToPlainText } from "../../../utils/convert.user.to.plain.text";
 import {
-  ChatMessage,
-  GenerateStructuredOutputReq,
-  GenerateStructuredOutputWithExamplesReq,
   ILLMClient,
+  LLMEmbeddingRequest,
+  LLMEmbeddingResponse,
+  LLMGenerateStructuredOutputRequest,
+  LLMGenerateStructuredOutputWithExamplesRequest,
   LLMModelConfig,
 } from "../../llm.interface";
 import { OpenAIChatModels, OpenAIEmbeddingModels } from "./openai.interface";
@@ -29,7 +30,7 @@ export default class OpenAIClient implements ILLMClient {
     });
   }
 
-  async generateStructuredOutput<T>(req: GenerateStructuredOutputReq): Promise<T> {
+  async generateStructuredOutput<T>(req: LLMGenerateStructuredOutputRequest): Promise<T> {
     const { prompt, schema, config } = req;
 
     // Create the prompt template following the reference pattern
@@ -56,7 +57,7 @@ return null for the attribute's value.`,
     return result as T;
   }
 
-  async generateStructuredOutputWithExamples<T>(req: GenerateStructuredOutputWithExamplesReq<T>): Promise<T> {
+  async generateStructuredOutputWithExamples<T>(req: LLMGenerateStructuredOutputWithExamplesRequest<T>): Promise<T> {
     const { prompt, schema, config, examples = [] } = req;
 
     const messages: Array<[string, string]> = [
@@ -93,11 +94,14 @@ Follow the patterns demonstrated in the examples below.`,
     return result as T;
   }
 
-  async embed(input: string | object | (string | object)[]): Promise<number[][]> {
+  async embed(req: LLMEmbeddingRequest): Promise<LLMEmbeddingResponse> {
+    const { input } = req;
+
     const texts = Array.isArray(input) ? input : [input];
     const stringified = texts.map((t) => (typeof t === "string" ? t : JSON.stringify(t)));
 
     const model = this.makeEmbeddingModel();
-    return model.embedDocuments(stringified);
+    const embeddings: number[][] = await model.embedDocuments(stringified);
+    return { embeddings };
   }
 }
