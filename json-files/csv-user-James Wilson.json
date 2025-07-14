@@ -1,0 +1,18 @@
+{
+  "name": "James Wilson",
+  "email": null,
+  "role": "Night Auditor",
+  "location": "London",
+  "skills": [
+    "Security Protocols",
+    "Accounting",
+    "Opera PMS",
+    "English"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "2 years",
+  "description": null,
+  "createdAt": "2025-07-14T17:24:02.035Z",
+  "updatedAt": "2025-07-14T17:24:02.035Z"
+}

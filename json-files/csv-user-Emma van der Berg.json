@@ -1,0 +1,19 @@
+{
+  "name": "Emma van der Berg",
+  "email": null,
+  "role": "Concierge",
+  "location": "Amsterdam",
+  "skills": [
+    "Local Knowledge",
+    "Reservation Systems",
+    "Dutch",
+    "French",
+    "English"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "4 years",
+  "description": null,
+  "createdAt": "2025-07-14T17:24:02.035Z",
+  "updatedAt": "2025-07-14T17:24:02.035Z"
+}

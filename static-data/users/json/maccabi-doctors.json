@@ -1,0 +1,42 @@
+[
+  {
+    "user_id": "doc101",
+    "full_name": "Dr. Tal Ben-David",
+    "job_title": "Internal Medicine Specialist",
+    "location": "Tel Aviv",
+    "skills": ["Diagnostics", "Hypertension", "Chronic Disease Management"],
+    "notes": "Runs patient education workshops at the central Maccabi branch."
+  },
+  {
+    "user_id": "doc102",
+    "full_name": "Dr. Shiran Malka",
+    "job_title": "Pediatrician",
+    "location": "Petah Tikva",
+    "skills": ["Child Nutrition", "Developmental Disorders", "Asthma Management"],
+    "notes": "Published several papers on childhood asthma in urban populations."
+  },
+  {
+    "user_id": "doc103",
+    "full_name": "Dr. Amir Azulay",
+    "job_title": "Orthopedic Surgeon",
+    "location": "Ashdod",
+    "skills": ["Joint Replacement", "Sports Injuries", "Rehabilitation"],
+    "notes": "Collaborates with IDF rehab centers on musculoskeletal injuries."
+  },
+  {
+    "user_id": "doc104",
+    "full_name": "Dr. Meital Avrahami",
+    "job_title": "Neurologist",
+    "location": "Ramat Gan",
+    "skills": ["Epilepsy", "Headaches", "Neurodegenerative Diseases"],
+    "notes": "Leads the neurology clinic at Maccabi’s Ramat Gan branch."
+  },
+  {
+    "user_id": "doc105",
+    "full_name": "Dr. Gilad Regev",
+    "job_title": "Ophthalmologist",
+    "location": "Beer Sheva",
+    "skills": ["Retinal Disorders", "Diabetic Eye Disease", "Laser Surgery"],
+    "notes": "Head of southern region vision screening program."
+  }
+]

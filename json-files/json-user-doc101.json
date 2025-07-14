@@ -1,0 +1,18 @@
+{
+  "id": "doc101",
+  "name": "Dr. Tal Ben-David",
+  "email": null,
+  "role": "Internal Medicine Specialist",
+  "location": "Tel Aviv",
+  "skills": [
+    "Diagnostics",
+    "Hypertension",
+    "Chronic Disease Management"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Runs patient education workshops at the central Maccabi branch.",
+  "createdAt": "2025-07-14T16:21:44.148Z",
+  "updatedAt": "2025-07-14T16:21:44.148Z"
+}

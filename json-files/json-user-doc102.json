@@ -1,0 +1,18 @@
+{
+  "id": "doc102",
+  "name": "Dr. Shiran Malka",
+  "email": null,
+  "role": "Pediatrician",
+  "location": "Petah Tikva",
+  "skills": [
+    "Child Nutrition",
+    "Developmental Disorders",
+    "Asthma Management"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Published several papers on childhood asthma in urban populations.",
+  "createdAt": "2025-07-14T16:21:44.148Z",
+  "updatedAt": "2025-07-14T16:21:44.148Z"
+}

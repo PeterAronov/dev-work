@@ -1,0 +1,18 @@
+{
+  "id": "doc105",
+  "name": "Dr. Gilad Regev",
+  "email": null,
+  "role": "Ophthalmologist",
+  "location": "Beer Sheva",
+  "skills": [
+    "Retinal Disorders",
+    "Diabetic Eye Disease",
+    "Laser Surgery"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Head of southern region vision screening program.",
+  "createdAt": "2025-07-14T16:21:44.148Z",
+  "updatedAt": "2025-07-14T16:21:44.148Z"
+}

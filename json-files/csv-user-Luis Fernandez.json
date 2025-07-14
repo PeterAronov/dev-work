@@ -1,0 +1,19 @@
+{
+  "name": "Luis Fernandez",
+  "email": null,
+  "role": "Restaurant Manager",
+  "location": "Barcelona",
+  "skills": [
+    "Food Service",
+    "Wine Knowledge",
+    "Staff Training",
+    "Catalan",
+    "Spanish"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "7 years",
+  "description": null,
+  "createdAt": "2025-07-14T17:24:02.035Z",
+  "updatedAt": "2025-07-14T17:24:02.035Z"
+}

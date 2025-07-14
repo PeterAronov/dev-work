@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { JSONUserParserService, PlainTextParserService } from "./packages/paresrs";
+import { CSVUserParserService, JSONUserParserService, PlainTextParserService } from "./packages/paresrs";
 import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
@@ -119,17 +119,33 @@ const runAll = async () => {
   for (const file of textFiles) {
     console.log(`\n--- Processing: ${file.filename} ---`);
     console.log("File content:", file.content);
-    await extractFromPlainTextAndSaveUser(file.content, file.filename);
+    // await extractFromPlainTextAndSaveUser(file.content, file.filename);
   }
 
-  const jsonUsers: IUser[] = await JSONUserParserService.parseJSONFiles("static-data/users/json");
-  console.log(`Parsed ${jsonUsers.length} JSON users from static-data/users/json`);
-  for (const user of jsonUsers) {
-    saveToJsonFile(`json-user-${user.id}`, user);
-    console.log(`\n--- Processing JSON User: ${user.name} ---`);
+  /// JSON User Extraction
+
+  console.log("\n=== Starting JSON User Extraction ===");
+
+  // const jsonUsers: IUser[] = await JSONUserParserService.parseJSONFiles("static-data/users/json");
+  // console.log(`Parsed ${jsonUsers.length} JSON users from static-data/users/json`);
+  // for (const user of jsonUsers) {
+  //   saveToJsonFile(`json-user-${user.id}`, user);
+  //   console.log(`\n--- Processing JSON User: ${user.name} ---`);
+  //   console.log("User data:", JSON.stringify(user, null, 2));
+  // }
+  // await userService.saveUsers(jsonUsers);
+
+  // CSV User Extraction
+
+  console.log("\n=== Starting CSV User Extraction ===");
+  const csvUsers: IUser[] = await CSVUserParserService.parseCSVFiles("static-data/users/csv");
+  console.log(`Parsed ${csvUsers.length} CSV users from static-data/users/csv`);
+  for (const user of csvUsers) {
+    saveToJsonFile(`csv-user-${user.name}`, user);
+    console.log(`\n--- Processing CSV User: ${user.name} ---`);
     console.log("User data:", JSON.stringify(user, null, 2));
   }
-  await userService.saveUsers(jsonUsers);
+  await userService.saveUsers(csvUsers);
 
   // Demonstrate extraction with examples
   /*
