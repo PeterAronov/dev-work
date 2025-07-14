@@ -36,7 +36,7 @@ const getUserById = async (id: number) => {
 
 const extractFromPlainTextAndSaveUser = async (text: string, filename?: string) => {
   try {
-    const extractedUser: IUser = await userService.extractUserFromText(text);
+    const extractedUser: IUser = await userService.extractUserFromPlainText(text);
     extractedUser.description = text;
 
     const savedUser: IUser = await userService.saveUser(extractedUser);
@@ -87,7 +87,7 @@ const extractFromPlainTextAndSaveUser = async (text: string, filename?: string) 
 //       },
 //     ];
 
-//     const extractedUser = await userService.extractUserFromTextWithExamples(text, examples);
+//     const extractedUser = await userService.extractUserFromPlainTextWithExamples(text, examples);
 //     const savedUser = await userService.saveUser(extractedUser);
 
 //     if (filename) {
@@ -119,7 +119,7 @@ const runAll = async () => {
   for (const file of textFiles) {
     console.log(`\n--- Processing: ${file.filename} ---`);
     console.log("File content:", file.content);
-    // await extractFromPlainTextAndSaveUser(file.content, file.filename);
+    await extractFromPlainTextAndSaveUser(file.content, file.filename);
   }
 
   /// JSON User Extraction

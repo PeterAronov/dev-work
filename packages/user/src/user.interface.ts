@@ -14,7 +14,7 @@ export interface IUser {
 }
 
 export interface IUserService {
-  extractUserFromText(text: string): Promise<IUser>;
+  extractUserFromPlainText(text: string): Promise<IUser>;
   saveUser(user: IUser): Promise<IUser>;
   getUserById(id: string): Promise<IUser | null>;
   getAllUsers(): Promise<IUser[]>;

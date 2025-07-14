@@ -59,7 +59,7 @@ ${plainText}
     }
   }
 
-  async extractUserFromText(text: string): Promise<IUser> {
+  async extractUserFromPlainText(text: string): Promise<IUser> {
     try {
       console.log("Extracting user data from text...");
 
@@ -72,6 +72,9 @@ ${plainText}
       throw new Error(`Failed to extract user data: ${error?.message}`);
     }
   }
+
+
+  
 
   private async createUserEmbeddingLLM(user: IUser): Promise<number[]> {
     try {

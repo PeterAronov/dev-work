@@ -1,5 +1,244 @@
 [
   {
+    "name": "Alice Morgan",
+    "email": "alice.morgan@productlabs.io",
+    "role": "Product Manager",
+    "location": "Amsterdam",
+    "skills": [
+      "Agile methodology",
+      "stakeholder communication",
+      "roadmapping"
+    ],
+    "previousCompanies": [
+      "Booking.com",
+      "Stripe",
+      "two local Dutch startups"
+    ],
+    "interests": [
+      "ethical design",
+      "behavioral economics",
+      "marathon running"
+    ],
+    "experience": "She has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
+    "id": "5a1d0cd4-752a-4833-9e9d-11bdf961573c",
+    "createdAt": "2025-07-14T20:18:13.122Z",
+    "updatedAt": "2025-07-14T20:18:13.123Z",
+    "description": "Alice Morgan (alice.morgan@productlabs.io) is a seasoned product manager based in Amsterdam. \nShe has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech. \nAlice has strong skills in Agile methodology, stakeholder communication, and roadmapping. \nShe previously worked at Booking.com, Stripe, and two local Dutch startups. \nOutside of work, she’s passionate about ethical design, behavioral economics, and marathon running."
+  },
+  {
+    "name": "Carlos Mendes",
+    "email": "carlos.m@webflowcraft.com",
+    "role": "full-stack JavaScript engineer",
+    "location": "Porto, Portugal",
+    "skills": [
+      "React",
+      "Node.js",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "previousCompanies": [
+      "OutSystems"
+    ],
+    "interests": [
+      "developer experience (DX)",
+      "micro frontends",
+      "performance optimization"
+    ],
+    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
+    "id": "f8a38ef3-64c1-4d76-8c1f-1b009d8986c5",
+    "createdAt": "2025-07-14T20:18:23.538Z",
+    "updatedAt": "2025-07-14T20:18:23.539Z",
+    "description": "Carlos Mendes (carlos.m@webflowcraft.com) is a full-stack JavaScript engineer working remotely from Porto, Portugal. \nWith 7+ years of experience, Carlos builds SaaS platforms and high-performance web apps for startups across the US and Europe. \nHe specializes in React, Node.js, Next.js, and PostgreSQL, and is a contributor to the React Hook Form library. \nCarlos has delivered end-to-end apps for clients in healthtech, edtech, and travel — including a real-time collaboration platform for a YC-backed company. \nBefore freelancing full-time, he worked at OutSystems as a frontend lead. \nCarlos is deeply interested in developer experience (DX), micro frontends, and performance optimization. \nHe also teaches advanced TypeScript workshops and runs a YouTube channel focused on debugging and testing patterns."
+  },
+  {
+    "name": "Dr. Elena Petrova",
+    "email": "elena.petrova@neuralx.ai",
+    "role": "AI research scientist",
+    "location": "Zurich, Switzerland",
+    "skills": [
+      "PyTorch",
+      "Hugging Face Transformers",
+      "TensorFlow",
+      "fastai"
+    ],
+    "previousCompanies": [
+      "Hugging Face",
+      "DeepMind"
+    ],
+    "interests": [
+      "open science",
+      "ethical AI",
+      "mentoring early-career female researchers"
+    ],
+    "experience": "Elena is currently leading a research group at NeuralX AI Labs, focusing on foundation models, federated learning, and low-resource language models. She has published papers at NeurIPS and ICML and collaborated on multilingual benchmark development.",
+    "id": "9d3ad3bb-bc50-4093-b222-b7276a1ed571",
+    "createdAt": "2025-07-14T20:18:29.634Z",
+    "updatedAt": "2025-07-14T20:18:29.634Z",
+    "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI."
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@tech.com",
+    "role": "backend engineer",
+    "location": "Berlin",
+    "skills": [
+      "Kubernetes",
+      "Python",
+      "cloud infrastructure"
+    ],
+    "previousCompanies": [
+      "Google"
+    ],
+    "interests": [
+      "open-source"
+    ],
+    "experience": "",
+    "id": "fca7e8b1-6a0d-444f-aa66-f626d210b99e",
+    "createdAt": "2025-07-14T20:18:33.183Z",
+    "updatedAt": "2025-07-14T20:18:33.184Z",
+    "description": "John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source."
+  },
+  {
+    "name": "Josh Lee",
+    "email": "josh@devrel.io",
+    "role": "Developer Advocate",
+    "location": "UK",
+    "skills": null,
+    "previousCompanies": [
+      "HashiCorp"
+    ],
+    "interests": [
+      "speaking at meetups",
+      "producing YouTube content",
+      "writing documentation"
+    ],
+    "experience": "He helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
+    "id": "df767633-58c5-48d5-beb0-88505951a962",
+    "createdAt": "2025-07-14T20:18:41.113Z",
+    "updatedAt": "2025-07-14T20:18:41.113Z",
+    "description": "Josh Lee is a Developer Advocate working remotely from the UK. He helps build communities and educates engineers about cloud-native tooling.\nJosh loves speaking at meetups, producing YouTube content, and writing documentation. \nFormerly at HashiCorp, now working with multiple open-source foundations.\nHis email is josh@devrel.io."
+  },
+  {
+    "name": "Dr. Kunal Sharma",
+    "email": "k.sharma@ai.research.org",
+    "role": "Data Scientist",
+    "location": "Berlin",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "NLP",
+      "biomedical data modeling"
+    ],
+    "previousCompanies": [
+      "DeepMind",
+      "Novartis"
+    ],
+    "interests": [
+      "long hikes",
+      "jazz piano",
+      "open science advocacy"
+    ],
+    "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich",
+    "id": "a6b3690c-cde2-48f8-9592-8679e095354a",
+    "createdAt": "2025-07-14T20:18:46.690Z",
+    "updatedAt": "2025-07-14T20:18:46.691Z",
+    "description": "Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy."
+  },
+  {
+    "name": "Michael Anderson",
+    "email": "michael.anderson@cloudops.io",
+    "role": "Senior DevOps Engineer",
+    "location": "Austin, Texas",
+    "skills": [
+      "CI/CD",
+      "cloud infrastructure",
+      "automation",
+      "AWS",
+      "GCP",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Jenkins",
+      "Helm",
+      "Prometheus",
+      "Bash scripting"
+    ],
+    "previousCompanies": [
+      "IBM",
+      "Netflix"
+    ],
+    "interests": [
+      "open-source monitoring tools",
+      "mentoring junior engineers"
+    ],
+    "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps.",
+    "id": "84e0a6b0-87c8-4d70-9d7c-cd6282f903e6",
+    "createdAt": "2025-07-14T20:18:54.970Z",
+    "updatedAt": "2025-07-14T20:18:54.971Z",
+    "description": "Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge."
+  },
+  {
+    "name": ":null,",
+    "email": ":null,",
+    "role": ":null,",
+    "location": ":null,",
+    "skills": null,
+    "previousCompanies": null,
+    "interests": null,
+    "experience": ":null,",
+    "id": "adee090e-f466-4a7e-9b1f-2c63afd206fa",
+    "createdAt": "2025-07-14T20:18:59.510Z",
+    "updatedAt": "2025-07-14T20:18:59.510Z",
+    "description": "`The sun is shining and it's a beautiful day for a walk in the park.`"
+  },
+  {
+    "name": "Sarah Smith",
+    "email": "sarah@frontend.dev",
+    "role": "frontend developer",
+    "location": "San Francisco",
+    "skills": [
+      "React",
+      "TypeScript",
+      "UI/UX design"
+    ],
+    "previousCompanies": [
+      "Meta",
+      "Airbnb"
+    ],
+    "interests": [
+      "accessibility",
+      "performance optimization"
+    ],
+    "experience": "",
+    "id": "09ba2ee8-9c8b-462d-a774-7867e8852617",
+    "createdAt": "2025-07-14T20:19:02.282Z",
+    "updatedAt": "2025-07-14T20:19:02.282Z",
+    "description": "`Sarah Smith (sarah@frontend.dev) is a frontend developer from San Francisco. \n    She specializes in React, TypeScript, and UI/UX design. \n    Previously worked at Meta and Airbnb. She's passionate about accessibility and performance optimization.`"
+  },
+  {
+    "name": "Yossi Cohen",
+    "email": "",
+    "role": "entrepreneur and product strategist",
+    "location": "Israel",
+    "skills": [
+      "supply chain optimization",
+      "food safety compliance",
+      "sustainable packaging",
+      "consumer trend analysis"
+    ],
+    "previousCompanies": null,
+    "interests": [
+      "Mediterranean cooking",
+      "mentoring young founders",
+      "exploring new markets in global food culture"
+    ],
+    "experience": "Over a decade of experience leading innovation and growth initiatives across food tech startups and large-scale production companies.",
+    "id": "5281ebd0-a16d-411c-9826-62bb65e82667",
+    "createdAt": "2025-07-14T20:19:10.031Z",
+    "updatedAt": "2025-07-14T20:19:10.032Z",
+    "description": "Meet Yossi Cohen, an Israel-based entrepreneur and product strategist in the food industry.\nWith over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies. \nHis expertise spans supply chain optimization, food safety compliance, sustainable packaging, and consumer trend analysis.\nYossi is passionate about bridging culinary tradition with modern technology, and in his free time, he enjoys Mediterranean cooking, mentoring young founders, and exploring new markets in global food culture."
+  },
+  {
     "name": "Marc Rodriguez",
     "email": null,
     "role": "Resident DJ",
@@ -15,9 +254,9 @@
     "interests": null,
     "experience": "12 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:02.038Z",
-    "id": "5ace3720-e0fc-4db2-a7b4-666e1e8ae7b0"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:10.947Z",
+    "id": "364332ad-917d-4ea2-860d-56440f4f2c78"
   },
   {
     "name": "Chloe Williams",
@@ -34,9 +273,9 @@
     "interests": null,
     "experience": "8 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:03.211Z",
-    "id": "8b70366d-9cf1-4283-820a-e088c466d882"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:11.804Z",
+    "id": "fc98a9cf-726d-48c4-bcdd-be4613cd99a2"
   },
   {
     "name": "Alessandro Nero",
@@ -53,9 +292,9 @@
     "interests": null,
     "experience": "15 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:03.732Z",
-    "id": "d611d1d5-ca81-42e7-8a0e-4ba1637f5b45"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:12.117Z",
+    "id": "daa465aa-2a46-46e9-b85f-ad8b856c42d8"
   },
   {
     "name": "Luna Morales",
@@ -72,9 +311,9 @@
     "interests": null,
     "experience": "4 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:04.050Z",
-    "id": "5e5835cb-b29e-4beb-9567-ad5d9edb2955"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:12.395Z",
+    "id": "cba89d1b-bfb5-4576-b814-975e0f797caf"
   },
   {
     "name": "Kai Thompson",
@@ -91,9 +330,9 @@
     "interests": null,
     "experience": "7 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:07.270Z",
-    "id": "1f0bc28c-e602-40f9-a84c-970ee8e62838"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:12.880Z",
+    "id": "9e565c0b-6029-497c-98d0-77697b254e72"
   },
   {
     "name": "Valentina Costa",
@@ -110,9 +349,9 @@
     "interests": null,
     "experience": "6 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:09.061Z",
-    "id": "dab1f32a-2695-462b-9ebc-b934a8e80203"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:13.194Z",
+    "id": "9ad10b14-3f9e-4703-88e4-5e32100e2abc"
   },
   {
     "name": "Diego Sanchez",
@@ -129,9 +368,9 @@
     "interests": null,
     "experience": "10 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:09.529Z",
-    "id": "b11994bc-5912-47bb-a610-1009191c8f42"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:13.643Z",
+    "id": "7d7cbb30-7775-419f-962a-67a441a828c1"
   },
   {
     "name": "Zara Ahmed",
@@ -148,9 +387,9 @@
     "interests": null,
     "experience": "5 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:10.034Z",
-    "id": "f5eaf567-40ad-44c7-bca4-4deead54b097"
+    "createdAt": "2025-07-14T20:19:10.940Z",
+    "updatedAt": "2025-07-14T20:19:14.122Z",
+    "id": "3cf3d1f3-d41e-4ffd-9873-cfdc04c4a7dc"
   },
   {
     "name": "Carlos Martinez",
@@ -167,9 +406,9 @@
     "interests": null,
     "experience": "8 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:10.646Z",
-    "id": "20dc8763-ed00-4f60-b2a9-2a9fd94e6a16"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:14.851Z",
+    "id": "48a928e0-fabb-4194-9e14-107cc9b37c9c"
   },
   {
     "name": "Sofia Rossi",
@@ -186,9 +425,9 @@
     "interests": null,
     "experience": "5 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:11.376Z",
-    "id": "d067faf5-7343-4b9d-8823-1ae014c89463"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:15.465Z",
+    "id": "9d84867e-36b6-4dce-bd75-fcb44a731562"
   },
   {
     "name": "Emma van der Berg",
@@ -206,9 +445,9 @@
     "interests": null,
     "experience": "4 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:12.080Z",
-    "id": "50437e86-4465-4fa8-a99f-4edc0aa0d9dc"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:15.741Z",
+    "id": "8d5cb8de-4419-4192-ac3a-2721cf6b3836"
   },
   {
     "name": "Luis Fernandez",
@@ -226,9 +465,9 @@
     "interests": null,
     "experience": "7 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:12.809Z",
-    "id": "0178e4f5-e7c0-4de8-9eee-e3d404b9fa4d"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:16.492Z",
+    "id": "91f2c402-37ca-4a31-b4fe-6563a9b89b9f"
   },
   {
     "name": "Anna Schmidt",
@@ -245,9 +484,9 @@
     "interests": null,
     "experience": "3 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:13.159Z",
-    "id": "588e6703-52cc-4b91-86ea-6b4321d6f22b"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:17.078Z",
+    "id": "6b11c869-bb7b-4744-bf95-67e188cb4a25"
   },
   {
     "name": "Maria Santos",
@@ -265,9 +504,9 @@
     "interests": null,
     "experience": "6 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:13.600Z",
-    "id": "0fd996b7-ee79-4537-a1e9-f219e1e065b9"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:17.355Z",
+    "id": "751d704d-72e7-4bef-90ac-56f6dc3c31fe"
   },
   {
     "name": "James Wilson",
@@ -284,9 +523,9 @@
     "interests": null,
     "experience": "2 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:15.060Z",
-    "id": "08f9d9c4-2db2-4fb1-99a7-b5e30b18f7f1"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:17.778Z",
+    "id": "8ff4334d-4cf6-4a9e-91d7-206e06e3a7fb"
   },
   {
     "name": "Isabella Bianchi",
@@ -304,8 +543,8 @@
     "interests": null,
     "experience": "9 years",
     "description": null,
-    "createdAt": "2025-07-14T17:24:02.035Z",
-    "updatedAt": "2025-07-14T17:24:16.313Z",
-    "id": "bccda024-5e79-4c85-b7c8-9ca8032d3da2"
+    "createdAt": "2025-07-14T20:19:10.942Z",
+    "updatedAt": "2025-07-14T20:19:18.107Z",
+    "id": "5f8755cc-882f-4088-8054-b6d603176a4e"
   }
 ]

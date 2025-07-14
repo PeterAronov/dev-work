@@ -25,9 +25,9 @@
     "open-source monitoring tools",
     "mentoring junior engineers"
   ],
-  "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
-  "id": "fbfa1b57-3449-441c-9328-1d03924851dd",
-  "createdAt": "2025-07-14T16:21:30.622Z",
-  "updatedAt": "2025-07-14T16:21:30.623Z",
+  "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps.",
+  "id": "84e0a6b0-87c8-4d70-9d7c-cd6282f903e6",
+  "createdAt": "2025-07-14T20:18:54.970Z",
+  "updatedAt": "2025-07-14T20:18:54.971Z",
   "description": "Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge."
 }
