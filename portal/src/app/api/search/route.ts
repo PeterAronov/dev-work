@@ -17,27 +17,36 @@ export async function POST(request: NextRequest) {
 
     const searchResults: SimilaritySearchResponse = await VectorStoreService.similaritySearch({
       query: query.trim(),
-      topK: 5,
-      threshold: 0.7,
     });
 
+
+    
     const finalAnswer = await userService.getUsersFinalAnswerLLM(query, searchResults);
 
-    const transformedResults = searchResults.results.map((result, index) => ({
-      id: result.document.metadata.uuid || `result-${index}`,
-      name: result.document.metadata.name || "Unknown",
-      email: result.document.metadata.email,
-      location: result.document.metadata.location,
-      role: result.document.metadata.role,
-      skills: result.document.metadata.skills || [],
-      experience: result.document.metadata.experience,
-      interests: result.document.metadata.interests || [],
-      previousCompanies: result.document.metadata.previousCompanies || [],
-      description: result.document.pageContent,
-      matchScore: Math.round((1 - result.score) * 100), // Convert distance to percentage
-      matchReason: `User matches based on semantic similarity to "${query}"`, // use LLM peter
-    }));
+    const transformedResults = await Promise.all(
+      searchResults.results.map(async (result, index) => {
+        const matchReason: string = await userService.getUserMatchExplanation(
+          result.document.metadata,
+          result.document.pageContent,
+          query
+        );
 
+        return {
+          id: result.document.metadata.uuid || `result-${index}`,
+          name: result.document.metadata.name || "Unknown",
+          email: result.document.metadata.email,
+          location: result.document.metadata.location,
+          role: result.document.metadata.role,
+          skills: result.document.metadata.skills || [],
+          experience: result.document.metadata.experience,
+          interests: result.document.metadata.interests || [],
+          previousCompanies: result.document.metadata.previousCompanies || [],
+          description: result.document.pageContent,
+          matchScore: Math.round((1 - result.score) * 100), // Convert distance to percentage
+          matchReason, // Now uses LLM-generated explanation!
+        };
+      })
+    ).then((results) => results.sort((a, b) => b.matchScore - a.matchScore));
     return NextResponse.json({
       success: true,
       query,

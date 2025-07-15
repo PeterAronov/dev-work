@@ -19,3 +19,7 @@ export enum OpenAIEmbeddingModels {
 | `text-embedding-3-small` | 44.0       | 62.3     |
 | `text-embedding-3-large` | 54.9       | 64.6     |
 **/
+
+// MIRACL is a benchmark for multilingual information retrieval and cross-lingual tasks.
+// MTEB (Multilingual Text Embedding Benchmark) is a benchmark for evaluating multilingual text embeddings.
+

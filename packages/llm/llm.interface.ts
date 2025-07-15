@@ -102,7 +102,7 @@ export interface ILLMClient {
   /**
    * Generates a free-form or chat-based response.
    */
-  generateText?<T = any>(req: LLMRequest): Promise<string>;
+  generateText(req: LLMRequest): Promise<string>;
 
   /**
    * Extracts structured data from a prompt using schema validation.

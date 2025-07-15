@@ -117,6 +117,57 @@ ${plainText}
     }
   }
 
+  /**
+   * Generate personalized match explanation using LLM
+   */
+  async getUserMatchExplanation(userMetadata: any, userDescription: string, query: string): Promise<string> {
+    try {
+      console.log(`UserService | Generating match explanation for user: ${userMetadata.name}`);
+
+      const prompt = `
+You are an intelligent search assistant. Write a concise explanation of why a user matches a search query.
+
+Query: "${query}"
+
+User Profile:
+- Name: ${userMetadata.name || "N/A"}
+- Role: ${userMetadata.role || "N/A"}
+- Location: ${userMetadata.location || "N/A"}
+- Skills: ${userMetadata.skills ? userMetadata.skills.join(", ") : "N/A"}
+- Experience: ${userMetadata.experience || "N/A"}
+- Previous Companies: ${userMetadata.previousCompanies ? userMetadata.previousCompanies.join(", ") : "N/A"}
+- Interests: ${userMetadata.interests ? userMetadata.interests.join(", ") : "N/A"}
+
+Description: ${userDescription}
+
+Write a direct, concise explanation (1-2 sentences max). Focus on the key matching factors.
+
+Examples:
+- "Software engineer with Python and cloud infrastructure experience, based in Berlin"
+- "5+ years frontend development experience with React and TypeScript skills"
+- "AI expert with machine learning background and previous work at tech companies"
+- "Produce expert in Israel who owns a local store and grows cherries and mangoes"
+
+Explanation:`;
+
+      const explanation = await LLMService.generateText({
+        prompt,
+        priority: [ModelRegistry.Gpt4, ModelRegistry.Gpt4O],
+        config: {
+          temperature: 0.3,
+          maxTokens: 150,
+        },
+      });
+
+      console.log(`UserService | Generated explanation for ${userMetadata.name}: ${explanation.trim()}`);
+      return explanation.trim();
+    } catch (error: any) {
+      console.error(`UserService | Failed to generate match explanation for ${userMetadata.name}:`, error?.message);
+      // Fallback to generic explanation if LLM fails
+      return `User matches based on semantic similarity to "${query}"`;
+    }
+  }
+
   async extractUserFromPlainText(text: string): Promise<IUser> {
     try {
       console.log("UserService | Extracting user data from text:\n\n", text);

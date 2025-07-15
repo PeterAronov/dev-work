@@ -42,7 +42,7 @@ class LLMService {
     return client;
   }
 
-  async generateText<T = any>(req: LLMRequest): Promise<string> {
+  async generateText(req: LLMRequest): Promise<string> {
     console.log("LLMService | Generating text response...");
 
     const { prompt, priority, config } = req;
