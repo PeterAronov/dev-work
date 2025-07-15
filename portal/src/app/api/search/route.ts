@@ -1,5 +1,5 @@
 // portal/src/app/api/search/route.ts
-import { UserService } from "@neon/users";
+import { UserRelevancy, UserService } from "@neon/users";
 import { SimilaritySearchResponse, VectorStoreService } from "@neon/vector-store";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -19,12 +19,40 @@ export async function POST(request: NextRequest) {
       query: query.trim(),
     });
 
+    console.log(`Found ${searchResults.results.length} similarity matches, now filtering by relevancy...`);
 
-    
-    const finalAnswer = await userService.getUsersFinalAnswerLLM(query, searchResults);
+    const resultsWithRelevancy = await Promise.all(
+      searchResults.results.map(async (result) => {
+        const relevancy = await userService.userRelevancyToQueryLLM(
+          result.document.metadata,
+          result.document.pageContent,
+          query
+        );
+        return { ...result, relevancy };
+      })
+    );
+
+    // Filter by relevancy - only keep HIGH and MID relevancy users
+    const relevantResults = resultsWithRelevancy.filter((result) => {
+      if (result.relevancy === UserRelevancy.HIGH || result.relevancy === UserRelevancy.MID) {
+        return true;
+      } else {
+        console.log(`Filtered out ${result.document.metadata.name} - LOW relevancy`);
+        return false;
+      }
+    });
+
+    console.log(`After relevancy filtering: ${relevantResults.length} users remain`);
+
+    const finalAnswer = await userService.getUsersFinalAnswerLLM(query, {
+      results: relevantResults,
+      processingTimeMs: searchResults.processingTimeMs,
+    });
+
+    console.log(`Final answer generated: ${finalAnswer}`);
 
     const transformedResults = await Promise.all(
-      searchResults.results.map(async (result, index) => {
+      relevantResults.map(async (result, index) => {
         const matchReason: string = await userService.getUserMatchExplanation(
           result.document.metadata,
           result.document.pageContent,

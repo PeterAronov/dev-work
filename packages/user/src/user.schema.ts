@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { UserRelevancy } from "./user.interface";
 
 export const UserSchema = z.object({
   name: z.string().nullable().describe("The person's full name"),
@@ -12,3 +13,9 @@ export const UserSchema = z.object({
 });
 
 export type User = z.infer<typeof UserSchema>;
+
+export const UserRelevancySchema = z.object({
+  relevancy: z.nativeEnum(UserRelevancy).describe("The relevancy level of the user to the search query"),
+});
+
+export type UserRelevancyResult = z.infer<typeof UserRelevancySchema>;

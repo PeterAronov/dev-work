@@ -137,7 +137,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Find Anyone, Instantly</h1>
+              <h1 className="text-3xl font-bold text-gray-900">Neon: Find Anyone, Instantly</h1>
               <p className="text-gray-600 mt-1">
                 Ask questions in plain English. Our AI understands what you're looking for.
               </p>

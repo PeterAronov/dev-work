@@ -8,8 +8,8 @@ import {
   VectorStoreProvider,
   VectorStoreService,
 } from "../../vector-store";
-import { IUser, IUserService } from "./user.interface";
-import { User, UserSchema } from "./user.schema";
+import { IUser, IUserService, UserRelevancy } from "./user.interface";
+import { User, UserRelevancyResult, UserRelevancySchema, UserSchema } from "./user.schema";
 
 export class UserService implements IUserService {
   private users: IUser[] = []; // In-memory storage for demo
@@ -165,6 +165,55 @@ Explanation:`;
       console.error(`UserService | Failed to generate match explanation for ${userMetadata.name}:`, error?.message);
       // Fallback to generic explanation if LLM fails
       return `User matches based on semantic similarity to "${query}"`;
+    }
+  }
+
+  /**
+   * Assess user relevancy to search query using structured LLM output
+   */
+  async userRelevancyToQueryLLM(userMetadata: any, userDescription: string, query: string): Promise<UserRelevancy> {
+    try {
+      console.log(`UserService | Assessing relevancy for user: ${userMetadata.name} to query: "${query}"`);
+
+      const prompt = `
+Analyze how relevant this user profile is to the search query and assign a relevancy level.
+
+Search Query: "${query}"
+
+User Profile:
+- Name: ${userMetadata.name || "N/A"}
+- Role: ${userMetadata.role || "N/A"}
+- Location: ${userMetadata.location || "N/A"}
+- Skills: ${userMetadata.skills ? userMetadata.skills.join(", ") : "N/A"}
+- Experience: ${userMetadata.experience || "N/A"}
+- Previous Companies: ${userMetadata.previousCompanies ? userMetadata.previousCompanies.join(", ") : "N/A"}
+- Interests: ${userMetadata.interests ? userMetadata.interests.join(", ") : "N/A"}
+
+Full Description: ${userDescription}
+
+Relevancy Guidelines:
+- HIGH: User directly matches the query requirements (role, skills, location, experience)
+- MID: User partially matches with some relevant aspects but missing key elements
+- LOW: User has minimal or no clear connection to the query requirements
+
+Assess the relevancy level based on how well the user matches the search query.`;
+
+      const result: UserRelevancyResult = await LLMService.generateStructuredOutput({
+        prompt,
+        schema: UserRelevancySchema,
+        priority: [ModelRegistry.Gpt4O, ModelRegistry.Gpt4],
+        config: {
+          temperature: 0.1, // Low temperature for consistent classification
+          maxTokens: 200,
+        },
+      });
+
+      console.log(`UserService | Relevancy for ${userMetadata.name}: ${result.relevancy}`);
+      return result.relevancy;
+    } catch (error: any) {
+      console.error(`UserService | Failed to assess relevancy for ${userMetadata.name}:`, error?.message);
+      // Fallback to MID relevancy if LLM fails
+      return UserRelevancy.MID;
     }
   }
 

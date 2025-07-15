@@ -14,6 +14,12 @@ export interface IUser {
   updatedAt?: Date;
 }
 
+export enum UserRelevancy {
+  LOW = "low",
+  MID = "mid",
+  HIGH = "high",
+}
+
 export interface IUserService {
   extractUserFromPlainText(text: string): Promise<IUser>;
   saveUser(user: IUser): Promise<IUser | null>;
