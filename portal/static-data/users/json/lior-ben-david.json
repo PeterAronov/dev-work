@@ -1,0 +1,8 @@
+{
+    "user_id": "u105",
+    "full_name": "Lior Ben-David",
+    "job_title": "Quantitative Analyst",
+    "location": "Tel Aviv",
+    "skills": ["R", "Machine Learning", "Monte Carlo", "Python"],
+    "notes": "Built trading strategies for derivatives market."
+  }

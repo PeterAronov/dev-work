@@ -1,0 +1,6 @@
+Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. 
+She holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. 
+Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. 
+She has collaborated with Hugging Face and DeepMind on multilingual benchmark development. 
+Elena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. 
+She speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.
