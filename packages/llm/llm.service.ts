@@ -7,6 +7,7 @@ import {
   LLMGenerateStructuredOutputRequest,
   LLMModel,
   LLMProvider,
+  LLMRequest,
 } from "./llm.interface";
 import { ModelRegistry, ModelSelector } from "./model.registry";
 
@@ -39,6 +40,30 @@ class LLMService {
     }
 
     return client;
+  }
+
+  async generateText<T = any>(req: LLMRequest): Promise<string> {
+    console.log("LLMService | Generating text response...");
+
+    const { prompt, priority, config } = req;
+
+    if (!prompt) {
+      throw new Error("Prompt is required for text generation");
+    }
+
+    const model: LLMModel = priority?.[0] || ModelRegistry.Gpt4O;
+    const client: ILLMClient = this.getClient(model);
+
+    console.log(`LLMService | Using model: ${model.name} and provider: ${model.provider}`);
+
+    if (!client.generateText) {
+      throw new Error(`generateText not implemented for provider: ${model.provider}`);
+    }
+
+    return await client.generateText({
+      ...req,
+      config: { ...config, modelName: model.id },
+    });
   }
 
   async generateStructuredOutput<T>(req: LLMGenerateStructuredOutputRequest): Promise<T> {

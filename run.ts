@@ -5,9 +5,8 @@ import { CSVUserParserService, JSONUserParserService, PlainTextParserService } f
 import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
-import { MemoryVector, VectorStoreService } from "./packages/vector-store";
+import { MemoryVector, SimilaritySearchResponse, VectorStoreService } from "./packages/vector-store";
 import { SalesforceService } from "./salesforce/src/salesforce.service";
-
 console.log("Running Salesforce Service...");
 console.log(`OPEN_AI_API_KEY: ${JSON.stringify(process.env.OPEN_AI_API_KEY, null, 2)}`);
 
@@ -116,10 +115,14 @@ const runAll = async () => {
 async function searchUsers(query: string) {
   try {
     console.log(`\n=== Searching Users with query: "${query}" ===`);
-    const { results } = await VectorStoreService.similaritySearch({ query });
+    const mostSimilarUsers: SimilaritySearchResponse = await VectorStoreService.similaritySearch({ query });
 
-    console.log(`Found ${results.length} matching users for query "${query}"`);
-    saveToJsonFile(`search-results`, results);
+    console.log(`Found ${mostSimilarUsers.results.length} matching users for query "${query}"`);
+
+    const finalAnswer: string = await userService.getUsersFinalAnswerLLM(query, mostSimilarUsers);
+
+    saveToJsonFile(`final-answer-for-query`, finalAnswer);
+    saveToJsonFile(`search-results`, mostSimilarUsers.results);
   } catch (error: any) {
     console.error("Error in searchUsers:", error?.message || error);
   }
@@ -128,9 +131,11 @@ async function searchUsers(query: string) {
 runAll()
   .then(async () => {
     console.log("\n🎉 All operations completed successfully!");
-    await searchUsers(
-      "Looking for a fruit and vegetable expert in Israel who owns a local store and grows produce like appels or cherries"
-    );
+    // await searchUsers(
+    //   "Looking for a fruit and vegetable expert in Israel who owns a local store and grows produce like appels or cherries"
+    // );
+
+    await searchUsers("Looking for a software engineer with experience in AI and machine learning");
   })
   .catch((error) => {
     console.error("Error in runAll:", error);

@@ -2,12 +2,76 @@ import { Document } from "@langchain/core/documents";
 import { v4 as uuidv4 } from "uuid";
 import { LLMService } from "../../llm";
 import { ModelRegistry } from "../../llm/model.registry";
-import { AddDocumentsRequest, VectorStoreProvider, VectorStoreService } from "../../vector-store";
+import {
+  AddDocumentsRequest,
+  SimilaritySearchResponse,
+  VectorStoreProvider,
+  VectorStoreService,
+} from "../../vector-store";
 import { IUser, IUserService } from "./user.interface";
 import { User, UserSchema } from "./user.schema";
 
 export class UserService implements IUserService {
   private users: IUser[] = []; // In-memory storage for demo
+
+  /**
+   * Generate final answer from user search results using LLM
+   */
+  async getUsersFinalAnswerLLM(query: string, documents: SimilaritySearchResponse): Promise<string> {
+    try {
+      console.log(`UserService | Generating final answer for query: "${query}"`);
+      console.log(`Processing ${documents.results.length} user profiles...`);
+
+      if (!documents || documents.results.length === 0) {
+        return "I couldn't find any relevant users matching your query. Please try a different search term or check if users have been added to the system.";
+      }
+
+      const userProfiles = documents.results
+        .map((doc, index) => {
+          const relevanceScore = Math.round((1 - doc.score) * 100);
+          return `--- User Profile ${index + 1} (Similarity Score: ${relevanceScore}%) ---\n${doc.text}\n`;
+        })
+        .join("\n");
+
+      console.log("UserService | User profiles prepared for LLM processing:\n", JSON.stringify(userProfiles, null, 2));
+
+      const prompt = `
+You are an intelligent search assistant for a user profile database. A user has searched for: "${query}"
+
+I found ${documents.results} user profile(s) using vector similarity search:
+
+${userProfiles}
+
+IMPORTANT: The similarity scores are based on vector embeddings and may not always reflect true relevance. Please carefully analyze each user profile to determine if they actually match the query requirements.
+
+Instructions:
+1. Carefully examine each user profile to verify if they truly match the query requirements
+2. Identify which users (if any) best match the query requirements  
+3. Provide specific details about the matching users (names, locations, skills, experience, etc.)
+4. If multiple users match, present them in order of actual relevance (not just similarity score)
+5. If no users truly match the query, clearly state this and suggest alternative search terms
+6. Keep the response natural, conversational, and helpful
+
+Your response:`;
+
+      console.log("UserSSending user profiles to LLM for final answer generation...");
+
+      const finalAnswer = await LLMService.generateText({
+        prompt,
+        priority: [ModelRegistry.Gpt4O, ModelRegistry.Gpt4],
+        config: {
+          temperature: 0.3,
+          maxTokens: 1000,
+        },
+      });
+
+      console.log("UserService | Final answer generated successfully");
+      return finalAnswer;
+    } catch (error: any) {
+      console.error("Error in getUsersFinalAnswerLLM:", error?.message || error);
+      throw new Error(`Failed to generate final answer: ${error?.message}`);
+    }
+  }
 
   /**
    * Extract user data from plain text - simplified interface
@@ -143,7 +207,7 @@ ${plainText}
     const parts: string[] = [];
 
     if (user.description) parts.push(`Description: ${user.description}`);
-    if (user.id) parts.push(`ID: ${user.id}`);
+    if (user.id) parts.push(`user ${user.id}`);
     if (user.name) parts.push(`Name: ${user.name}`);
     if (user.email) parts.push(`Email: ${user.email}`);
     if (user.role) parts.push(`Role: ${user.role}`);

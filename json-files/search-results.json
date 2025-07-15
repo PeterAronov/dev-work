@@ -1,69 +1,49 @@
 [
   {
-    "id": "u205",
-    "score": 0.6397862551490718,
-    "text": "Description: Specializes in sustainable and green building design.\nID: u205\nName: Elior Bar\nRole: Architectural Engineer\nLocation: Ramat Gan\nSkills: Revit, Urban Planning, Building Codes",
+    "id": "unknown",
+    "score": 0.6339321809303453,
+    "text": "Description: John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source.\nName: John Doe\nEmail: john.doe@tech.com\nRole: backend engineer\nLocation: Berlin\nSkills: Kubernetes, Python, cloud infrastructure\nPrevious Companies: Google\nInterests: open-source",
     "document": {
-      "pageContent": "Description: Specializes in sustainable and green building design.\nID: u205\nName: Elior Bar\nRole: Architectural Engineer\nLocation: Ramat Gan\nSkills: Revit, Urban Planning, Building Codes",
+      "pageContent": "Description: John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source.\nName: John Doe\nEmail: john.doe@tech.com\nRole: backend engineer\nLocation: Berlin\nSkills: Kubernetes, Python, cloud infrastructure\nPrevious Companies: Google\nInterests: open-source",
       "metadata": {
-        "uuid": "7cab6f24-b042-44ae-adbd-39d40ec42a80",
-        "id": "u205",
-        "name": "Elior Bar",
-        "email": null,
-        "role": "Architectural Engineer",
-        "location": "Ramat Gan",
+        "uuid": "597b6c62-915b-47b6-9f77-9ff30a1e8ee6",
+        "name": "John Doe",
+        "email": "john.doe@tech.com",
+        "role": "backend engineer",
+        "location": "Berlin",
         "skills": [
-          "Revit",
-          "Urban Planning",
-          "Building Codes"
+          "Kubernetes",
+          "Python",
+          "cloud infrastructure"
         ],
-        "previousCompanies": null,
-        "interests": null,
-        "experience": null
+        "previousCompanies": [
+          "Google"
+        ],
+        "interests": [
+          "open-source"
+        ],
+        "experience": ""
       }
     }
   },
   {
-    "id": "doc102",
-    "score": 0.6387983466112632,
-    "text": "Description: Published several papers on childhood asthma in urban populations.\nID: doc102\nName: Dr. Shiran Malka\nRole: Pediatrician\nLocation: Petah Tikva\nSkills: Child Nutrition, Developmental Disorders, Asthma Management",
+    "id": "u105",
+    "score": 0.6326078709561247,
+    "text": "Description: Built trading strategies for derivatives market.\nuser u105\nName: Lior Ben-David\nRole: Quantitative Analyst\nLocation: Tel Aviv\nSkills: R, Machine Learning, Monte Carlo, Python",
     "document": {
-      "pageContent": "Description: Published several papers on childhood asthma in urban populations.\nID: doc102\nName: Dr. Shiran Malka\nRole: Pediatrician\nLocation: Petah Tikva\nSkills: Child Nutrition, Developmental Disorders, Asthma Management",
+      "pageContent": "Description: Built trading strategies for derivatives market.\nuser u105\nName: Lior Ben-David\nRole: Quantitative Analyst\nLocation: Tel Aviv\nSkills: R, Machine Learning, Monte Carlo, Python",
       "metadata": {
-        "uuid": "2625c1d8-47ae-4a02-a3cc-43ace8845dc0",
-        "id": "doc102",
-        "name": "Dr. Shiran Malka",
+        "uuid": "ea89e536-f6cf-47b9-b076-7e969b87f1f5",
+        "id": "u105",
+        "name": "Lior Ben-David",
         "email": null,
-        "role": "Pediatrician",
-        "location": "Petah Tikva",
-        "skills": [
-          "Child Nutrition",
-          "Developmental Disorders",
-          "Asthma Management"
-        ],
-        "previousCompanies": null,
-        "interests": null,
-        "experience": null
-      }
-    }
-  },
-  {
-    "id": "u201",
-    "score": 0.5939580284564021,
-    "text": "Description: Head chef at a boutique hotel. Specializes in fusion and seasonal menus.\nID: u201\nName: Erez Nahum\nRole: Executive Chef\nLocation: Tel Aviv\nSkills: Mediterranean Cuisine, Menu Design, Team Leadership",
-    "document": {
-      "pageContent": "Description: Head chef at a boutique hotel. Specializes in fusion and seasonal menus.\nID: u201\nName: Erez Nahum\nRole: Executive Chef\nLocation: Tel Aviv\nSkills: Mediterranean Cuisine, Menu Design, Team Leadership",
-      "metadata": {
-        "uuid": "76de200d-bf8d-4bbf-b6bf-067af5fdc41b",
-        "id": "u201",
-        "name": "Erez Nahum",
-        "email": null,
-        "role": "Executive Chef",
+        "role": "Quantitative Analyst",
         "location": "Tel Aviv",
         "skills": [
-          "Mediterranean Cuisine",
-          "Menu Design",
-          "Team Leadership"
+          "R",
+          "Machine Learning",
+          "Monte Carlo",
+          "Python"
         ],
         "previousCompanies": null,
         "interests": null,
@@ -73,59 +53,103 @@
   },
   {
     "id": "unknown",
-    "score": 0.5288175756036337,
-    "text": "Description: Meet Yossi Cohen, an Israel-based entrepreneur and product strategist in the food industry.\nWith over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies. \nHis expertise spans supply chain optimization, food safety compliance, sustainable packaging, and consumer trend analysis.\nYossi is passionate about bridging culinary tradition with modern technology, and in his free time, he enjoys Mediterranean cooking, mentoring young founders, and exploring new markets in global food culture.\nName: Yossi Cohen\nRole: entrepreneur and product strategist\nLocation: Israel\nSkills: supply chain optimization, food safety compliance, sustainable packaging, consumer trend analysis\nInterests: Mediterranean cooking, mentoring young founders, exploring new markets in global food culture\nExperience: With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies.",
+    "score": 0.6129260355789006,
+    "text": "Description: Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge.\nName: Michael Anderson\nEmail: michael.anderson@cloudops.io\nRole: Senior DevOps Engineer\nLocation: Austin, Texas\nSkills: CI/CD, cloud infrastructure, automation, AWS, GCP, Terraform, Kubernetes, Docker, Jenkins, Helm, Prometheus, Bash scripting\nPrevious Companies: IBM, Netflix\nInterests: open-source monitoring tools, mentoring junior engineers\nExperience: Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
     "document": {
-      "pageContent": "Description: Meet Yossi Cohen, an Israel-based entrepreneur and product strategist in the food industry.\nWith over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies. \nHis expertise spans supply chain optimization, food safety compliance, sustainable packaging, and consumer trend analysis.\nYossi is passionate about bridging culinary tradition with modern technology, and in his free time, he enjoys Mediterranean cooking, mentoring young founders, and exploring new markets in global food culture.\nName: Yossi Cohen\nRole: entrepreneur and product strategist\nLocation: Israel\nSkills: supply chain optimization, food safety compliance, sustainable packaging, consumer trend analysis\nInterests: Mediterranean cooking, mentoring young founders, exploring new markets in global food culture\nExperience: With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies.",
+      "pageContent": "Description: Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge.\nName: Michael Anderson\nEmail: michael.anderson@cloudops.io\nRole: Senior DevOps Engineer\nLocation: Austin, Texas\nSkills: CI/CD, cloud infrastructure, automation, AWS, GCP, Terraform, Kubernetes, Docker, Jenkins, Helm, Prometheus, Bash scripting\nPrevious Companies: IBM, Netflix\nInterests: open-source monitoring tools, mentoring junior engineers\nExperience: Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
       "metadata": {
-        "uuid": "70b4001d-a243-4483-afad-118e895e79c3",
-        "name": "Yossi Cohen",
-        "email": "",
-        "role": "entrepreneur and product strategist",
-        "location": "Israel",
+        "uuid": "93a4e80b-18cc-4d87-b897-c9bcd7f9f1d2",
+        "name": "Michael Anderson",
+        "email": "michael.anderson@cloudops.io",
+        "role": "Senior DevOps Engineer",
+        "location": "Austin, Texas",
         "skills": [
-          "supply chain optimization",
-          "food safety compliance",
-          "sustainable packaging",
-          "consumer trend analysis"
+          "CI/CD",
+          "cloud infrastructure",
+          "automation",
+          "AWS",
+          "GCP",
+          "Terraform",
+          "Kubernetes",
+          "Docker",
+          "Jenkins",
+          "Helm",
+          "Prometheus",
+          "Bash scripting"
         ],
-        "previousCompanies": null,
+        "previousCompanies": [
+          "IBM",
+          "Netflix"
+        ],
         "interests": [
-          "Mediterranean cooking",
-          "mentoring young founders",
-          "exploring new markets in global food culture"
+          "open-source monitoring tools",
+          "mentoring junior engineers"
         ],
-        "experience": "With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies."
+        "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%."
       }
     }
   },
   {
     "id": "unknown",
-    "score": 0.3523750849687166,
-    "text": "Description: Moshe Bitton (moshe.bitton@bittonfresh.co.il) is a produce expert and shop owner based in Bat Yam, Israel.\nWith over 12 years in the industry, Moshe runs Bitton Fresh, a popular neighborhood store known for premium fruits, seasonal vegetables, and personal service.\nHe specializes in sourcing high-quality cherries and mangoes, which he grows on family-owned land in northern Israel near Moshav Yesod HaMa'ala.\nMoshe works closely with small farms to bring fresh, locally grown produce to urban customers.\nHe also supplies boutique restaurants across Tel Aviv and manages weekly farm-to-door deliveries around the Gush Dan area.\nBefore opening his shop, Moshe worked in agricultural logistics and spent time learning sustainable farming methods in the Arava region.\nHe’s passionate about food education, zero-waste retailing, and building stronger farmer-consumer relationships.\nOutside of work, Moshe enjoys hiking in the Galilee, cold-pressing juices, and developing homemade dried fruit mixes.\nName: Moshe Bitton\nEmail: moshe.bitton@bittonfresh.co.il\nRole: Produce Expert and Shop Owner\nLocation: Bat Yam, Israel\nSkills: Sourcing high-quality produce, Agricultural logistics, Sustainable farming methods\nInterests: Food education, Zero-waste retailing, Building stronger farmer-consumer relationships, Hiking in the Galilee, Cold-pressing juices, Developing homemade dried fruit mixes\nExperience: Over 12 years in the produce industry, owner of Bitton Fresh, worked in agricultural logistics, learned sustainable farming methods in the Arava region.",
+    "score": 0.5496229392338686,
+    "text": "Description: Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy.\nName: Dr. Kunal Sharma\nEmail: k.sharma@ai.research.org\nRole: data scientist\nLocation: Berlin\nSkills: Python, PyTorch, NLP, biomedical data modeling\nPrevious Companies: DeepMind, Novartis\nInterests: long hikes, jazz piano, open science advocacy\nExperience: focusing on machine learning for healthcare",
     "document": {
-      "pageContent": "Description: Moshe Bitton (moshe.bitton@bittonfresh.co.il) is a produce expert and shop owner based in Bat Yam, Israel.\nWith over 12 years in the industry, Moshe runs Bitton Fresh, a popular neighborhood store known for premium fruits, seasonal vegetables, and personal service.\nHe specializes in sourcing high-quality cherries and mangoes, which he grows on family-owned land in northern Israel near Moshav Yesod HaMa'ala.\nMoshe works closely with small farms to bring fresh, locally grown produce to urban customers.\nHe also supplies boutique restaurants across Tel Aviv and manages weekly farm-to-door deliveries around the Gush Dan area.\nBefore opening his shop, Moshe worked in agricultural logistics and spent time learning sustainable farming methods in the Arava region.\nHe’s passionate about food education, zero-waste retailing, and building stronger farmer-consumer relationships.\nOutside of work, Moshe enjoys hiking in the Galilee, cold-pressing juices, and developing homemade dried fruit mixes.\nName: Moshe Bitton\nEmail: moshe.bitton@bittonfresh.co.il\nRole: Produce Expert and Shop Owner\nLocation: Bat Yam, Israel\nSkills: Sourcing high-quality produce, Agricultural logistics, Sustainable farming methods\nInterests: Food education, Zero-waste retailing, Building stronger farmer-consumer relationships, Hiking in the Galilee, Cold-pressing juices, Developing homemade dried fruit mixes\nExperience: Over 12 years in the produce industry, owner of Bitton Fresh, worked in agricultural logistics, learned sustainable farming methods in the Arava region.",
+      "pageContent": "Description: Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy.\nName: Dr. Kunal Sharma\nEmail: k.sharma@ai.research.org\nRole: data scientist\nLocation: Berlin\nSkills: Python, PyTorch, NLP, biomedical data modeling\nPrevious Companies: DeepMind, Novartis\nInterests: long hikes, jazz piano, open science advocacy\nExperience: focusing on machine learning for healthcare",
       "metadata": {
-        "uuid": "2fcb50ca-a56d-4812-9358-e65e75edfc3e",
-        "name": "Moshe Bitton",
-        "email": "moshe.bitton@bittonfresh.co.il",
-        "role": "Produce Expert and Shop Owner",
-        "location": "Bat Yam, Israel",
+        "uuid": "d7390567-af4f-48af-a765-e1c7c750d00b",
+        "name": "Dr. Kunal Sharma",
+        "email": "k.sharma@ai.research.org",
+        "role": "data scientist",
+        "location": "Berlin",
         "skills": [
-          "Sourcing high-quality produce",
-          "Agricultural logistics",
-          "Sustainable farming methods"
+          "Python",
+          "PyTorch",
+          "NLP",
+          "biomedical data modeling"
         ],
-        "previousCompanies": null,
+        "previousCompanies": [
+          "DeepMind",
+          "Novartis"
+        ],
         "interests": [
-          "Food education",
-          "Zero-waste retailing",
-          "Building stronger farmer-consumer relationships",
-          "Hiking in the Galilee",
-          "Cold-pressing juices",
-          "Developing homemade dried fruit mixes"
+          "long hikes",
+          "jazz piano",
+          "open science advocacy"
         ],
-        "experience": "Over 12 years in the produce industry, owner of Bitton Fresh, worked in agricultural logistics, learned sustainable farming methods in the Arava region."
+        "experience": "focusing on machine learning for healthcare"
+      }
+    }
+  },
+  {
+    "id": "unknown",
+    "score": 0.5455422401037959,
+    "text": "Description: Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.\nName: Dr. Elena Petrova\nEmail: elena.petrova@neuralx.ai\nRole: AI research scientist\nLocation: Zurich, Switzerland\nSkills: PyTorch, Hugging Face Transformers, TensorFlow, fastai\nPrevious Companies: Hugging Face, DeepMind\nInterests: foundation models, federated learning, low-resource language models, open science, ethical AI\nExperience: Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs.",
+    "document": {
+      "pageContent": "Description: Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.\nName: Dr. Elena Petrova\nEmail: elena.petrova@neuralx.ai\nRole: AI research scientist\nLocation: Zurich, Switzerland\nSkills: PyTorch, Hugging Face Transformers, TensorFlow, fastai\nPrevious Companies: Hugging Face, DeepMind\nInterests: foundation models, federated learning, low-resource language models, open science, ethical AI\nExperience: Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs.",
+      "metadata": {
+        "uuid": "dd06560b-e86e-459b-be70-e885892ae740",
+        "name": "Dr. Elena Petrova",
+        "email": "elena.petrova@neuralx.ai",
+        "role": "AI research scientist",
+        "location": "Zurich, Switzerland",
+        "skills": [
+          "PyTorch",
+          "Hugging Face Transformers",
+          "TensorFlow",
+          "fastai"
+        ],
+        "previousCompanies": [
+          "Hugging Face",
+          "DeepMind"
+        ],
+        "interests": [
+          "foundation models",
+          "federated learning",
+          "low-resource language models",
+          "open science",
+          "ethical AI"
+        ],
+        "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs."
       }
     }
   }
