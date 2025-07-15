@@ -6,31 +6,10 @@ import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
 import { MemoryVector, SimilaritySearchResponse, VectorStoreService } from "./packages/vector-store";
-import { SalesforceService } from "./salesforce/src/salesforce.service";
 console.log("Running Salesforce Service...");
 console.log(`OPEN_AI_API_KEY: ${JSON.stringify(process.env.OPEN_AI_API_KEY, null, 2)}`);
 
-const salesforceService = new SalesforceService();
 const userService = new UserService();
-
-const allUsers = async () => {
-  try {
-    const { users } = await salesforceService.getAllUsers();
-    saveToJsonFile("allUsers", users);
-    console.log("All Users:", users);
-  } catch (error: any) {
-    console.error("Error fetching accounts:", error?.message || error);
-  }
-};
-const getUserById = async (id: number) => {
-  try {
-    const user = await salesforceService.getUserById({ id });
-    saveToJsonFile(`user.${id}.json`, user);
-    console.log(`User with ID ${id}:`, user);
-  } catch (error: any) {
-    console.error(`Error fetching user with ID ${id}:`, error?.message || error);
-  }
-};
 
 /************ LLM User Extraction *************/
 
