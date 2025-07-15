@@ -55,11 +55,11 @@ ${plainText}
 
   async extractUserFromPlainText(text: string): Promise<IUser> {
     try {
-      console.log("Extracting user data from text...");
+      console.log("UserService | Extracting user data from text:\n\n", text);
 
       const user = await this.extractUserFromPlainTextLLM(text);
 
-      console.log("Successfully extracted user data:", user);
+      console.log("UserService | Successfully extracted user data:\n", user);
       return user;
     } catch (error: any) {
       console.error("Error extracting user data:", error?.message || error);
@@ -125,15 +125,8 @@ ${plainText}
   }
 
   async saveUsers(users: IUser[]): Promise<IUser[]> {
-    const savedUsers: IUser[] = [];
-
-    for (const user of users) {
-      const savedUser: IUser | null = await this.saveUser(user);
-      if (savedUser) {
-        savedUsers.push(savedUser);
-      }
-    }
-    return savedUsers;
+    const results = await Promise.all(users.map((user) => this.saveUser(user)));
+    return results.filter((user): user is IUser => user !== null);
   }
 
   async getUserById(id: string): Promise<IUser | null> {

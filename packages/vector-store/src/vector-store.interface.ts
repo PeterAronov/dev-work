@@ -10,12 +10,7 @@ export interface IVectorStoreClient {
   clear?(): Promise<void>;
   isInitialized?(): boolean;
   addDocuments?(documents: Document[]): Promise<void>;
-  searchDocuments?(
-    query: string,
-    topK: number,
-    metadataFilter?: Record<string, any>,
-    threshold?: number
-  ): Promise<DocumentSearchResponse[]>;
+  similaritySearch?(query: string, topK?: number, threshold?: number): Promise<DocumentSearchResponse[]>;
   getAllMemoryVectors?(): Promise<MemoryVector[]>;
 }
 
@@ -30,7 +25,6 @@ export interface VectorSearchResponse {
   id: string;
   score: number; // Similarity score (0-1, higher = more similar)
   text: string; // Original text content
-  metadata?: any;
 }
 
 export enum VectorStoreProvider {
@@ -77,18 +71,15 @@ export interface AddDocumentsResponse {
   processingTimeMs: number;
 }
 
-export interface SearchDocumentsRequest extends VectorStoreRequest {
+export interface SimilaritySearchRequest extends VectorStoreRequest {
   query: string;
   topK?: number;
   metadataFilter?: Record<string, any>;
   threshold?: number;
 }
 
-export interface SearchDocumentsResponse {
+export interface SimilaritySearchResponse {
   results: DocumentSearchResponse[];
-  totalFound: number;
-  query: string;
-  provider: VectorStoreProvider;
   processingTimeMs: number;
 }
 

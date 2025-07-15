@@ -68,15 +68,17 @@ const runAll = async () => {
 */
   console.log("\n=== Starting LLM User Extraction ===");
 
-  // Basic extraction
+  // Plain Text User extraction
 
   const textFiles = await PlainTextParserService.readTextFiles("static-data/users/plain-text");
 
-  for (const file of textFiles) {
-    console.log(`\n--- Processing: ${file.filename} ---`);
-    console.log("File content:", file.content);
-    await extractFromPlainTextAndSaveUser(file.content, file.filename);
-  }
+  await Promise.all(
+    textFiles.map(async (file) => {
+      console.log(`\n--- Processing: ${file.filename} ---`);
+      console.log("File content:", file.content);
+      await extractFromPlainTextAndSaveUser(file.content, file.filename);
+    })
+  );
 
   /// JSON User Extraction
 
@@ -87,7 +89,6 @@ const runAll = async () => {
   for (const user of jsonUsers) {
     saveToJsonFile(`json-user-${user.id}`, user);
     console.log(`\n--- Processing JSON User: ${user.name} ---`);
-    console.log("User data:", JSON.stringify(user, null, 2));
   }
   await userService.saveUsers(jsonUsers);
 
@@ -99,7 +100,6 @@ const runAll = async () => {
   for (const user of csvUsers) {
     saveToJsonFile(`csv-user-${user.name}`, user);
     console.log(`\n--- Processing CSV User: ${user.name} ---`);
-    console.log("User data:", JSON.stringify(user, null, 2));
   }
   await userService.saveUsers(csvUsers);
 
@@ -113,9 +113,24 @@ const runAll = async () => {
   saveToJsonFile("all-extracted-users", allUsers);
 };
 
+async function searchUsers(query: string) {
+  try {
+    console.log(`\n=== Searching Users with query: "${query}" ===`);
+    const { results } = await VectorStoreService.similaritySearch({ query });
+
+    console.log(`Found ${results.length} matching users for query "${query}"`);
+    saveToJsonFile(`search-results`, results);
+  } catch (error: any) {
+    console.error("Error in searchUsers:", error?.message || error);
+  }
+}
+
 runAll()
-  .then(() => {
+  .then(async () => {
     console.log("\n🎉 All operations completed successfully!");
+    await searchUsers(
+      "Looking for a fruit and vegetable expert in Israel who owns a local store and grows produce like appels or cherries"
+    );
   })
   .catch((error) => {
     console.error("Error in runAll:", error);

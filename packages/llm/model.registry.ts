@@ -14,8 +14,6 @@ export const ModelRegistry: Record<string, LLMModel> = {
     },
     contextWindow: 128000,
     maxOutputTokens: 4096,
-    supportsStreaming: true,
-    supportsVision: true,
     supportsFunctionCalling: true,
   },
 
@@ -31,8 +29,6 @@ export const ModelRegistry: Record<string, LLMModel> = {
     },
     contextWindow: 8192,
     maxOutputTokens: 4096,
-    supportsStreaming: true,
-    supportsVision: true,
     supportsFunctionCalling: true,
   },
 
@@ -48,8 +44,6 @@ export const ModelRegistry: Record<string, LLMModel> = {
     },
     contextWindow: 128000,
     maxOutputTokens: 4096,
-    supportsStreaming: true,
-    supportsVision: true,
     supportsFunctionCalling: true,
   },
 
@@ -65,8 +59,6 @@ export const ModelRegistry: Record<string, LLMModel> = {
     },
     contextWindow: 16385,
     maxOutputTokens: 4096,
-    supportsStreaming: true,
-    supportsVision: false,
     supportsFunctionCalling: true,
   },
 
@@ -81,8 +73,6 @@ export const ModelRegistry: Record<string, LLMModel> = {
       outputToken: 0,
     },
     contextWindow: 8191,
-    supportsStreaming: false,
-    supportsVision: false,
     supportsFunctionCalling: false,
   },
 
@@ -97,8 +87,6 @@ export const ModelRegistry: Record<string, LLMModel> = {
       outputToken: 0,
     },
     contextWindow: 8191,
-    supportsStreaming: false,
-    supportsVision: false,
     supportsFunctionCalling: false,
   },
 };
@@ -152,10 +140,6 @@ export class ModelSelector {
       models = models.filter((model) => model.tasks?.includes(config.task as LLMTask));
     }
 
-    if (config.requiresVision) {
-      models = models.filter((model) => model.supportsVision);
-    }
-
     if (config.requiresFunctionCalling) {
       models = models.filter((model) => model.supportsFunctionCalling);
     }
@@ -195,8 +179,6 @@ export class ModelSelector {
 
     // Function calling and vision support
     if (model.supportsFunctionCalling) score += 20;
-    if (model.supportsVision) score += 15;
-    if (model.supportsStreaming) score += 5;
 
     // Subtract cost penalty (lower cost = higher score)
     const totalCost = (model.cost?.inputToken || 0) + (model.cost?.outputToken || 0);
@@ -223,11 +205,6 @@ export class ModelSelector {
         return this.getByCapability(LLMModelCapability.Embedding).sort(
           (a, b) => (a.cost?.inputToken || 0) - (b.cost?.inputToken || 0)
         ); // Sort by cost for embeddings
-
-      case "vision":
-        return this.getByCapability(LLMModelCapability.Vision)
-          .filter((model) => model.supportsVision)
-          .sort((a, b) => this.calculateModelScore(b) - this.calculateModelScore(a));
 
       case "function-calling":
         return Object.values(ModelRegistry)

@@ -14,12 +14,15 @@
     "DeepMind"
   ],
   "interests": [
+    "foundation models",
+    "federated learning",
+    "low-resource language models",
     "open science",
     "ethical AI"
   ],
-  "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models.",
+  "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs.",
   "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.",
-  "uuid": "80363eb6-a6aa-4de3-a135-af895046f834",
-  "createdAt": "2025-07-15T00:33:01.110Z",
-  "updatedAt": "2025-07-15T00:33:01.110Z"
+  "uuid": "d3d23b85-7a3d-4451-890f-a3ecdc3be148",
+  "createdAt": "2025-07-15T10:44:59.149Z",
+  "updatedAt": "2025-07-15T10:44:59.149Z"
 }

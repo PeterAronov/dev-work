@@ -65,52 +65,38 @@ export class InMemoryVectorStoreClient implements IVectorStoreClient {
     }
   }
 
-  /**
-   * Search documents using natural language query with optional metadata filtering
-   * Perfect for queries like "Find data scientists in Germany" or "Users with React experience"
-   */
-  async searchDocuments(
-    query: string,
-    topK: number = 5,
-    metadataFilter?: Record<string, any>,
-    threshold: number = 0.7
-  ): Promise<DocumentSearchResponse[]> {
+  async similaritySearch(query: string, topK: number = 5, threshold: number = 0.7): Promise<DocumentSearchResponse[]> {
     this.ensureInitialized();
 
     try {
-      console.log(`🔍 Searching for: "${query}" (topK: ${topK}, threshold: ${threshold})`);
+      console.log(`InMemoryVectorStoreClient | Searching for: "${query}" (topK: ${topK}, threshold: ${threshold})`);
 
-      // Use LangChain's similarity search with scores
-      const results = await this.vectorStore!.similaritySearchWithScore(query, topK * 2); // Get more for filtering
+      const results = await this.vectorStore!.similaritySearchWithScore(query, topK);
 
-      // Convert to our format and apply filters
       const searchResults: DocumentSearchResponse[] = results
         .map(([doc, distance]) => ({
           id: doc.metadata.id || "unknown",
           score: this.convertDistanceToSimilarity(distance),
           text: doc.pageContent,
-          metadata: doc.metadata,
           document: doc,
         }))
         .filter((result) => {
-          // Apply similarity threshold
-          if (result.score < threshold) return false;
+          console.log(`ID: ${result.id}, Score: ${result.score.toFixed(4)},\nText: ${result.text}`);
 
-          // Apply metadata filter if provided
-          if (metadataFilter) {
-            return this.matchesMetadataFilter(result.metadata, metadataFilter);
-          }
+          if (result.score > threshold) return false;
 
           return true;
         })
         .sort((a, b) => b.score - a.score) // Sort by similarity
         .slice(0, topK); // Take only topK
 
-      console.log(`✅ Found ${searchResults.length} matching users`);
+      // let's print all the scores
+
+      console.log(`InMemoryVectorStoreClient | Found ${searchResults.length} matching users`);
       return searchResults;
-    } catch (error) {
-      console.error("Document search failed:", error);
-      throw new Error(`Document search failed: ${error instanceof Error ? error.message : "Unknown error"}`);
+    } catch (error: any) {
+      console.error("InMemoryVectorStoreClient | Document search failed:", error?.message);
+      throw new Error(`Document search failed: ${error?.message}`);
     }
   }
 
@@ -127,7 +113,6 @@ export class InMemoryVectorStoreClient implements IVectorStoreClient {
         id,
         score: 1.0,
         text: document.pageContent,
-        metadata: document.metadata,
       };
     } catch (error: any) {
       console.error(`Failed to get document for ID: ${id}`, error?.message);
@@ -166,7 +151,7 @@ export class InMemoryVectorStoreClient implements IVectorStoreClient {
    * Convert LangChain distance to similarity score (0-1, higher = more similar)
    */
   private convertDistanceToSimilarity(distance: number): number {
-    return Math.max(0, Math.min(1, 1 - distance / 2));
+    return Math.max(0, Math.min(1, 1 - distance));
   }
 
   isInitialized(): boolean {

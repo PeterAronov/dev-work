@@ -52,8 +52,6 @@ export interface LLMModel {
   };
   contextWindow?: number;
   maxOutputTokens?: number;
-  supportsStreaming?: boolean;
-  supportsVision?: boolean;
   supportsFunctionCalling?: boolean;
 }
 

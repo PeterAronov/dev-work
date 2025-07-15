@@ -9,8 +9,8 @@ import {
   GetDocumentResponse,
   IVectorStoreClient,
   MemoryVector,
-  SearchDocumentsRequest,
-  SearchDocumentsResponse,
+  SimilaritySearchRequest,
+  SimilaritySearchResponse,
   VectorSearchResponse,
   VectorStoreProvider,
 } from "./vector-store.interface";
@@ -104,11 +104,11 @@ class VectorStoreService {
     } as AddDocumentsResponse;
   }
 
-  async searchDocuments(req: SearchDocumentsRequest): Promise<SearchDocumentsResponse> {
+  async similaritySearch(req: SimilaritySearchRequest): Promise<SimilaritySearchResponse> {
     const startTime = Date.now();
     console.log(`VectorStoreService | Searching documents: "${req.query}"`);
 
-    const { query, provider, topK = 5, metadataFilter, threshold = 0.7 } = req;
+    const { query, provider } = req;
 
     if (!query || query.trim().length === 0) {
       throw new Error("Search query is required and cannot be empty");
@@ -117,22 +117,16 @@ class VectorStoreService {
     const selectedProvider = provider || this.defaultProvider;
     const client = this.getClient(selectedProvider);
 
-    if (!client.searchDocuments) {
-      throw new Error(`Provider ${selectedProvider} does not support searchDocuments operation`);
+    if (!client.similaritySearch) {
+      throw new Error(`Provider ${selectedProvider} does not support similaritySearch operation`);
     }
 
-    const results = await client.searchDocuments(query, topK, metadataFilter, threshold);
+    const results = await client.similaritySearch(query);
     const processingTimeMs = Date.now() - startTime;
 
     console.log(`VectorStoreService | Found ${results.length} results in ${processingTimeMs}ms`);
 
-    return {
-      results,
-      totalFound: results.length,
-      query,
-      provider: selectedProvider,
-      processingTimeMs,
-    };
+    return { results, processingTimeMs };
   }
 
   async getDocument(req: GetDocumentRequest): Promise<GetDocumentResponse> {
