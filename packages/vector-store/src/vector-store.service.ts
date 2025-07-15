@@ -8,6 +8,7 @@ import {
   GetDocumentRequest,
   GetDocumentResponse,
   IVectorStoreClient,
+  MemoryVector,
   SearchDocumentsRequest,
   SearchDocumentsResponse,
   VectorSearchResponse,
@@ -198,6 +199,17 @@ class VectorStoreService {
       console.error("VectorStoreService | Health check failed:", error);
       return false;
     }
+  }
+
+  async getAllMemoryVectors(): Promise<MemoryVector[]> {
+    const selectedProvider: VectorStoreProvider = this.defaultProvider;
+    const client: IVectorStoreClient = this.getClient(selectedProvider);
+
+    if (!client.getAllMemoryVectors) {
+      throw new Error(`Provider ${selectedProvider} does not support getMemoryVectors operation`);
+    }
+
+    return client.getAllMemoryVectors();
   }
 }
 

@@ -1,6 +1,8 @@
+import { Document } from "@langchain/core/documents";
 import { v4 as uuidv4 } from "uuid";
 import { LLMService } from "../../llm";
 import { ModelRegistry } from "../../llm/model.registry";
+import { AddDocumentsRequest, VectorStoreProvider, VectorStoreService } from "../../vector-store";
 import { IUser, IUserService } from "./user.interface";
 import { User, UserSchema } from "./user.schema";
 
@@ -18,7 +20,7 @@ Your task is to:
 1. Carefully analyze the provided text
 2. Extract relevant user information according to the provided schema
 3. Return structured data that matches the schema exactly
-4. If a field cannot be determined from the text, set it to null
+4. If a field **cannot be confidently determined**, DO NOT include it in the output
 5. Be precise and conservative - only extract information that is clearly stated
 
 The text may contain:
@@ -34,7 +36,7 @@ ${plainText}
     `;
 
     try {
-      const extractedUser = await LLMService.generateStructuredOutput<User>({
+      const extractedUser: IUser = await LLMService.generateStructuredOutput<User>({
         prompt: instructions,
         schema: UserSchema,
         priority: [ModelRegistry.Gpt4O, ModelRegistry.Gpt4],
@@ -44,18 +46,10 @@ ${plainText}
         },
       });
 
-      // Convert extracted user to IUser with metadata
-      const user: IUser = {
-        ...extractedUser,
-        id: uuidv4(),
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-
-      return user;
-    } catch (error) {
-      console.error("Error in extractUserFromPlainTextLLM:", error);
-      throw new Error(`Failed to extract user data: ${error instanceof Error ? error.message : "Unknown error"}`);
+      return extractedUser;
+    } catch (error: any) {
+      console.error(`UserService | Failed to extract user data:`, error?.message);
+      throw new Error(`Failed to extract user data: ${error?.message}`);
     }
   }
 
@@ -73,70 +67,71 @@ ${plainText}
     }
   }
 
-
-  
-
   private async createUserEmbeddingLLM(user: IUser): Promise<number[]> {
     try {
-      // Create a comprehensive text representation of the user
       const userText: string = this.userToSearchableText(user);
 
       console.log(`Creating embedding for user: ${user.name}`);
 
       const embeddingResponse = await LLMService.executeEmbedding({
         input: userText,
-        priority: [ModelRegistry.OpenAIEmbeddingLarge], // Using the Large model as requested
+        priority: [ModelRegistry.OpenAIEmbeddingLarge],
         config: {
           // No additional config needed for embeddings
         },
       });
 
-      // Return the first (and only) embedding vector
       return embeddingResponse.embeddings[0];
-    } catch (error) {
-      console.error("Error creating user embedding:", error);
-      throw new Error(`Failed to create embedding: ${error instanceof Error ? error.message : "Unknown error"}`);
+    } catch (error: any) {
+      console.error("Error creating user embedding:", error?.message);
+      throw new Error(`Failed to create embedding: ${error?.message}`);
     }
   }
 
-  async saveUser(user: IUser): Promise<IUser> {
-    const newUser: IUser = {
-      ...user,
-      id: user.id || uuidv4(),
-      updatedAt: new Date(),
-    };
-
-    this.users.push(newUser);
-    console.log(`User saved with ID: ${newUser.id}`);
-
-    // Create embedding for the user after saving using OpenAIEmbeddingLarge
+  async saveUser(user: IUser): Promise<IUser | null> {
     try {
-      const embedding = await this.createUserEmbeddingLLM(newUser);
-      console.log(`Created embedding for user ${newUser.id} using OpenAI Large model`);
-      console.log(`Vector dimension: ${embedding.length}`);
-      console.log(
-        `Embedding preview: [${embedding
-          .slice(0, 5)
-          .map((n) => n.toFixed(4))
-          .join(", ")}...]`
-      );
+      if (isInvalidField(user.name) || isInvalidField(user.role) || isInvalidField(user.location)) {
+        console.warn("UserService | Incomplete user data, cannot save:", JSON.stringify(user, null, 2));
+        return null;
+      }
 
-      // Here you could store the embedding in a vector database
-      // For now, we're just logging it
-      // Example: await this.vectorDB.store(newUser.id, embedding);
-    } catch (error) {
-      console.warn(`Failed to create embedding for user ${newUser.id}:`, error);
-      // Don't fail the save operation if embedding fails
+      const newUser: IUser = {
+        ...user,
+        uuid: user.uuid || uuidv4(),
+        createdAt: user.createdAt || new Date(),
+        updatedAt: new Date(),
+      };
+
+      console.log(`UserService | Saving user ${newUser.name}(${newUser.id}) via VectorStoreService...`);
+
+      const userDocument: Document = this.userToDocument(newUser);
+
+      const addDocumentsRequest: AddDocumentsRequest = {
+        provider: VectorStoreProvider.InMemory,
+        documents: [userDocument],
+      };
+
+      await VectorStoreService.addDocuments(addDocumentsRequest);
+
+      this.users.push(newUser);
+
+      console.log(`UserService | Successfully saved user ${newUser.name}(${newUser.id})`);
+
+      return newUser;
+    } catch (error: any) {
+      console.error(`UserService | Failed to save user:`, error?.message);
+      throw new Error(`Failed to save user via VectorStore: ${error?.message}`);
     }
-
-    return newUser;
   }
 
   async saveUsers(users: IUser[]): Promise<IUser[]> {
     const savedUsers: IUser[] = [];
+
     for (const user of users) {
-      const savedUser = await this.saveUser(user);
-      savedUsers.push(savedUser);
+      const savedUser: IUser | null = await this.saveUser(user);
+      if (savedUser) {
+        savedUsers.push(savedUser);
+      }
     }
     return savedUsers;
   }
@@ -148,6 +143,8 @@ ${plainText}
   async getAllUsers(): Promise<IUser[]> {
     return [...this.users];
   }
+
+  // API's methods for VectorStoreService upserting  users
 
   private userToSearchableText(user: IUser): string {
     const parts: string[] = [];
@@ -165,4 +162,32 @@ ${plainText}
 
     return parts.join("\n");
   }
+
+  private userToDocument(user: IUser): Document {
+    const pageContent = this.userToSearchableText(user);
+
+    const metadata = {
+      uuid: user.uuid || uuidv4(),
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      location: user.location,
+      skills: user.skills,
+      previousCompanies: user.previousCompanies,
+      interests: user.interests,
+      experience: user.experience,
+    };
+
+    return {
+      pageContent,
+      metadata,
+    };
+  }
+}
+
+function isInvalidField(value: any): boolean {
+  return (
+    value === null || value === undefined || value === "null" || (typeof value === "string" && value.trim() === "")
+  );
 }

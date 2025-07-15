@@ -1,4 +1,5 @@
 {
+  "id": null,
   "name": "Luis Fernandez",
   "email": null,
   "role": "Restaurant Manager",
@@ -14,6 +15,6 @@
   "interests": null,
   "experience": "7 years",
   "description": null,
-  "createdAt": "2025-07-14T20:19:10.942Z",
-  "updatedAt": "2025-07-14T20:19:10.942Z"
+  "createdAt": "2025-07-15T00:33:19.545Z",
+  "updatedAt": "2025-07-15T00:33:19.545Z"
 }

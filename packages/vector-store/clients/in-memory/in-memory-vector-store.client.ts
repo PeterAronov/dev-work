@@ -3,7 +3,12 @@ import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { OpenAIEmbeddingModels } from "../../../llm";
-import { DocumentSearchResponse, IVectorStoreClient, VectorSearchResponse } from "../../src/vector-store.interface";
+import {
+  DocumentSearchResponse,
+  IVectorStoreClient,
+  MemoryVector,
+  VectorSearchResponse,
+} from "../../src/vector-store.interface";
 
 /**
  * Simplified InMemoryVectorStoreClient for user profile search
@@ -47,12 +52,13 @@ export class InMemoryVectorStoreClient implements IVectorStoreClient {
       await this.vectorStore!.addDocuments(documents);
 
       documents.forEach((doc) => {
-        if (doc.metadata?.id) {
-          this.documentMap.set(doc.metadata.id, doc);
+        if (doc.metadata?.uuid) {
+          this.documentMap.set(doc.metadata.uuid, doc);
         }
       });
 
       console.log(`InMemoryVectorStoreClient | Successfully added ${documents.length} user documents`);
+      console.log(`InMemoryVectorStoreClient | Current total documents count: ${this.documentMap.size}`);
     } catch (error: any) {
       console.error("Failed to add documents:", error?.message);
       throw new Error(`Add documents failed: ${error?.message}`);
@@ -103,7 +109,7 @@ export class InMemoryVectorStoreClient implements IVectorStoreClient {
       console.log(`✅ Found ${searchResults.length} matching users`);
       return searchResults;
     } catch (error) {
-      console.error("❌ Document search failed:", error);
+      console.error("Document search failed:", error);
       throw new Error(`Document search failed: ${error instanceof Error ? error.message : "Unknown error"}`);
     }
   }
@@ -174,6 +180,27 @@ export class InMemoryVectorStoreClient implements IVectorStoreClient {
   private ensureInitialized(): void {
     if (!this.vectorStore) {
       throw new Error("Vector store not initialized. Call initialize() first.");
+    }
+  }
+
+  async getAllMemoryVectors(): Promise<MemoryVector[]> {
+    this.ensureInitialized();
+
+    try {
+      console.log("InMemoryVectorStoreClient | Retrieving all memory vectors...");
+
+      const vectors = this.vectorStore!.memoryVectors.map((vec) => ({
+        content: vec.content,
+        embedding: vec.embedding,
+        metadata: vec.metadata,
+        id: vec.id,
+      }));
+
+      console.log(`InMemoryVectorStoreClient | Found ${vectors.length} memory vectors`);
+      return vectors;
+    } catch (error: any) {
+      console.error("Failed to retrieve memory vectors:", error?.message);
+      throw new Error(`Get memory vectors failed: ${error?.message}`);
     }
   }
 }

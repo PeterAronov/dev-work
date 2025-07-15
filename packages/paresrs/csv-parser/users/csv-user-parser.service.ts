@@ -20,6 +20,7 @@ export class CSVUserParserService {
     const skills = csvUser.skills ? csvUser.skills.split(",").map((skill) => skill.trim().replace(/^"|"$/g, "")) : null;
 
     return {
+      id: null,
       name: csvUser.name || null,
       email: null,
       role: csvUser.role || null,

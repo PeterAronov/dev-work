@@ -1,7 +1,7 @@
 {
   "name": "Dr. Kunal Sharma",
   "email": "k.sharma@ai.research.org",
-  "role": "Data Scientist",
+  "role": "data scientist",
   "location": "Berlin",
   "skills": [
     "Python",
@@ -18,9 +18,9 @@
     "jazz piano",
     "open science advocacy"
   ],
-  "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich",
-  "id": "a6b3690c-cde2-48f8-9592-8679e095354a",
-  "createdAt": "2025-07-14T20:18:46.690Z",
-  "updatedAt": "2025-07-14T20:18:46.691Z",
-  "description": "Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy."
+  "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich and contributions to research teams at DeepMind and Novartis.",
+  "description": "Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy.",
+  "uuid": "ee111371-53cf-46b6-bccd-a88a2e60268e",
+  "createdAt": "2025-07-15T00:33:07.373Z",
+  "updatedAt": "2025-07-15T00:33:07.373Z"
 }

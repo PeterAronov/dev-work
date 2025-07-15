@@ -5,6 +5,7 @@ import { CSVUserParserService, JSONUserParserService, PlainTextParserService } f
 import { IUser } from "./packages/user/src/user.interface";
 import { UserService } from "./packages/user/src/user.service";
 import { saveToJsonFile } from "./packages/utils/save.to.file";
+import { MemoryVector, VectorStoreService } from "./packages/vector-store";
 import { SalesforceService } from "./salesforce/src/salesforce.service";
 
 console.log("Running Salesforce Service...");
@@ -39,7 +40,11 @@ const extractFromPlainTextAndSaveUser = async (text: string, filename?: string) 
     const extractedUser: IUser = await userService.extractUserFromPlainText(text);
     extractedUser.description = text;
 
-    const savedUser: IUser = await userService.saveUser(extractedUser);
+    const savedUser: IUser | null = await userService.saveUser(extractedUser);
+
+    if (!savedUser) {
+      return;
+    }
 
     if (filename) {
       saveToJsonFile(filename, savedUser);
@@ -52,55 +57,6 @@ const extractFromPlainTextAndSaveUser = async (text: string, filename?: string) 
     throw error;
   }
 };
-
-// const extractUserWithExamples = async (text: string, filename?: string) => {
-//   try {
-//     const examples = [
-//       {
-//         input:
-//           "Alice Johnson (alice.j@tech.com) is a data scientist from New York. She works with Python, machine learning, and has worked at Netflix.",
-//         output: {
-//           id: null,
-//           name: "Alice Johnson",
-//           email: "alice.j@tech.com",
-//           role: "data scientist",
-//           location: "New York",
-//           skills: ["Python", "machine learning"],
-//           previousCompanies: ["Netflix"],
-//           interests: null,
-//           experience: null,
-//         },
-//       },
-//       {
-//         input: "The weather is nice today with sunny skies.",
-//         output: {
-//           id: null,
-//           name: null,
-//           email: null,
-//           role: null,
-//           location: null,
-//           skills: null,
-//           previousCompanies: null,
-//           interests: null,
-//           experience: null,
-//         },
-//       },
-//     ];
-
-//     const extractedUser = await userService.extractUserFromPlainTextWithExamples(text, examples);
-//     const savedUser = await userService.saveUser(extractedUser);
-
-//     if (filename) {
-//       saveToJsonFile(filename, savedUser);
-//       console.log(`Saved user with examples to ${filename}`);
-//     }
-
-//     return savedUser;
-//   } catch (error: any) {
-//     console.error("Error in extractUserWithExamples:", error?.message || error);
-//     throw error;
-//   }
-// };
 
 const runAll = async () => {
   /*
@@ -126,14 +82,14 @@ const runAll = async () => {
 
   console.log("\n=== Starting JSON User Extraction ===");
 
-  // const jsonUsers: IUser[] = await JSONUserParserService.parseJSONFiles("static-data/users/json");
-  // console.log(`Parsed ${jsonUsers.length} JSON users from static-data/users/json`);
-  // for (const user of jsonUsers) {
-  //   saveToJsonFile(`json-user-${user.id}`, user);
-  //   console.log(`\n--- Processing JSON User: ${user.name} ---`);
-  //   console.log("User data:", JSON.stringify(user, null, 2));
-  // }
-  // await userService.saveUsers(jsonUsers);
+  const jsonUsers: IUser[] = await JSONUserParserService.parseJSONFiles("static-data/users/json");
+  console.log(`Parsed ${jsonUsers.length} JSON users from static-data/users/json`);
+  for (const user of jsonUsers) {
+    saveToJsonFile(`json-user-${user.id}`, user);
+    console.log(`\n--- Processing JSON User: ${user.name} ---`);
+    console.log("User data:", JSON.stringify(user, null, 2));
+  }
+  await userService.saveUsers(jsonUsers);
 
   // CSV User Extraction
 
@@ -147,18 +103,13 @@ const runAll = async () => {
   }
   await userService.saveUsers(csvUsers);
 
-  // Demonstrate extraction with examples
-  /*
-  console.log("\n=== Demonstrating Few-Shot Learning ===");
-  await extractUserWithExamples(
-    "Mike Wilson (m.wilson@devops.io) is a DevOps engineer in Austin. He knows Docker, AWS, and Jenkins. Used to work at Microsoft.",
-    "extracted-user-with-examples"
-  );
-*/
   // Show all users in memory
   console.log("\n=== All Users in UserService ===");
+
+  const getAllMemoryVectors: MemoryVector[] = await VectorStoreService.getAllMemoryVectors();
+  saveToJsonFile("vector-store-memory-vectors", getAllMemoryVectors);
+
   const allUsers: IUser[] = await userService.getAllUsers();
-  console.log("Users in service:", JSON.stringify(allUsers, null, 2));
   saveToJsonFile("all-extracted-users", allUsers);
 };
 

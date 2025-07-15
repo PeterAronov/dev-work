@@ -16,6 +16,7 @@ export interface IVectorStoreClient {
     metadataFilter?: Record<string, any>,
     threshold?: number
   ): Promise<DocumentSearchResponse[]>;
+  getAllMemoryVectors?(): Promise<MemoryVector[]>;
 }
 
 export interface MemoryVector {

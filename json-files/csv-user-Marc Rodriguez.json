@@ -1,4 +1,5 @@
 {
+  "id": null,
   "name": "Marc Rodriguez",
   "email": null,
   "role": "Resident DJ",
@@ -14,6 +15,6 @@
   "interests": null,
   "experience": "12 years",
   "description": null,
-  "createdAt": "2025-07-14T20:19:10.940Z",
-  "updatedAt": "2025-07-14T20:19:10.940Z"
+  "createdAt": "2025-07-15T00:33:19.544Z",
+  "updatedAt": "2025-07-15T00:33:19.544Z"
 }
