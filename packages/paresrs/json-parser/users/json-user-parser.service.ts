@@ -25,11 +25,23 @@ export class JSONUserParserService {
     };
   }
 
-  static async parseJSONFile(filePath: string): Promise<IUser> {
+  static async parseJSONFile(filePath: string): Promise<IUser[]> {
     const resolvedPath = path.resolve(process.cwd(), filePath);
     const jsonContent = await fs.readFile(resolvedPath, "utf-8");
-    const jsonUser: JSONUserData = this.parseJSONContent(jsonContent);
-    return this.convertToIUser(jsonUser);
+    const parsed = JSON.parse(jsonContent);
+
+    const users: IUser[] = [];
+
+    if (Array.isArray(parsed)) {
+      // in case of multiple users in a single json file
+      for (const jsonUser of parsed) {
+        users.push(this.convertToIUser(jsonUser));
+      }
+    } else {
+      users.push(this.convertToIUser(parsed));
+    }
+
+    return users;
   }
 
   static async parseJSONFiles(folderPath: string): Promise<IUser[]> {
@@ -37,13 +49,14 @@ export class JSONUserParserService {
     const files = await fs.readdir(resolvedPath);
     const jsonFiles = files.filter((file) => file.endsWith(".json"));
 
-    const users: IUser[] = [];
+    const allUsers: IUser[] = [];
+
     for (const jsonFile of jsonFiles) {
       const filePath = path.join(resolvedPath, jsonFile);
-      const user = await this.parseJSONFile(filePath);
-      users.push(user);
+      const usersFromFile: IUser[] = await this.parseJSONFile(filePath);
+      allUsers.push(...usersFromFile); // flatten into one array
     }
 
-    return users;
+    return allUsers;
   }
 }

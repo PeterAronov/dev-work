@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "name": "Kai Thompson",
+  "email": null,
+  "role": "Producer DJ",
+  "location": "Berlin",
+  "skills": [
+    "Minimal Techno",
+    "Music Production",
+    "Logic Pro",
+    "DJ Controller"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "7 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.296Z",
+  "updatedAt": "2025-07-15T13:26:18.296Z"
+}

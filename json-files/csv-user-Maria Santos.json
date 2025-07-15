@@ -1,0 +1,20 @@
+{
+  "id": null,
+  "name": "Maria Santos",
+  "email": null,
+  "role": "Revenue Manager",
+  "location": "Lisbon",
+  "skills": [
+    "Pricing Strategy",
+    "Excel",
+    "Revenue Management Systems",
+    "Portuguese",
+    "Spanish"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "6 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.297Z",
+  "updatedAt": "2025-07-15T13:26:18.297Z"
+}

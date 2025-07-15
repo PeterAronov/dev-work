@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "name": "Anna Schmidt",
+  "email": null,
+  "role": "Event Coordinator",
+  "location": "Berlin",
+  "skills": [
+    "Event Planning",
+    "Banquet Management",
+    "German",
+    "English"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "3 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.297Z",
+  "updatedAt": "2025-07-15T13:26:18.297Z"
+}

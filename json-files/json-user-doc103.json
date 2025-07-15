@@ -1,0 +1,18 @@
+{
+  "id": "doc103",
+  "name": "Dr. Amir Azulay",
+  "email": null,
+  "role": "Orthopedic Surgeon",
+  "location": "Ashdod",
+  "skills": [
+    "Joint Replacement",
+    "Sports Injuries",
+    "Rehabilitation"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Collaborates with IDF rehab centers on musculoskeletal injuries.",
+  "createdAt": "2025-07-15T13:26:15.031Z",
+  "updatedAt": "2025-07-15T13:26:15.031Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "name": "Chloe Williams",
+  "email": null,
+  "role": "International DJ",
+  "location": "London",
+  "skills": [
+    "Techno",
+    "Progressive House",
+    "Traktor Pro",
+    "Live Mixing"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "8 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.296Z",
+  "updatedAt": "2025-07-15T13:26:18.296Z"
+}

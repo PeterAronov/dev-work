@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "name": "Diego Sanchez",
+  "email": null,
+  "role": "Underground DJ",
+  "location": "Barcelona",
+  "skills": [
+    "Acid House",
+    "Underground Scene",
+    "Analog Mixing",
+    "Vinyl Collection"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "10 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.296Z",
+  "updatedAt": "2025-07-15T13:26:18.296Z"
+}

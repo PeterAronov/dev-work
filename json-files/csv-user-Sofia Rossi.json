@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "name": "Sofia Rossi",
+  "email": null,
+  "role": "Housekeeping Supervisor",
+  "location": "Milan",
+  "skills": [
+    "Team Management",
+    "Quality Control",
+    "Italian",
+    "German"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "5 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.297Z",
+  "updatedAt": "2025-07-15T13:26:18.297Z"
+}

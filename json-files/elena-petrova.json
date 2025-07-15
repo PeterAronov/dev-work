@@ -14,13 +14,15 @@
     "DeepMind"
   ],
   "interests": [
+    "foundation models",
+    "federated learning",
+    "low-resource language models",
     "open science",
-    "ethical AI",
-    "mentoring early-career female researchers"
+    "ethical AI"
   ],
-  "experience": "Elena is currently leading a research group at NeuralX AI Labs, focusing on foundation models, federated learning, and low-resource language models. She has published papers at NeurIPS and ICML and collaborated on multilingual benchmark development.",
-  "id": "e32c7a9b-98a3-4c0a-ad4b-6a5ed252743b",
-  "createdAt": "2025-07-14T16:04:22.431Z",
-  "updatedAt": "2025-07-14T16:04:22.432Z",
-  "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI."
+  "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs.",
+  "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.",
+  "uuid": "dd06560b-e86e-459b-be70-e885892ae740",
+  "createdAt": "2025-07-15T13:26:12.750Z",
+  "updatedAt": "2025-07-15T13:26:12.750Z"
 }

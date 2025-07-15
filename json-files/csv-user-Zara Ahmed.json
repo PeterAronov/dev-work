@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "name": "Zara Ahmed",
+  "email": null,
+  "role": "Electronic Producer",
+  "location": "Amsterdam",
+  "skills": [
+    "Trance",
+    "Music Composition",
+    "FL Studio",
+    "Synthesizers"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "5 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.296Z",
+  "updatedAt": "2025-07-15T13:26:18.296Z"
+}

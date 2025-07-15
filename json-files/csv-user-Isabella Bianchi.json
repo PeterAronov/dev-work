@@ -1,0 +1,20 @@
+{
+  "id": null,
+  "name": "Isabella Bianchi",
+  "email": null,
+  "role": "Guest Relations Manager",
+  "location": "Rome",
+  "skills": [
+    "VIP Services",
+    "Problem Resolution",
+    "Italian",
+    "English",
+    "French"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": "9 years",
+  "description": null,
+  "createdAt": "2025-07-15T13:26:18.297Z",
+  "updatedAt": "2025-07-15T13:26:18.297Z"
+}

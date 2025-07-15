@@ -15,8 +15,8 @@
     "open-source"
   ],
   "experience": "",
-  "id": "8f5f615e-f58f-4dd9-af23-fd6635361e96",
-  "createdAt": "2025-07-14T16:04:24.587Z",
-  "updatedAt": "2025-07-14T16:04:24.588Z",
-  "description": "John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source."
+  "description": "John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source.",
+  "uuid": "597b6c62-915b-47b6-9f77-9ff30a1e8ee6",
+  "createdAt": "2025-07-15T13:26:12.786Z",
+  "updatedAt": "2025-07-15T13:26:12.786Z"
 }

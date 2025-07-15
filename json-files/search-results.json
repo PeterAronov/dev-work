@@ -1,0 +1,156 @@
+[
+  {
+    "id": "unknown",
+    "score": 0.6339321809303453,
+    "text": "Description: John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source.\nName: John Doe\nEmail: john.doe@tech.com\nRole: backend engineer\nLocation: Berlin\nSkills: Kubernetes, Python, cloud infrastructure\nPrevious Companies: Google\nInterests: open-source",
+    "document": {
+      "pageContent": "Description: John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source.\nName: John Doe\nEmail: john.doe@tech.com\nRole: backend engineer\nLocation: Berlin\nSkills: Kubernetes, Python, cloud infrastructure\nPrevious Companies: Google\nInterests: open-source",
+      "metadata": {
+        "uuid": "597b6c62-915b-47b6-9f77-9ff30a1e8ee6",
+        "name": "John Doe",
+        "email": "john.doe@tech.com",
+        "role": "backend engineer",
+        "location": "Berlin",
+        "skills": [
+          "Kubernetes",
+          "Python",
+          "cloud infrastructure"
+        ],
+        "previousCompanies": [
+          "Google"
+        ],
+        "interests": [
+          "open-source"
+        ],
+        "experience": ""
+      }
+    }
+  },
+  {
+    "id": "u105",
+    "score": 0.6326078709561247,
+    "text": "Description: Built trading strategies for derivatives market.\nuser u105\nName: Lior Ben-David\nRole: Quantitative Analyst\nLocation: Tel Aviv\nSkills: R, Machine Learning, Monte Carlo, Python",
+    "document": {
+      "pageContent": "Description: Built trading strategies for derivatives market.\nuser u105\nName: Lior Ben-David\nRole: Quantitative Analyst\nLocation: Tel Aviv\nSkills: R, Machine Learning, Monte Carlo, Python",
+      "metadata": {
+        "uuid": "ea89e536-f6cf-47b9-b076-7e969b87f1f5",
+        "id": "u105",
+        "name": "Lior Ben-David",
+        "email": null,
+        "role": "Quantitative Analyst",
+        "location": "Tel Aviv",
+        "skills": [
+          "R",
+          "Machine Learning",
+          "Monte Carlo",
+          "Python"
+        ],
+        "previousCompanies": null,
+        "interests": null,
+        "experience": null
+      }
+    }
+  },
+  {
+    "id": "unknown",
+    "score": 0.6129260355789006,
+    "text": "Description: Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge.\nName: Michael Anderson\nEmail: michael.anderson@cloudops.io\nRole: Senior DevOps Engineer\nLocation: Austin, Texas\nSkills: CI/CD, cloud infrastructure, automation, AWS, GCP, Terraform, Kubernetes, Docker, Jenkins, Helm, Prometheus, Bash scripting\nPrevious Companies: IBM, Netflix\nInterests: open-source monitoring tools, mentoring junior engineers\nExperience: Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
+    "document": {
+      "pageContent": "Description: Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge.\nName: Michael Anderson\nEmail: michael.anderson@cloudops.io\nRole: Senior DevOps Engineer\nLocation: Austin, Texas\nSkills: CI/CD, cloud infrastructure, automation, AWS, GCP, Terraform, Kubernetes, Docker, Jenkins, Helm, Prometheus, Bash scripting\nPrevious Companies: IBM, Netflix\nInterests: open-source monitoring tools, mentoring junior engineers\nExperience: Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
+      "metadata": {
+        "uuid": "93a4e80b-18cc-4d87-b897-c9bcd7f9f1d2",
+        "name": "Michael Anderson",
+        "email": "michael.anderson@cloudops.io",
+        "role": "Senior DevOps Engineer",
+        "location": "Austin, Texas",
+        "skills": [
+          "CI/CD",
+          "cloud infrastructure",
+          "automation",
+          "AWS",
+          "GCP",
+          "Terraform",
+          "Kubernetes",
+          "Docker",
+          "Jenkins",
+          "Helm",
+          "Prometheus",
+          "Bash scripting"
+        ],
+        "previousCompanies": [
+          "IBM",
+          "Netflix"
+        ],
+        "interests": [
+          "open-source monitoring tools",
+          "mentoring junior engineers"
+        ],
+        "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%."
+      }
+    }
+  },
+  {
+    "id": "unknown",
+    "score": 0.5496229392338686,
+    "text": "Description: Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy.\nName: Dr. Kunal Sharma\nEmail: k.sharma@ai.research.org\nRole: data scientist\nLocation: Berlin\nSkills: Python, PyTorch, NLP, biomedical data modeling\nPrevious Companies: DeepMind, Novartis\nInterests: long hikes, jazz piano, open science advocacy\nExperience: focusing on machine learning for healthcare",
+    "document": {
+      "pageContent": "Description: Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy.\nName: Dr. Kunal Sharma\nEmail: k.sharma@ai.research.org\nRole: data scientist\nLocation: Berlin\nSkills: Python, PyTorch, NLP, biomedical data modeling\nPrevious Companies: DeepMind, Novartis\nInterests: long hikes, jazz piano, open science advocacy\nExperience: focusing on machine learning for healthcare",
+      "metadata": {
+        "uuid": "d7390567-af4f-48af-a765-e1c7c750d00b",
+        "name": "Dr. Kunal Sharma",
+        "email": "k.sharma@ai.research.org",
+        "role": "data scientist",
+        "location": "Berlin",
+        "skills": [
+          "Python",
+          "PyTorch",
+          "NLP",
+          "biomedical data modeling"
+        ],
+        "previousCompanies": [
+          "DeepMind",
+          "Novartis"
+        ],
+        "interests": [
+          "long hikes",
+          "jazz piano",
+          "open science advocacy"
+        ],
+        "experience": "focusing on machine learning for healthcare"
+      }
+    }
+  },
+  {
+    "id": "unknown",
+    "score": 0.5455422401037959,
+    "text": "Description: Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.\nName: Dr. Elena Petrova\nEmail: elena.petrova@neuralx.ai\nRole: AI research scientist\nLocation: Zurich, Switzerland\nSkills: PyTorch, Hugging Face Transformers, TensorFlow, fastai\nPrevious Companies: Hugging Face, DeepMind\nInterests: foundation models, federated learning, low-resource language models, open science, ethical AI\nExperience: Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs.",
+    "document": {
+      "pageContent": "Description: Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.\nName: Dr. Elena Petrova\nEmail: elena.petrova@neuralx.ai\nRole: AI research scientist\nLocation: Zurich, Switzerland\nSkills: PyTorch, Hugging Face Transformers, TensorFlow, fastai\nPrevious Companies: Hugging Face, DeepMind\nInterests: foundation models, federated learning, low-resource language models, open science, ethical AI\nExperience: Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs.",
+      "metadata": {
+        "uuid": "dd06560b-e86e-459b-be70-e885892ae740",
+        "name": "Dr. Elena Petrova",
+        "email": "elena.petrova@neuralx.ai",
+        "role": "AI research scientist",
+        "location": "Zurich, Switzerland",
+        "skills": [
+          "PyTorch",
+          "Hugging Face Transformers",
+          "TensorFlow",
+          "fastai"
+        ],
+        "previousCompanies": [
+          "Hugging Face",
+          "DeepMind"
+        ],
+        "interests": [
+          "foundation models",
+          "federated learning",
+          "low-resource language models",
+          "open science",
+          "ethical AI"
+        ],
+        "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs."
+      }
+    }
+  }
+]

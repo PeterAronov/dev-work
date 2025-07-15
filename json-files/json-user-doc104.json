@@ -1,0 +1,18 @@
+{
+  "id": "doc104",
+  "name": "Dr. Meital Avrahami",
+  "email": null,
+  "role": "Neurologist",
+  "location": "Ramat Gan",
+  "skills": [
+    "Epilepsy",
+    "Headaches",
+    "Neurodegenerative Diseases"
+  ],
+  "previousCompanies": null,
+  "interests": null,
+  "experience": null,
+  "description": "Leads the neurology clinic at Maccabi’s Ramat Gan branch.",
+  "createdAt": "2025-07-15T13:26:15.031Z",
+  "updatedAt": "2025-07-15T13:26:15.031Z"
+}

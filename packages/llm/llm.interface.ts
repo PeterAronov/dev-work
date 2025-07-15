@@ -52,8 +52,6 @@ export interface LLMModel {
   };
   contextWindow?: number;
   maxOutputTokens?: number;
-  supportsStreaming?: boolean;
-  supportsVision?: boolean;
   supportsFunctionCalling?: boolean;
 }
 
@@ -73,9 +71,9 @@ export interface LLMModelConfig {
 
 // LLM Request and Response Interfaces ///
 
-export interface LLMRequest<TArgs = any> {
+export interface LLMRequest {
   prompt?: string;
-  args?: TArgs;
+  args?: any;
   config?: LLMModelConfig;
   model?: LLMModel; // optional, fallback to config.modelName
   // Service-level model selection
@@ -104,7 +102,7 @@ export interface ILLMClient {
   /**
    * Generates a free-form or chat-based response.
    */
-  generateText?<T = any>(req: LLMRequest<T>): Promise<T>;
+  generateText?<T = any>(req: LLMRequest): Promise<string>;
 
   /**
    * Extracts structured data from a prompt using schema validation.

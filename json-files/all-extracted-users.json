@@ -1,29 +1,73 @@
 [
   {
-    "name": "Alice Morgan",
-    "email": "alice.morgan@productlabs.io",
-    "role": "Product Manager",
-    "location": "Amsterdam",
+    "name": "Sarah Smith",
+    "email": "sarah@frontend.dev",
+    "role": "frontend developer",
+    "location": "San Francisco",
     "skills": [
-      "Agile methodology",
-      "stakeholder communication",
-      "roadmapping"
+      "React",
+      "TypeScript",
+      "UI/UX design"
     ],
     "previousCompanies": [
-      "Booking.com",
-      "Stripe",
-      "two local Dutch startups"
+      "Meta",
+      "Airbnb"
     ],
     "interests": [
-      "ethical design",
-      "behavioral economics",
-      "marathon running"
+      "accessibility",
+      "performance optimization"
     ],
-    "experience": "She has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
-    "id": "f61284bc-2be1-42e8-97f4-e5cb6595f502",
-    "createdAt": "2025-07-14T16:04:12.765Z",
-    "updatedAt": "2025-07-14T16:04:12.766Z",
-    "description": "Alice Morgan (alice.morgan@productlabs.io) is a seasoned product manager based in Amsterdam. \nShe has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech. \nAlice has strong skills in Agile methodology, stakeholder communication, and roadmapping. \nShe previously worked at Booking.com, Stripe, and two local Dutch startups. \nOutside of work, she’s passionate about ethical design, behavioral economics, and marathon running."
+    "experience": "",
+    "description": "`Sarah Smith (sarah@frontend.dev) is a frontend developer from San Francisco. \n    She specializes in React, TypeScript, and UI/UX design. \n    Previously worked at Meta and Airbnb. She's passionate about accessibility and performance optimization.`",
+    "uuid": "c9bbb55a-0636-4139-b5a6-cd85155e068f",
+    "createdAt": "2025-07-15T13:26:12.504Z",
+    "updatedAt": "2025-07-15T13:26:12.504Z"
+  },
+  {
+    "name": "Dr. Kunal Sharma",
+    "email": "k.sharma@ai.research.org",
+    "role": "data scientist",
+    "location": "Berlin",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "NLP",
+      "biomedical data modeling"
+    ],
+    "previousCompanies": [
+      "DeepMind",
+      "Novartis"
+    ],
+    "interests": [
+      "long hikes",
+      "jazz piano",
+      "open science advocacy"
+    ],
+    "experience": "focusing on machine learning for healthcare",
+    "description": "Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy.",
+    "uuid": "d7390567-af4f-48af-a765-e1c7c750d00b",
+    "createdAt": "2025-07-15T13:26:12.543Z",
+    "updatedAt": "2025-07-15T13:26:12.543Z"
+  },
+  {
+    "name": "Josh Lee",
+    "email": "josh@devrel.io",
+    "role": "Developer Advocate",
+    "location": "UK",
+    "skills": null,
+    "previousCompanies": [
+      "HashiCorp"
+    ],
+    "interests": [
+      "speaking at meetups",
+      "producing YouTube content",
+      "writing documentation"
+    ],
+    "experience": "He helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
+    "description": "Josh Lee is a Developer Advocate working remotely from the UK. He helps build communities and educates engineers about cloud-native tooling.\nJosh loves speaking at meetups, producing YouTube content, and writing documentation. \nFormerly at HashiCorp, now working with multiple open-source foundations.\nHis email is josh@devrel.io.",
+    "uuid": "800048a1-53f9-41f2-8160-67be263d608e",
+    "createdAt": "2025-07-15T13:26:12.665Z",
+    "updatedAt": "2025-07-15T13:26:12.665Z"
   },
   {
     "name": "Carlos Mendes",
@@ -44,11 +88,11 @@
       "micro frontends",
       "performance optimization"
     ],
-    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe. Delivered end-to-end apps for clients in healthtech, edtech, and travel, including a real-time collaboration platform for a YC-backed company.",
-    "id": "77737fe0-5c6d-4579-8342-60e5d98fc329",
-    "createdAt": "2025-07-14T16:04:16.866Z",
-    "updatedAt": "2025-07-14T16:04:16.867Z",
-    "description": "Carlos Mendes (carlos.m@webflowcraft.com) is a full-stack JavaScript engineer working remotely from Porto, Portugal. \nWith 7+ years of experience, Carlos builds SaaS platforms and high-performance web apps for startups across the US and Europe. \nHe specializes in React, Node.js, Next.js, and PostgreSQL, and is a contributor to the React Hook Form library. \nCarlos has delivered end-to-end apps for clients in healthtech, edtech, and travel — including a real-time collaboration platform for a YC-backed company. \nBefore freelancing full-time, he worked at OutSystems as a frontend lead. \nCarlos is deeply interested in developer experience (DX), micro frontends, and performance optimization. \nHe also teaches advanced TypeScript workshops and runs a YouTube channel focused on debugging and testing patterns."
+    "experience": "7+ years of experience building SaaS platforms and high-performance web apps for startups across the US and Europe",
+    "description": "Carlos Mendes (carlos.m@webflowcraft.com) is a full-stack JavaScript engineer working remotely from Porto, Portugal. \nWith 7+ years of experience, Carlos builds SaaS platforms and high-performance web apps for startups across the US and Europe. \nHe specializes in React, Node.js, Next.js, and PostgreSQL, and is a contributor to the React Hook Form library. \nCarlos has delivered end-to-end apps for clients in healthtech, edtech, and travel — including a real-time collaboration platform for a YC-backed company. \nBefore freelancing full-time, he worked at OutSystems as a frontend lead. \nCarlos is deeply interested in developer experience (DX), micro frontends, and performance optimization. \nHe also teaches advanced TypeScript workshops and runs a YouTube channel focused on debugging and testing patterns.",
+    "uuid": "0f6e031b-783e-45e4-a9cc-2f29cdb58050",
+    "createdAt": "2025-07-15T13:26:12.685Z",
+    "updatedAt": "2025-07-15T13:26:12.685Z"
   },
   {
     "name": "Dr. Elena Petrova",
@@ -66,83 +110,40 @@
       "DeepMind"
     ],
     "interests": [
+      "foundation models",
+      "federated learning",
+      "low-resource language models",
       "open science",
-      "ethical AI",
-      "mentoring early-career female researchers"
+      "ethical AI"
     ],
-    "experience": "Elena is currently leading a research group at NeuralX AI Labs, focusing on foundation models, federated learning, and low-resource language models. She has published papers at NeurIPS and ICML and collaborated on multilingual benchmark development.",
-    "id": "e32c7a9b-98a3-4c0a-ad4b-6a5ed252743b",
-    "createdAt": "2025-07-14T16:04:22.431Z",
-    "updatedAt": "2025-07-14T16:04:22.432Z",
-    "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI."
+    "experience": "Elena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs.",
+    "description": "Dr. Elena Petrova (elena.petrova@neuralx.ai) is an AI research scientist based in Zurich, Switzerland. \nShe holds a Ph.D. in Machine Learning from ETH Zurich, where her dissertation focused on transformer interpretability and multilingual embeddings. \nElena has published papers at NeurIPS and ICML and is currently leading a research group at NeuralX AI Labs, where she focuses on foundation models, federated learning, and low-resource language models. \nShe has collaborated with Hugging Face and DeepMind on multilingual benchmark development. \nElena's skills include PyTorch, Hugging Face Transformers, TensorFlow, and fastai. \nShe speaks five languages fluently, mentors early-career female researchers, and is an advocate for open science and ethical AI.",
+    "uuid": "dd06560b-e86e-459b-be70-e885892ae740",
+    "createdAt": "2025-07-15T13:26:12.750Z",
+    "updatedAt": "2025-07-15T13:26:12.750Z"
   },
   {
-    "name": "John Doe",
-    "email": "john.doe@tech.com",
-    "role": "backend engineer",
-    "location": "Berlin",
+    "name": "Yossi Cohen",
+    "email": "",
+    "role": "entrepreneur and product strategist",
+    "location": "Israel",
     "skills": [
-      "Kubernetes",
-      "Python",
-      "cloud infrastructure"
+      "supply chain optimization",
+      "food safety compliance",
+      "sustainable packaging",
+      "consumer trend analysis"
     ],
-    "previousCompanies": [
-      "Google"
-    ],
+    "previousCompanies": null,
     "interests": [
-      "open-source"
+      "Mediterranean cooking",
+      "mentoring young founders",
+      "exploring new markets in global food culture"
     ],
-    "experience": "",
-    "id": "8f5f615e-f58f-4dd9-af23-fd6635361e96",
-    "createdAt": "2025-07-14T16:04:24.587Z",
-    "updatedAt": "2025-07-14T16:04:24.588Z",
-    "description": "John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source."
-  },
-  {
-    "name": "Josh Lee",
-    "email": "josh@devrel.io",
-    "role": "Developer Advocate",
-    "location": "UK",
-    "skills": null,
-    "previousCompanies": [
-      "HashiCorp"
-    ],
-    "interests": [
-      "speaking at meetups",
-      "producing YouTube content",
-      "writing documentation"
-    ],
-    "experience": "Helps build communities and educates engineers about cloud-native tooling. Formerly at HashiCorp, now working with multiple open-source foundations.",
-    "id": "48116ed0-d670-4826-94bd-6ec4d856e867",
-    "createdAt": "2025-07-14T16:04:27.611Z",
-    "updatedAt": "2025-07-14T16:04:27.611Z",
-    "description": "Josh Lee is a Developer Advocate working remotely from the UK. He helps build communities and educates engineers about cloud-native tooling.\nJosh loves speaking at meetups, producing YouTube content, and writing documentation. \nFormerly at HashiCorp, now working with multiple open-source foundations.\nHis email is josh@devrel.io."
-  },
-  {
-    "name": "Dr. Kunal Sharma",
-    "email": "k.sharma@ai.research.org",
-    "role": "Data Scientist",
-    "location": "Berlin",
-    "skills": [
-      "Python",
-      "PyTorch",
-      "NLP",
-      "biomedical data modeling"
-    ],
-    "previousCompanies": [
-      "DeepMind",
-      "Novartis"
-    ],
-    "interests": [
-      "long hikes",
-      "jazz piano",
-      "open science advocacy"
-    ],
-    "experience": "Focusing on machine learning for healthcare with a PhD in AI from ETH Zurich",
-    "id": "55ee93a7-ec09-4cc3-9190-103b654fc210",
-    "createdAt": "2025-07-14T16:04:30.111Z",
-    "updatedAt": "2025-07-14T16:04:30.111Z",
-    "description": "Meet Dr. Kunal Sharma (k.sharma@ai.research.org), a Berlin-based data scientist focusing on machine learning for healthcare.\nKunal has a PhD in AI from ETH Zurich and previously contributed to research teams at DeepMind and Novartis. \nHis key skills include Python, PyTorch, NLP, and biomedical data modeling. \nIn his free time, Kunal enjoys long hikes, jazz piano, and open science advocacy."
+    "experience": "With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies.",
+    "description": "Meet Yossi Cohen, an Israel-based entrepreneur and product strategist in the food industry.\nWith over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies. \nHis expertise spans supply chain optimization, food safety compliance, sustainable packaging, and consumer trend analysis.\nYossi is passionate about bridging culinary tradition with modern technology, and in his free time, he enjoys Mediterranean cooking, mentoring young founders, and exploring new markets in global food culture.",
+    "uuid": "58efc8a2-99d5-4e87-8b93-c13a3dc93ff8",
+    "createdAt": "2025-07-15T13:26:12.751Z",
+    "updatedAt": "2025-07-15T13:26:12.751Z"
   },
   {
     "name": "Michael Anderson",
@@ -172,89 +173,83 @@
       "mentoring junior engineers"
     ],
     "experience": "Over 10 years of experience in CI/CD, cloud infrastructure, and automation. Leads infrastructure-as-code initiatives using Terraform and Kubernetes at CloudOps, reducing deployment times by 40%.",
-    "id": "85d9ee4a-1f65-499c-a280-c074c50f58dc",
-    "createdAt": "2025-07-14T16:04:33.478Z",
-    "updatedAt": "2025-07-14T16:04:33.480Z",
-    "description": "Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge."
+    "description": "Michael Anderson (michael.anderson@cloudops.io) is a senior DevOps engineer currently living in Austin, Texas. \nHe has over 10 years of experience in CI/CD, cloud infrastructure, and automation, and is certified in both AWS and GCP. \nMichael began his career as a systems administrator at IBM, then transitioned to a cloud architect role at Netflix. \nAt his current role at CloudOps, he leads infrastructure-as-code initiatives using Terraform and Kubernetes, and has reduced deployment times by 40%. \nHis technical toolkit includes Docker, Jenkins, Helm, Prometheus, and Bash scripting. \nIn his free time, Michael contributes to open-source monitoring tools and enjoys mentoring junior engineers through TechBridge.",
+    "uuid": "93a4e80b-18cc-4d87-b897-c9bcd7f9f1d2",
+    "createdAt": "2025-07-15T13:26:12.786Z",
+    "updatedAt": "2025-07-15T13:26:12.786Z"
   },
   {
-    "name": ":null",
-    "email": ":null",
-    "role": ":null",
-    "location": ":null",
-    "skills": null,
-    "previousCompanies": null,
-    "interests": null,
-    "experience": ":null",
-    "id": "122b315b-684b-4b2d-8c2f-67aae17db92c",
-    "createdAt": "2025-07-14T16:04:35.643Z",
-    "updatedAt": "2025-07-14T16:04:35.644Z",
-    "description": "`The sun is shining and it's a beautiful day for a walk in the park.`"
-  },
-  {
-    "name": "Sarah Smith",
-    "email": "sarah@frontend.dev",
-    "role": "frontend developer",
-    "location": "San Francisco",
+    "name": "John Doe",
+    "email": "john.doe@tech.com",
+    "role": "backend engineer",
+    "location": "Berlin",
     "skills": [
-      "React",
-      "TypeScript",
-      "UI/UX design"
+      "Kubernetes",
+      "Python",
+      "cloud infrastructure"
     ],
     "previousCompanies": [
-      "Meta",
-      "Airbnb"
+      "Google"
     ],
     "interests": [
-      "accessibility",
-      "performance optimization"
+      "open-source"
     ],
     "experience": "",
-    "id": "f05430e2-e12e-4997-b529-59cadc2ab7cd",
-    "createdAt": "2025-07-14T16:04:37.896Z",
-    "updatedAt": "2025-07-14T16:04:37.898Z",
-    "description": "`Sarah Smith (sarah@frontend.dev) is a frontend developer from San Francisco. \n    She specializes in React, TypeScript, and UI/UX design. \n    Previously worked at Meta and Airbnb. She's passionate about accessibility and performance optimization.`"
+    "description": "John Doe (john.doe@tech.com) is a backend engineer based in Berlin. He has experience\nwith Kubernetes, Python, and cloud infrastructure. Formerly worked\nat Google and loves open-source.",
+    "uuid": "597b6c62-915b-47b6-9f77-9ff30a1e8ee6",
+    "createdAt": "2025-07-15T13:26:12.786Z",
+    "updatedAt": "2025-07-15T13:26:12.786Z"
   },
   {
-    "name": "Yossi Cohen",
-    "email": "",
-    "role": "entrepreneur and product strategist",
-    "location": "Israel",
+    "name": "Moshe Bitton",
+    "email": "moshe.bitton@bittonfresh.co.il",
+    "role": "Produce Expert and Shop Owner",
+    "location": "Bat Yam, Israel",
     "skills": [
-      "supply chain optimization",
-      "food safety compliance",
-      "sustainable packaging",
-      "consumer trend analysis"
+      "Sourcing high-quality produce",
+      "Agricultural logistics",
+      "Sustainable farming methods"
     ],
     "previousCompanies": null,
     "interests": [
-      "Mediterranean cooking",
-      "mentoring young founders",
-      "exploring new markets in global food culture"
+      "Food education",
+      "Zero-waste retailing",
+      "Building stronger farmer-consumer relationships",
+      "Hiking",
+      "Cold-pressing juices",
+      "Developing homemade dried fruit mixes"
     ],
-    "experience": "With over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies.",
-    "id": "ea77dbbb-f9b7-4488-a45f-67d235d818de",
-    "createdAt": "2025-07-14T16:04:40.861Z",
-    "updatedAt": "2025-07-14T16:04:40.861Z",
-    "description": "Meet Yossi Cohen, an Israel-based entrepreneur and product strategist in the food industry.\nWith over a decade of experience, Yossi has led innovation and growth initiatives across food tech startups and large-scale production companies. \nHis expertise spans supply chain optimization, food safety compliance, sustainable packaging, and consumer trend analysis.\nYossi is passionate about bridging culinary tradition with modern technology, and in his free time, he enjoys Mediterranean cooking, mentoring young founders, and exploring new markets in global food culture."
+    "experience": "Over 12 years in the produce industry, owner of Bitton Fresh, worked in agricultural logistics, learned sustainable farming methods in the Arava region",
+    "description": "Moshe Bitton (moshe.bitton@bittonfresh.co.il) is a produce expert and shop owner based in Bat Yam, Israel.\nWith over 12 years in the industry, Moshe runs Bitton Fresh, a popular neighborhood store known for premium fruits, seasonal vegetables, and personal service.\nHe specializes in sourcing high-quality cherries and mangoes, which he grows on family-owned land in northern Israel near Moshav Yesod HaMa'ala.\nMoshe works closely with small farms to bring fresh, locally grown produce to urban customers.\nHe also supplies boutique restaurants across Tel Aviv and manages weekly farm-to-door deliveries around the Gush Dan area.\nBefore opening his shop, Moshe worked in agricultural logistics and spent time learning sustainable farming methods in the Arava region.\nHe’s passionate about food education, zero-waste retailing, and building stronger farmer-consumer relationships.\nOutside of work, Moshe enjoys hiking in the Galilee, cold-pressing juices, and developing homemade dried fruit mixes.",
+    "uuid": "823d77f4-e97c-48f8-bf2e-4ec5cc937978",
+    "createdAt": "2025-07-15T13:26:13.241Z",
+    "updatedAt": "2025-07-15T13:26:13.241Z"
   },
   {
-    "id": "u104",
-    "name": "Avi Mizrahi",
-    "email": null,
-    "role": "Clinical Research Coordinator",
-    "location": "Jerusalem",
+    "name": "Alice Morgan",
+    "email": "alice.morgan@productlabs.io",
+    "role": "Product Manager",
+    "location": "Amsterdam",
     "skills": [
-      "Clinical Trials",
-      "Regulatory Compliance",
-      "Data Collection"
+      "Agile methodology",
+      "stakeholder communication",
+      "roadmapping"
     ],
-    "previousCompanies": null,
-    "interests": null,
-    "experience": null,
-    "description": "Managed oncology trials in multiple hospitals.",
-    "createdAt": "2025-07-14T16:04:41.130Z",
-    "updatedAt": "2025-07-14T16:04:41.134Z"
+    "previousCompanies": [
+      "Booking.com",
+      "Stripe",
+      "two local Dutch startups"
+    ],
+    "interests": [
+      "ethical design",
+      "behavioral economics",
+      "marathon running"
+    ],
+    "experience": "She has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech.",
+    "description": "Alice Morgan (alice.morgan@productlabs.io) is a seasoned product manager based in Amsterdam. \nShe has led cross-functional teams for over 8 years in industries ranging from e-commerce to fintech. \nAlice has strong skills in Agile methodology, stakeholder communication, and roadmapping. \nShe previously worked at Booking.com, Stripe, and two local Dutch startups. \nOutside of work, she’s passionate about ethical design, behavioral economics, and marathon running.",
+    "uuid": "5224506b-1a93-475b-96a3-b1bfda3870c7",
+    "createdAt": "2025-07-15T13:26:14.492Z",
+    "updatedAt": "2025-07-15T13:26:14.492Z"
   },
   {
     "id": "u204",
@@ -271,8 +266,28 @@
     "interests": null,
     "experience": null,
     "description": "Supervised construction of high-rise apartments across northern Israel.",
-    "createdAt": "2025-07-14T16:04:41.130Z",
-    "updatedAt": "2025-07-14T16:04:41.787Z"
+    "createdAt": "2025-07-15T13:26:15.030Z",
+    "updatedAt": "2025-07-15T13:26:15.036Z",
+    "uuid": "b5557148-4fb9-4651-ab2e-21f56b300ae2"
+  },
+  {
+    "id": "u104",
+    "name": "Avi Mizrahi",
+    "email": null,
+    "role": "Clinical Research Coordinator",
+    "location": "Jerusalem",
+    "skills": [
+      "Clinical Trials",
+      "Regulatory Compliance",
+      "Data Collection"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Managed oncology trials in multiple hospitals.",
+    "createdAt": "2025-07-15T13:26:15.029Z",
+    "updatedAt": "2025-07-15T13:26:15.035Z",
+    "uuid": "604f9169-c192-4433-9134-868751de73ae"
   },
   {
     "id": "u205",
@@ -289,8 +304,9 @@
     "interests": null,
     "experience": null,
     "description": "Specializes in sustainable and green building design.",
-    "createdAt": "2025-07-14T16:04:41.130Z",
-    "updatedAt": "2025-07-14T16:04:42.226Z"
+    "createdAt": "2025-07-15T13:26:15.030Z",
+    "updatedAt": "2025-07-15T13:26:15.036Z",
+    "uuid": "f5ce1ea1-1fe3-4d48-a6ca-18285bedf499"
   },
   {
     "id": "u201",
@@ -307,8 +323,9 @@
     "interests": null,
     "experience": null,
     "description": "Head chef at a boutique hotel. Specializes in fusion and seasonal menus.",
-    "createdAt": "2025-07-14T16:04:41.131Z",
-    "updatedAt": "2025-07-14T16:04:43.018Z"
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.036Z",
+    "uuid": "54e321c0-c4ba-4086-8016-ac732ff59329"
   },
   {
     "id": "u105",
@@ -326,8 +343,104 @@
     "interests": null,
     "experience": null,
     "description": "Built trading strategies for derivatives market.",
-    "createdAt": "2025-07-14T16:04:41.131Z",
-    "updatedAt": "2025-07-14T16:04:43.425Z"
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.036Z",
+    "uuid": "ea89e536-f6cf-47b9-b076-7e969b87f1f5"
+  },
+  {
+    "id": "doc101",
+    "name": "Dr. Tal Ben-David",
+    "email": null,
+    "role": "Internal Medicine Specialist",
+    "location": "Tel Aviv",
+    "skills": [
+      "Diagnostics",
+      "Hypertension",
+      "Chronic Disease Management"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Runs patient education workshops at the central Maccabi branch.",
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "d3ed5374-bc73-4cbb-99ca-40c0fa8f1767"
+  },
+  {
+    "id": "doc102",
+    "name": "Dr. Shiran Malka",
+    "email": null,
+    "role": "Pediatrician",
+    "location": "Petah Tikva",
+    "skills": [
+      "Child Nutrition",
+      "Developmental Disorders",
+      "Asthma Management"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Published several papers on childhood asthma in urban populations.",
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "e76b3847-ac89-4f6f-9e75-ab2b0c0e925e"
+  },
+  {
+    "id": "doc103",
+    "name": "Dr. Amir Azulay",
+    "email": null,
+    "role": "Orthopedic Surgeon",
+    "location": "Ashdod",
+    "skills": [
+      "Joint Replacement",
+      "Sports Injuries",
+      "Rehabilitation"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Collaborates with IDF rehab centers on musculoskeletal injuries.",
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "366657fb-7d62-4486-a8c4-74e6d49b3a02"
+  },
+  {
+    "id": "doc104",
+    "name": "Dr. Meital Avrahami",
+    "email": null,
+    "role": "Neurologist",
+    "location": "Ramat Gan",
+    "skills": [
+      "Epilepsy",
+      "Headaches",
+      "Neurodegenerative Diseases"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Leads the neurology clinic at Maccabi’s Ramat Gan branch.",
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "667e01cc-b0fb-4d90-97ed-58124f421fcf"
+  },
+  {
+    "id": "doc105",
+    "name": "Dr. Gilad Regev",
+    "email": null,
+    "role": "Ophthalmologist",
+    "location": "Beer Sheva",
+    "skills": [
+      "Retinal Disorders",
+      "Diabetic Eye Disease",
+      "Laser Surgery"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Head of southern region vision screening program.",
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "c3a3e053-9e04-410a-84f1-9fb9011260a9"
   },
   {
     "id": "u108",
@@ -344,27 +457,9 @@
     "interests": null,
     "experience": null,
     "description": "Published research on heart disease in elderly populations.",
-    "createdAt": "2025-07-14T16:04:41.131Z",
-    "updatedAt": "2025-07-14T16:04:43.751Z"
-  },
-  {
-    "id": "u103",
-    "name": "Tamar Shalev",
-    "email": null,
-    "role": "Investment Banker",
-    "location": "Herzliya",
-    "skills": [
-      "Valuation",
-      "M&A",
-      "Pitchbooks",
-      "DCF Analysis"
-    ],
-    "previousCompanies": null,
-    "interests": null,
-    "experience": null,
-    "description": "Focused on cross-border fintech acquisitions.",
-    "createdAt": "2025-07-14T16:04:41.132Z",
-    "updatedAt": "2025-07-14T16:04:44.199Z"
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "c29b408a-98ef-44b8-9f53-a84a681c50ef"
   },
   {
     "id": "u101",
@@ -382,7 +477,353 @@
     "interests": null,
     "experience": null,
     "description": "Specializes in equity research for tech sector.",
-    "createdAt": "2025-07-14T16:04:41.132Z",
-    "updatedAt": "2025-07-14T16:04:44.619Z"
+    "createdAt": "2025-07-15T13:26:15.032Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "43556eb0-ddb7-4f00-82c0-fa59f287e648"
+  },
+  {
+    "id": "u103",
+    "name": "Tamar Shalev",
+    "email": null,
+    "role": "Investment Banker",
+    "location": "Herzliya",
+    "skills": [
+      "Valuation",
+      "M&A",
+      "Pitchbooks",
+      "DCF Analysis"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": null,
+    "description": "Focused on cross-border fintech acquisitions.",
+    "createdAt": "2025-07-15T13:26:15.031Z",
+    "updatedAt": "2025-07-15T13:26:15.037Z",
+    "uuid": "a0c957df-cfb2-4173-926b-ea44597107eb"
+  },
+  {
+    "id": null,
+    "name": "Marc Rodriguez",
+    "email": null,
+    "role": "Resident DJ",
+    "location": "Barcelona",
+    "skills": [
+      "House Music",
+      "Tech House",
+      "Serato DJ",
+      "CDJ",
+      "Performance"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "12 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.302Z",
+    "uuid": "9ffb4094-71ba-4511-818c-9109fffe12bd"
+  },
+  {
+    "id": null,
+    "name": "Chloe Williams",
+    "email": null,
+    "role": "International DJ",
+    "location": "London",
+    "skills": [
+      "Techno",
+      "Progressive House",
+      "Traktor Pro",
+      "Live Mixing"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "8 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.303Z",
+    "uuid": "bafd67a2-f0ca-44ad-ae3e-7918f572ed08"
+  },
+  {
+    "id": null,
+    "name": "Alessandro Nero",
+    "email": null,
+    "role": "Headliner DJ",
+    "location": "Ibiza",
+    "skills": [
+      "Electronic Music",
+      "Crowd Reading",
+      "Pioneer CDJ",
+      "Sound Design"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "15 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.303Z",
+    "uuid": "c3cd6687-2c39-4a77-acdc-a34cdd8c3159"
+  },
+  {
+    "id": null,
+    "name": "Luna Morales",
+    "email": null,
+    "role": "Opening DJ",
+    "location": "Madrid",
+    "skills": [
+      "Deep House",
+      "Vinyl Mixing",
+      "Ableton Live",
+      "Music Curation"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "4 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.303Z",
+    "uuid": "fb3a9808-49ff-41d4-94ed-fb04a9a0d876"
+  },
+  {
+    "id": null,
+    "name": "Valentina Costa",
+    "email": null,
+    "role": "Festival DJ",
+    "location": "Milan",
+    "skills": [
+      "Commercial House",
+      "Event Performance",
+      "Rekordbox",
+      "Stage Presence"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "6 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.303Z",
+    "uuid": "a114761c-1ee5-41c9-b147-7c23c234eb93"
+  },
+  {
+    "id": null,
+    "name": "Kai Thompson",
+    "email": null,
+    "role": "Producer DJ",
+    "location": "Berlin",
+    "skills": [
+      "Minimal Techno",
+      "Music Production",
+      "Logic Pro",
+      "DJ Controller"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "7 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.303Z",
+    "uuid": "a7772a85-0ee3-4353-9d65-1c65e8d8f572"
+  },
+  {
+    "id": null,
+    "name": "Diego Sanchez",
+    "email": null,
+    "role": "Underground DJ",
+    "location": "Barcelona",
+    "skills": [
+      "Acid House",
+      "Underground Scene",
+      "Analog Mixing",
+      "Vinyl Collection"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "10 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.303Z",
+    "uuid": "12973421-f6c4-4d47-a04e-ae3b236c239b"
+  },
+  {
+    "id": null,
+    "name": "Carlos Martinez",
+    "email": null,
+    "role": "Front Desk Manager",
+    "location": "Madrid",
+    "skills": [
+      "Customer Service",
+      "Opera PMS",
+      "Spanish",
+      "English"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "8 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "05c00b15-aee6-43f3-90f4-e9e2cb5765f8"
+  },
+  {
+    "id": null,
+    "name": "Zara Ahmed",
+    "email": null,
+    "role": "Electronic Producer",
+    "location": "Amsterdam",
+    "skills": [
+      "Trance",
+      "Music Composition",
+      "FL Studio",
+      "Synthesizers"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "5 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.296Z",
+    "updatedAt": "2025-07-15T13:26:18.303Z",
+    "uuid": "8f4208b8-f067-4919-8171-db9948f1a81a"
+  },
+  {
+    "id": null,
+    "name": "Sofia Rossi",
+    "email": null,
+    "role": "Housekeeping Supervisor",
+    "location": "Milan",
+    "skills": [
+      "Team Management",
+      "Quality Control",
+      "Italian",
+      "German"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "5 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "4d9bea16-fbc2-402c-9d59-ef0342d3fc3c"
+  },
+  {
+    "id": null,
+    "name": "Emma van der Berg",
+    "email": null,
+    "role": "Concierge",
+    "location": "Amsterdam",
+    "skills": [
+      "Local Knowledge",
+      "Reservation Systems",
+      "Dutch",
+      "French",
+      "English"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "4 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "8825577b-5d04-465c-9e9a-b7243790a367"
+  },
+  {
+    "id": null,
+    "name": "Anna Schmidt",
+    "email": null,
+    "role": "Event Coordinator",
+    "location": "Berlin",
+    "skills": [
+      "Event Planning",
+      "Banquet Management",
+      "German",
+      "English"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "3 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "54cca71b-0315-4810-827d-4f65ba9a2cd9"
+  },
+  {
+    "id": null,
+    "name": "Luis Fernandez",
+    "email": null,
+    "role": "Restaurant Manager",
+    "location": "Barcelona",
+    "skills": [
+      "Food Service",
+      "Wine Knowledge",
+      "Staff Training",
+      "Catalan",
+      "Spanish"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "7 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "ad6edbba-7c5e-4721-a4ad-aa44cffd27e5"
+  },
+  {
+    "id": null,
+    "name": "Maria Santos",
+    "email": null,
+    "role": "Revenue Manager",
+    "location": "Lisbon",
+    "skills": [
+      "Pricing Strategy",
+      "Excel",
+      "Revenue Management Systems",
+      "Portuguese",
+      "Spanish"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "6 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "3e9c502e-a8e5-4e5e-ac3a-9da6abc646f4"
+  },
+  {
+    "id": null,
+    "name": "Isabella Bianchi",
+    "email": null,
+    "role": "Guest Relations Manager",
+    "location": "Rome",
+    "skills": [
+      "VIP Services",
+      "Problem Resolution",
+      "Italian",
+      "English",
+      "French"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "9 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "510a99f1-301c-462a-aecd-bb0fae33c232"
+  },
+  {
+    "id": null,
+    "name": "James Wilson",
+    "email": null,
+    "role": "Night Auditor",
+    "location": "London",
+    "skills": [
+      "Security Protocols",
+      "Accounting",
+      "Opera PMS",
+      "English"
+    ],
+    "previousCompanies": null,
+    "interests": null,
+    "experience": "2 years",
+    "description": null,
+    "createdAt": "2025-07-15T13:26:18.297Z",
+    "updatedAt": "2025-07-15T13:26:18.304Z",
+    "uuid": "94817ad7-088a-4dae-b0f8-db83ee3203d3"
   }
 ]

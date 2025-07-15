@@ -9,6 +9,7 @@ import {
   LLMGenerateStructuredOutputRequest,
   LLMGenerateStructuredOutputWithExamplesRequest,
   LLMModelConfig,
+  LLMRequest,
 } from "../../llm.interface";
 import { OpenAIChatModels, OpenAIEmbeddingModels } from "./openai.interface";
 
@@ -28,6 +29,19 @@ export default class OpenAIClient implements ILLMClient {
       modelName: config?.modelName ?? this.defaultConfig?.modelName ?? OpenAIEmbeddingModels.SMALL,
       openAIApiKey: process.env.OPEN_AI_API_KEY!,
     });
+  }
+
+  async generateText<T = any>(req: LLMRequest): Promise<string> {
+    const { prompt, config } = req;
+
+    if (!prompt) {
+      throw new Error("Prompt is required for text generation");
+    }
+
+    const model = this.makeChatModel(config);
+    const result = await model.invoke(prompt);
+
+    return result.content as string;
   }
 
   async generateStructuredOutput<T>(req: LLMGenerateStructuredOutputRequest): Promise<T> {
