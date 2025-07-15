@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "workspaces": [
+    "packages/*",
+    "portal"
+  ],
   "scripts": {
     "start": "ts-node run.ts",
     "test": "jest --coverage"

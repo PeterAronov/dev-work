@@ -1,0 +1,8 @@
+{
+    "user_id": "u101",
+    "full_name": "Yael Cohen",
+    "job_title": "Financial Analyst",
+    "location": "Tel Aviv",
+    "skills": ["Excel", "Financial Modeling", "Power BI", "SQL"],
+    "notes": "Specializes in equity research for tech sector."
+  }

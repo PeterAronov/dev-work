@@ -248,3 +248,6 @@ function isInvalidField(value: any): boolean {
     value === null || value === undefined || value === "null" || (typeof value === "string" && value.trim() === "")
   );
 }
+
+//todo: tbd
+// peter add singelton instance
