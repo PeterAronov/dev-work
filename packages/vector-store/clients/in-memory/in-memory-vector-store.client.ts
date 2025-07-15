@@ -75,14 +75,17 @@ export class InMemoryVectorStoreClient implements IVectorStoreClient {
 
       const searchResults: DocumentSearchResponse[] = results
         .map(([doc, distance]) => ({
-          id: doc.metadata.id || "unknown",
           score: this.convertDistanceToSimilarity(distance),
-          text: doc.pageContent,
           document: doc,
         }))
         .filter((result) => {
-          console.log(`ID: ${result.id}, Score: ${result.score.toFixed(4)},\nText: ${result.text}`);
-
+          console.log(
+            `UUID: ${result.document.metadata.uuid}
+ID: ${result.document.metadata.id}
+Score: ${result.score.toFixed(4)}
+Text: ${result.document.pageContent}
+`
+          );
           if (result.score > threshold) return false;
 
           return true;

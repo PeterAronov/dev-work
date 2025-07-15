@@ -22,9 +22,9 @@ export interface MemoryVector {
 }
 
 export interface VectorSearchResponse {
-  id: string;
+  id?: string;
   score: number; // Similarity score (0-1, higher = more similar)
-  text: string; // Original text content
+  text?: string; // Original text content
 }
 
 export enum VectorStoreProvider {
